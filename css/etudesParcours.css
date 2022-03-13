@@ -1,0 +1,185 @@
+.date {
+    color: orangered;
+    text-align: center;
+    border-style: dotted;
+    border-color: black;
+    border-width: 2px;
+    font-size: 20px;
+    background-color: ghostwhite;
+}
+.etudes {
+    position: absolute;
+    top: 210%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+/* Utilities */
+.auto-grid {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 20%), 1fr)
+  );
+    grid-gap: var(--auto-grid-gap, 0);
+    padding: 0;
+    text-align: center;
+}
+/* Blocks */
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 70%;
+    width: 100%;
+    font-size: 20px;
+    position: relative;
+    padding: 1.5%;
+    color: white;
+    backface-visibility: hidden;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 2;
+}
+.profile::before,
+.profile::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+}
+.profile::after {
+    background: linear-gradient(
+        45deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.4) 100%
+    );
+    opacity:0;
+    transition: 300ms opacity linear;
+}
+.profile::before {
+    background: linear-gradient(
+        45deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.4) 100%
+    );
+    transition: 300ms opacity linear;
+}
+.profile > * {
+    z-index: 2;
+}
+.profile img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: -1;
+    object-fit: cover;
+    transition: filter 200ms ease, transform 250ms linear;
+}
+.profile h2,
+.profile p,
+.profile i {
+    transform: translateY(2ex);
+}
+.profile h2 {
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 0.03ch;
+    transition: 300ms transform ease;
+    font-size: 20px;
+}
+.profile p {
+    font-size: 15px;
+    font-weight: 500;
+}
+.profile p {
+    opacity: 0;
+    transition: 300ms opacity linear, 300ms transform ease-in-out;
+}
+.profile:focus {
+    outline: 0.5% solid white;
+    outline-offset: -0.5%;
+}
+.profile:hover :is(h2, p, i),
+.profile:focus :is(h2, p, i) {
+    color: black;
+    background-color: white;
+}
+.profile:hover::after,
+.profile:focus::after,
+.profile:hover::before,
+.profile:focus::before {
+    opacity: 0;
+}
+.profile:hover p,
+.profile:focus p {
+    opacity: 1;
+    transition-delay: 200ms;
+}
+.profile:hover img,
+.profile:focus img {
+    filter: saturate(100%);
+    transform: scale(1.05) rotate(1deg);
+}
+ /*----------------------------------------------------------------------------*/
+
+ .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 400px;
+    background: #262626;
+    overflow: hidden;
+}
+.card .imgBx,
+.card .details {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.card .imgBx {
+    top: 0;
+    left: 0;
+}
+.card:hover .imgBx {
+    top: 0;
+    left: -100%;
+}
+.card .imgBx img {
+    width: 100%;
+}
+.card .details {
+    background: #262626;
+    top: 0;
+    left: 100%;
+    padding: 60px 30px;
+}
+.card:hover .details {
+    top: 0;
+    left: 0%;
+}
+.card .details h2 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0 0 10px;
+    border-bottom: 2px solid #fff;
+
+}
+.card .details p {
+    margin: 20px 0 0;
+    color: #fff;
+}
