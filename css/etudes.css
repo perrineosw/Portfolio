@@ -35,7 +35,9 @@
 .tile .text
 {
     position: absolute;
-    padding: 30px;
+    padding: 30px 0 0 0;
+    text-align: center;
+    width: 100%;
     height: calc(100% - 60px);
 }
 .tile h1
