@@ -217,3 +217,39 @@ a {
 	pointer-events:none;
 }
 /*----------------------------------------------- LES PROJETS -----------------------------------------------*/
+.footer-basic {
+	position: absolute;
+	top: 610%;
+	width: 100%;
+	padding:40px 0;
+	background-color:#5bd5be;
+	color:black;
+	z-index: 1;
+}
+.footer-basic .social {
+	text-align:center;
+	padding-bottom:25px;
+}
+.footer-basic .social > a {
+	font-size:24px;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	display:inline-block;
+	text-align:center;
+	border-radius:50%;
+	border:1px solid black;
+	margin:0 8px;
+	color:inherit;
+}
+.footer-basic .social > a:hover {
+	border:1px solid #ff4500;
+	color: #ff4500;
+}
+.footer-basic .social .copyright {
+	text-align:center;
+	margin-left: 5%;
+	font-size:20px;
+	color:black;
+	margin-bottom:0;
+}
