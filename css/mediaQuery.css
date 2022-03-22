@@ -1,19 +1,65 @@
-@media only screen and (min-width: 600px) and (max-width: 800px) {
+@media only screen and (max-width: 500px){
+    .navigation{
+        font-size: 10px;
+        height: 5%;
+    }
+    /*----------------------------------------------- ACCUEIL -----------------------------------------------*/
+    .textAccueil{
+        left: 5%;
+        width: 90%;
+    }
     .nomPrenom {
-        font-size: 50px;
+        font-size: 40px;
     }
-}
-@media only screen and (max-width: 600px) {
-    .body {
-        overflow-x: hidden;
+    .textAccueilSlogan{
+        font-size: 20px;
+        line-height: 3;
+        background-color: ghostwhite;
     }
-    .navigation {
-        flex-flow: column wrap;
-        padding: 0;
+    /*----------------------------------------------- LES FONTS -----------------------------------------------*/
+    .moiImage {
+        top: 13%;
+        left: 56%;
+        width: 40%;
+        height: 35%;
+    }
+    /*----------------------------------------------- LES TITRES -----------------------------------------------*/
+    .titre {
+        top: 8%;
+        font-size: 20px;
+    }
+    /*----------------------------------------------- A PROPOS -----------------------------------------------*/
+    .textAPropos {
+        top: 13%;
+        left: 2%;
+        width: 52%;
+        line-height: 1.3;
         font-size: 10px;
     }
-    .navigation a { 
-        text-align: center; 
-        padding: 10px;
+    .interets {
+        top: 50%;
+        left: 2%;
+        width: 96%;
+        font-size: 20px;
+    }
+    .atouts {
+        top: 75%;
+        left: 2%;
+        width: 96%;
+        font-size: 20px;
+    }
+    .imgCentreInteret {
+        width: 35px;
+        height: 27px;
+    }
+    .imgCentreAtout {
+        width: 20px;
+        height: 20px;
+    }
+    .polaroide .photoPolaroide .info {
+        font-size: 10px;
+    }
+    .polaroide .photoPolaroide .infoInterets {
+        font-size: 6px;
     }
 }
