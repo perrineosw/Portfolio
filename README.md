@@ -1,4 +1,4 @@
 # Portfolio
-git add .
-git commit -m "xxx"
-git push
+- git add .
+- git commit -m "xxx"
+- git push
