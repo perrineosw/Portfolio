@@ -16,6 +16,7 @@
 	<link href="./css/projets.css" rel="stylesheet" media="all" type="text/css">
 	<link href="./css/diapo.css" rel="stylesheet" media="all" type="text/css">
 	<link href="./css/mediaQuery.css" rel="stylesheet" media="all" type="text/css">
+	<link href="./css/fondAnime.css" rel="stylesheet" media="all" type="text/css">
 
 	<link href='https://logicbox.net/jquery/simplyscroll/jquery.simplyscroll.css' rel="stylesheet" media="all" type="text/css">
 	<link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css' rel="stylesheet" media="all" type="text/css">
@@ -35,7 +36,16 @@
 	</nav>
 	<!----------------------------------------------- ACCUEIL ----------------------------------------------->
 	<div id="accueil" class="fondAccueil">
-		<img src="./images/fond.jpeg" alt=""/>
+		<!--img src="./images/fond.jpeg" alt=""/-->
+		<div class="container hero">
+			<div class="overlay"></div>
+			<div class="background">
+				<canvas id="hero-canvas" width="1920" height="1080"></canvas>
+			</div>
+		</div>
+
+		<a class="suppoprt-me" href="https://www.buymeacoffee.com/marioduarte" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Coffee&nbsp&emoji=&slug=marioduarte&button_colour=FF5F5F&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"></a>
+
 		<div class="textAccueil">
 			<div class="nomPrenom">OSWALD Perrine</div>
 			<div class="textAccueilSlogan">
@@ -475,6 +485,7 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.js'></script>
 	<script src='https://logicbox.net/jquery/simplyscroll/jquery.simplyscroll.min.js'></script>
 	<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+	<script src='https://unpkg.com/css-doodle@0.17.2/css-doodle.min.js'></script>
 
 	<script src="./javaS.js"></script>
 </body>
