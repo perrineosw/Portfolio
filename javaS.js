@@ -89,8 +89,8 @@ function draw() {
 	//setup canvas enviroment
 	let time = new Date().getTime() * 0.002;
 	//console.log(time);
-	const color1 = "rgb(22,210,174,0.3)";
-	const color2 = "rgba(22,210,174,0.4)";
+	const color1 = "rgb(255,69,0,0.3)";
+	const color2 = "rgb(22,210,174,0.3)";
 	let canvas = document.getElementById("hero-canvas");
 	let ctx = document.getElementById("hero-canvas").getContext("2d");
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -98,11 +98,11 @@ function draw() {
 
 	// random float to be used in the sin & cos
 	let randomX = random(.2, .9);
-	let randomY = random(.1, .2);
+	let randomY = random(.2, .9);
 
 	// sin & cos for the movement of the triangles in the canvas
-	let rectX = Math.cos(time * 1) * 1.5 + randomX;
-	let rectY = Math.sin(time * 1) * 1.5 + randomY;
+	let rectX = Math.cos(time) * 1.5 + randomX;
+	let rectY = Math.sin(time) * 1.5 + randomY;
 	let rectX2 = Math.cos(time * .7) * 3 + randomX;
 	let rectY2 = Math.sin(time * .7) * 3 + randomY;
 	let rectX3 = Math.cos(time * 1.4) * 4 + randomX;
