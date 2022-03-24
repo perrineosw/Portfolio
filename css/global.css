@@ -80,10 +80,10 @@ a {
 	cursor:pointer;
 	transition:all .3s ease-in 1.2s;
 }
-.button:hover{
-	background:transparent;
+.textAccueil-button:hover{
 	color:black;
 	transition:all .3s ease-in;
+	background-color: ghostwhite;
 }
 .bot-bar{
 	position:absolute;
@@ -121,19 +121,19 @@ a {
 	bottom:0;
 	transition:all .2s ease .6s;
 }
-.button:hover .bot-bar{
+.textAccueil-button:hover .bot-bar{
 	width:100%;
 	transition: all .4s ease-in-out;
 }
-.button:hover .top-bar{
+.textAccueil-button:hover .top-bar{
 	width:100%;
 	transition: all .4s ease-in-out .6s;
 }
-.button:hover .right-bar{
+.textAccueil-button:hover .right-bar{
 	height:100%;
 	transition:all .2s ease-in-out .4s;
 }
-.button:hover .left-bar{
+.textAccueil-button:hover .left-bar{
 	height:100%;
 	transition:all .2s ease-in-out 1s;
 }
