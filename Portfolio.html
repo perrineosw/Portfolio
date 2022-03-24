@@ -123,46 +123,41 @@
 		<label class="titre">
 			Mon parcours éducatif
 		</label>
-		<table style="position: absolute;top: 25%;left: 2%;width: 96%;height: 75%;z-index: 2;">
-			<tr class="auto-grid">
-				<td></td>
-				<td>
-					<p class="date">2019 / 2022</p>
-					<a href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-12/licence-informatique-45_1/l1-l2-l3-informatique-parcours-numerique-pour-les-environnements-connectes-nec-JDODLMEJ.html">
-						<div class="wrap">
-							<div class="tile">
-								<img src="https://organisation.univ-pau.fr/_resources/Images/Illustrations/Campus/Campus/Anglet/UFR%2520Sciences%2520de%2520la%2520C%25C3%25B4te%2520Basque.jpg" alt=""/>
-								<div class="text">
-									<h1>Licence informatique N.E.C.</h1>
-									<h2 class="animate-text">Numérique pour les Environnements Connectés</h2>
-									<p class="animate-text">U.P.P.A. - ANGLET - 64600</p>
-								</div>
-							</div>
-						</div>
-					</a>
-				</td>
-				<td></td>
-				<td>
-					<p class="date">2019</p>
-					<a href="https://www.lyceeharountazieff.com/">
-						<div class="wrap">
-							<div class="tile">
-								<img src="https://www.lyceeharountazieff.com/images/images-generales/image-lycee.jpg" alt=""/>
-								<div class="text">
-									<h1>Bac S</h1>
-									<h2 class="animate-text">Sciences de l'Ingénieur</h2>
-									<p class="animate-text">Lycée Haroun Tazieff<br>SAINT-PAUL-LES-DAX<br>40990</p>
-								</div>
-							</div>
-						</div>
-					</a>
-				</td>
-				<td></td>
-			</tr>
-		</table>
+		<div class="divEtudes-1">
+			<p class="date">2019 / 2022</p>
+			<div class="wrap">
+				<div class="tile">
+					<img src="https://organisation.univ-pau.fr/_resources/Images/Illustrations/Campus/Campus/Anglet/UFR%2520Sciences%2520de%2520la%2520C%25C3%25B4te%2520Basque.jpg" alt=""/>
+					<div class="text">
+						<h1>Licence informatique N.E.C.</h1>
+						<h2 class="animate-text">Numérique pour les Environnements Connectés</h2>
+						<a href="https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-12/licence-informatique-45_1/l1-l2-l3-informatique-parcours-numerique-pour-les-environnements-connectes-nec-JDODLMEJ.html">
+							<p class="animate-text separationTrait">U.P.P.A. - ANGLET - 64600</p>
+							<p class="animate-text doigt">&#9757;</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="divEtudes-2">
+			<p class="date">2019</p>
+			<div class="wrap">
+				<div class="tile">
+					<img src="https://www.lyceeharountazieff.com/images/images-generales/image-lycee.jpg" alt=""/>
+					<div class="text">
+						<h1>Bac S</h1>
+						<h2 class="animate-text">Sciences de l'Ingénieur</h2>
+						<a href="https://www.lyceeharountazieff.com/">
+							<p class="animate-text separationTrait">Lycée Haroun Tazieff<br>SAINT-PAUL-LES-DAX<br>40990</p>
+							<p class="animate-text doigt">&#9757;</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!----------------------------------------------- PARCOURS ----------------------------------------------->
-	<div id="parcours" style="position: absolute;top: 310%;left: 0;height: 100%;width: 100%;z-index: 2;">
+	<div id="parcours" class="parcours">
 		<div class="fondParcours"></div>
 		<label class="titre">
 			Mon parcours
@@ -175,10 +170,10 @@
 					<img src="./images/harmonie.jpg" alt="">
 				</div>
 				<div class="details">
-					<p style="border-bottom-style: solid;border-bottom-color: white;border-bottom-width: 5px;padding: 0 0 50px 0">
-						Aide à l'organisation et aux animations lors des concerts et déplacements</p>
+					<p>Aide à l'organisation et aux animations lors des concerts et déplacements</p>
 					<a href="https://www.harmonie-de-christus.com/">
-						<p>Harmonie de Christus<br>SAINT-VINCENT-DE-PAUL<br>40990</p>
+						<p class="separationTrait">Harmonie de Christus<br>SAINT-VINCENT-DE-PAUL<br>40990</p>
+						<p class="doigt">&#9757;</p>
 					</a>
 				</div>
 			</div>
@@ -191,10 +186,10 @@
 					<img src="./images/intermarche.jpeg" alt="">
 				</div>
 				<div class="details">
-					<p style="border-bottom-style: solid;border-bottom-color: white;border-bottom-width: 5px;padding: 0 0 50px 0">
-						Poste d’hôtesse de caisse, agent d'entretien et mise en rayon</p>
+					<p>Poste d’hôtesse de caisse, agent d'entretien et mise en rayon</p>
 					<a href="https://www.intermarche.com/magasins/05798/castets-40260/infos-pratiques">
-						<p>Intermarché<br>CASTETS<br>40075</p>
+						<p class="separationTrait">Intermarché<br>CASTETS<br>40075</p>
+						<p class="doigt">&#9757;</p>
 					</a>
 				</div>
 			</div>
@@ -207,10 +202,10 @@
 					<img src="./images/stPaulLesDax.jpeg" alt="">
 				</div>
 				<div class="details">
-					<p style="border-bottom-style: solid;border-bottom-color: white;border-bottom-width: 5px;padding: 0 0 50px 0">
-						Gestion d’un parc d’appareils mobiles (tablettes) via le MDM Jamf Pro (Apple)</p>
+					<p>Gestion d’un parc d’appareils mobiles (tablettes) via le MDM Jamf Pro (Apple)</p>
 					<a href="https://www.st-paul-les-dax.fr/">
-						<p>Mairie<br>SAINT-PAUL-LES-DAX<br>40990</p>
+						<p class="separationTrait">Mairie<br>SAINT-PAUL-LES-DAX<br>40990</p>
+						<p class="doigt">&#9757;</p>
 					</a>
 				</div>
 			</div>
@@ -224,10 +219,10 @@
 				</div>
 				<div class="details">
 					<p>Vente de tickets pour les navettes bus / parkings relais</p>
-					<p style="border-bottom-style: solid;border-bottom-color: white;border-bottom-width: 5px;padding: 0 0 50px 0">
-						Férias de DAX (journée & nuit)</p>
+					<p>Férias de DAX (journée & nuit)</p>
 					<a href="https://www.trans-landes.fr/">
-						<p>SPL Trans-Landes<br>SAINT-VINCENT-DE-PAUL<br>40990</p>
+						<p class="separationTrait">SPL Trans-Landes<br>SAINT-VINCENT-DE-PAUL<br>40990</p>
+						<p class="doigt">&#9757;</p>
 					</a>
 				</div>
 			</div>
@@ -241,17 +236,17 @@
 				</div>
 				<div class="details">
 					<p>Vente de tickets pour les navettes bus / parkings relais</p>
-					<p style="border-bottom-style: solid;border-bottom-color: white;border-bottom-width: 5px;padding: 0 0 50px 0">
-						Férias de DAX (journée)</p>
+					<p>Férias de DAX (journée)</p>
 					<a href="https://www.trans-landes.fr/">
-						<p>SPL Trans-Landes<br>SAINT-VINCENT-DE-PAUL<br>40990</p>
+						<p class="separationTrait">SPL Trans-Landes<br>SAINT-VINCENT-DE-PAUL<br>40990</p>
+						<p class="doigt">&#9757;</p>
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!----------------------------------------------- COMPETENCES ----------------------------------------------->
-	<div id="competences" style="position: absolute;top: 410%;left: 0;height: 100%;width: 100%;z-index: 2;">
+	<div id="competences" class="competences">
 		<div class="fondCompetences"></div>
 		<label class="titre">
 			Mes compétences
@@ -313,7 +308,7 @@
 		</div>
 	</div>
 	<!----------------------------------------------- PROJETS ----------------------------------------------->
-	<div id="projets" style="position: absolute;top: 510%;left: 0;height: 100%;width: 100%;z-index: 1;">
+	<div id="projets" class="projets">
 		<div class="fondProjets"></div>
 		<label class="titre">
 			Mes projets

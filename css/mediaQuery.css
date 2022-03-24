@@ -19,46 +19,84 @@
     .moiImage {
         top: 13%;
         left: 56%;
-        width: 40%;
-        height: 35%;
+        width: 180px;
+        height: 240px;
+    }
+    .fondAPropos {
+        top: 110%;
+        height: 120%;
+    }
+    .etudes{
+        top: 230%;
+        height: 120%;
+        background-color: orange;
+    }
+    .parcours{
+        top: 330%;
+        height: 120%;
+    }
+    .competences{
+        top: 450%;
+        height: 120%;
+    }
+    .projets{
+        top: 570%;
+        height: 120%;
     }
     /*----------------------------------------------- LES TITRES -----------------------------------------------*/
     .titre {
-        top: 8%;
+        top: 6%;
         font-size: 20px;
+    }
+    .separationTrait{
+        padding: 20px 0 0 0;
     }
     /*----------------------------------------------- A PROPOS -----------------------------------------------*/
     .textAPropos {
-        top: 13%;
+        top: 11%;
         left: 2%;
-        width: 52%;
+        width: 51%;
         line-height: 1.3;
-        font-size: 10px;
+        font-size: 12px;
     }
     .interets {
-        top: 50%;
+        top: 51%;
         left: 2%;
         width: 96%;
         font-size: 20px;
     }
     .atouts {
-        top: 75%;
+        top: 76%;
         left: 2%;
         width: 96%;
         font-size: 20px;
     }
     .imgCentreInteret {
-        width: 35px;
-        height: 27px;
+        width: 60px;
+        height: 45px;
     }
     .imgCentreAtout {
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
     }
     .polaroide .photoPolaroide .info {
         font-size: 10px;
     }
     .polaroide .photoPolaroide .infoInterets {
-        font-size: 6px;
+        font-size: 10px;
+    }
+    /*----------------------------------------------- ETUDES -----------------------------------------------*/
+    .wrap {
+        width: 100%;
+    }
+    .divEtudes-1{
+        top: 12%;
+        left: 2%;
+        width: 46%;
+    }
+    .divEtudes-2{
+        top: 12%;
+        right: 2%;
+        width: 46%;
     }
 }
