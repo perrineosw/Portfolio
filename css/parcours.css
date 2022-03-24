@@ -1,7 +1,53 @@
+.divParcours-1{
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    width: 18.4%;
+    height: 70%;
+    text-align: center;
+    z-index: 3;
+}
+.divParcours-2{
+    position: absolute;
+    top: 25%;
+    left: 21.4%;
+    width: 18.4%;
+    height: 70%;
+    text-align: center;
+    z-index: 3;
+}
+.divParcours-3{
+    position: absolute;
+    top: 25%;
+    left: 40.8%;
+    width: 18.4%;
+    height: 70%;
+    text-align: center;
+    z-index: 3;
+}
+.divParcours-4{
+    position: absolute;
+    top: 25%;
+    left: 60.2%;
+    width: 18.4%;
+    height: 70%;
+    text-align: center;
+    z-index: 3;
+}
+.divParcours-5{
+    position: absolute;
+    top: 25%;
+    left: 79.6%;
+    width: 18.4%;
+    height: 70%;
+    text-align: center;
+    z-index: 3;
+}
 .card {
     top: 0;
     left: 0;
-    width: 18.4%;
+    height: 100%;
+    width: 100%;
     transform: translate(0,0);
     background: ghostwhite;
 }

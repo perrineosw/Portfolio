@@ -29,18 +29,17 @@
     .etudes{
         top: 230%;
         height: 120%;
-        background-color: orange;
     }
     .parcours{
         top: 330%;
-        height: 120%;
+        height: 150%;
     }
     .competences{
-        top: 450%;
+        top: 480%;
         height: 120%;
     }
     .projets{
-        top: 570%;
+        top: 600%;
         height: 120%;
     }
     /*----------------------------------------------- LES TITRES -----------------------------------------------*/
@@ -98,5 +97,39 @@
         top: 12%;
         right: 2%;
         width: 46%;
+    }
+    /*----------------------------------------------- PARCOURS -----------------------------------------------*/
+    .card .imgBx p, .card .details p {
+        font-size: 12px;
+    }
+    .divParcours-1{
+        top: 12%;
+        left: 2%;
+        width: 46%;
+        height: 250px;
+    }
+    .divParcours-2{
+        top: 12%;
+        left: 52%;
+        width: 46%;
+        height: 250px;
+    }
+    .divParcours-3{
+        top: 41%;
+        left: 2%;
+        width: 46%;
+        height: 250px;
+    }
+    .divParcours-4{
+        top: 41%;
+        left: 52%;
+        width: 46%;
+        height: 250px;
+    }
+    .divParcours-5{
+        top: 70%;
+        left: 2%;
+        width: 46%;
+        height: 250px;
     }
 }
