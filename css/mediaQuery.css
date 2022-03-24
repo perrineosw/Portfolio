@@ -5,16 +5,17 @@
     }
     /*----------------------------------------------- ACCUEIL -----------------------------------------------*/
     .textAccueil{
+        top: 60%;
         left: 5%;
         width: 90%;
     }
     .nomPrenom {
-        font-size: 40px;
+    }
+    .infoNomPrenom {
+        padding: 7% 0 0 0;
     }
     .textAccueilSlogan{
-        font-size: 20px;
-        line-height: 3;
-        background-color: ghostwhite;
+        padding: 15% 0 0 0;
     }
     /*----------------------------------------------- LES FONTS -----------------------------------------------*/
     .moiImage {
