@@ -244,8 +244,8 @@ a {
 	height: 70px;
 }
 .imgCentreAtout {
-	width: 40px;
-	height: 40px;
+	width: 55px;
+	height: 55px;
 }
 /*----------------------------------------------- LES TITRES -----------------------------------------------*/
 .titre {
@@ -289,7 +289,7 @@ a {
 }
 .atouts {
 	position: absolute;
-	top: 70%;
+	top: 65%;
 	left: 69%;
 	width: 30%;
 	text-align: center;

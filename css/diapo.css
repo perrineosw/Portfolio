@@ -1,4 +1,4 @@
-.polaroide .photoPolaroide .infoInterets {
+.polaroide .photoPolaroide .info {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -12,20 +12,23 @@
 	opacity: 0;
 	transition-duration: 1s;
 }
-.polaroide .photoPolaroide:hover .infoInterets {
+.polaroide .photoPolaroide:hover .info {
 	opacity: 1;
 }
-.polaroide .photoPolaroide .info {
+.polaroide .photoPolaroide .infoAtouts {
 	position: absolute;
-	top: -15;
+	top: 0;
 	left: 0;
+	width: 100%;
+	height: 100%;
 	padding: 0;
 	text-align: center;
-	color: rgb(0, 0, 0);
-	font-size: 15px;
+	background-color: rgba(0, 0, 0, 1);
+	color: #fff;
+	font-size: 10px;
 	opacity: 0;
 	transition-duration: 1s;
 }
-.polaroide .photoPolaroide:hover .info {
+.polaroide .photoPolaroide:hover .infoAtouts {
 	opacity: 1;
 }

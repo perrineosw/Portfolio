@@ -68,6 +68,7 @@
 }
 .tile:hover .animate-text
 {
+    padding: 10px 30px;
     transform: translateX(0);
     opacity: 1;
 }
