@@ -263,7 +263,13 @@ a {
 	padding: 50px 0 0 0;
 }
 .doigt{
-	font-size: 40px;
+	font-size: 40px !important;
+}
+.doigt:before{
+	content: '\27A0';
+}
+.doigt:hover{
+	transform: scale(1.5);
 }
 /*----------------------------------------------- A PROPOS -----------------------------------------------*/
 .textAPropos {
