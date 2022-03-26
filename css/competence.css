@@ -1,9 +1,70 @@
 @import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
+
+.titreLangues {
+    position:absolute;
+    top: 30%;
+    left: 2%;
+    width: 18%;
+    font-size: 40px;
+    text-align: center;
+    z-index: 2;
+}
+.languesAnglais {
+    position:absolute;
+    top: 30%;
+    left: 20%;
+    width: 40%;
+    text-align: center;
+    z-index: 2;
+}
+.languesEspagnol {
+    position:absolute;
+    top: 30%;
+    left: 60%;
+    width: 40%;
+    text-align: center;
+    z-index: 2;
+}
+
+.titreLangages {
+    position:absolute;
+    top: 60%;
+    left: 2%;
+    width: 18%;
+    font-size: 40px;
+    text-align: center;
+    z-index: 2;
+}
+.langagesContenu {
+    position:absolute;
+    top: 55%;
+    left: 20%;
+    width: 80%;
+    z-index: 2;
+}
+
+.titreLogiciels {
+    position:absolute;
+    top: 85%;
+    left: 2%;
+    width: 18%;
+    font-size: 40px;
+    text-align: center;
+    z-index: 2;
+}
+.logicielsContenu {
+    position:absolute;
+    top: 80%;
+    left: 20%;
+    width: 80%;
+    z-index: 2;
+}
+
 /* Styling the determinate progress element */
 progress[value] {
   appearance: none;/* Get rid of the default appearance */
   border: none;  /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
-  width: 300px; 
+  width: 50%;
   height: 20px;/* Add dimensions */
   /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
   background-color: whiteSmoke;

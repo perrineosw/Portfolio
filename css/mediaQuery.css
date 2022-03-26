@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
+
 @media only screen and (max-width: 500px){
     .navigation{
         font-size: 10px;
@@ -66,14 +68,14 @@
     }
     .interets {
         top: 410px;
-        left: 2%;
-        width: 96%;
+        left: 0;
+        width: 100%;
         font-size: 20px;
     }
     .atouts {
         top: 600px;
-        left: 2%;
-        width: 96%;
+        left: 0;
+        width: 100%;
         font-size: 20px;
     }
     .imgCentreInteret {
@@ -140,5 +142,56 @@
         left: 2%;
         width: 46%;
         height: 250px;
+    }
+    /*----------------------------------------------- COMPETENCES -----------------------------------------------*/
+    .titreLangues {
+        top: 80px;
+        left: 0;
+        width: 100%;
+        font-size: 20px;
+    }
+    .languesAnglais {
+        top: 120px;
+        left: 0;
+        width: 100%;
+    }
+    .languesEspagnol {
+        top: 180px;
+        left: 0;
+        width: 100%;
+    }
+    .drapeau {
+        height: 40px;
+        width: 80px;
+    }
+    .titreLangages {
+        top: 260px;
+        left: 0;
+        width: 100%;
+        font-size: 20px;
+    }
+    .langagesContenu {
+        top: 290px;
+        left: 0;
+        width: 100%;
+    }
+    .titreLogiciels {
+        top: 470px;
+        left: 0;
+        width: 100%;
+        font-size: 20px;
+    }
+    .logicielsContenu {
+        top: 500px;
+        left: 0;
+        width: 100%;
+    }
+    .petitLogo {
+        height: 40px;
+        width: 40px;
+    }
+    /*----------------------------------------------- FOOTER -----------------------------------------------*/
+    .footer-basic {
+        top: 700%;
     }
 }

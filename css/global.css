@@ -301,9 +301,13 @@ a {
 	text-align:center;
 	z-index: 2;
 }
+ul.polaroide {
+	padding-inline-start: 0;
+}
 .photoPolaroide {
 	display:inline-block;
 	list-style:none;
+	justify-content:space-evenly;
 	border:solid 6px #fff;
 	background-color: #fff;
 	box-shadow:0 0 15px 0 #555;
@@ -318,7 +322,7 @@ a {
 .photoPolaroide:nth-child(odd){
 	transform:rotate(-10deg);
 }
-/*----------------------------------------------- LES PROJETS -----------------------------------------------*/
+/*----------------------------------------------- FOOTER -----------------------------------------------*/
 .footer-basic {
 	position: absolute;
 	top: 610%;
