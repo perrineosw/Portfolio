@@ -69,7 +69,7 @@ section.intro {
 	display: none;
 }
 .code-description > div {
-	padding: 0px 40px;
+	padding: 0 40px;
 	font-size: 26px;
 	border-left: 2px solid #DDDDDD;
 }
@@ -246,7 +246,7 @@ background-position: right 5% center;
 .hex-init {
 	position: absolute;
 	top: 46px;
-	left: 0px;
+	left: 0;
 	height: 46%;
 	width: 100%;
 	z-index: 9;
