@@ -1,4 +1,5 @@
 .hero {
+    position: fixed;
     width: 100%;
     height: 100%;
     max-height: calc(100% - 50px);
@@ -12,9 +13,9 @@
     bottom: 0;
     left: 0;
     background: transparent;
-    background: -moz-linear-gradient(top,  rgba(114,81,109,0) 0%, rgb(248, 248, 255) 100%);
-    background: -webkit-linear-gradient(top,  rgba(114,81,109,0) 0%, rgb(248, 248, 255) 100%);
-    background: linear-gradient(to bottom,  rgba(114,81,109,0) 0%, rgb(248, 248, 255) 100%);
+    background: -moz-linear-gradient(top,  rgba(114,81,109,0) 0%, rgb(255, 255, 255) 100%);
+    background: -webkit-linear-gradient(top,  rgba(114,81,109,0) 0%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(to bottom,  rgba(114,81,109,0) 0%, rgb(255, 255, 255) 100%);
     z-index: 1;
 }
 .background {
@@ -28,6 +29,7 @@
     z-index: 1;
 }
 .background #hero-canvas {
+    top: 8%;
     width: 100%;
     height: 100%;
     position: relative;

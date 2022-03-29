@@ -2,12 +2,13 @@
 
 @media only screen and (max-width: 500px){
     .navigation{
-        font-size: 10px;
+        font-size: 12px;
         height: 5%;
+        column-gap: 2px;
     }
     /*----------------------------------------------- ACCUEIL -----------------------------------------------*/
     .textAccueil{
-        top: 70%;
+        top: 67%;
         left: 2%;
         width: 93%;
     }
@@ -18,16 +19,22 @@
         padding: 15% 0 0 0;
     }
     /*----------------------------------------------- LES FONTS -----------------------------------------------*/
+    .background #hero-canvas {
+        top: 5% !important;
+        height: 110% !important;
+    }
     .moiImage {
-        top: 13%;
-        left: 56%;
-        width: 180px;
-        height: 240px;
+        top: 85px;
+        left: 205px;
+        width: 170px;
+        height: 233px;
+        z-index: 3;
     }
     .moiImage:hover {
         transform: scale(1.6);
-        margin-left: -120px;
-        border: ghostwhite solid 10px;
+        margin-left: -155px;
+        border-right: #e7e7e7 solid 50px;
+        border-left: #e7e7e7 solid 50px;
         z-index: 3;
     }
     .fondAPropos {
@@ -60,12 +67,18 @@
     }
     /*----------------------------------------------- A PROPOS -----------------------------------------------*/
     .textAPropos {
-        top: 80px;
+        top: 70px;
         left: 2%;
-        width: 51%;
+        width: 96%;
         height: auto;
         line-height: 1.3;
         font-size: 12px;
+    }
+    .textAPropos .aProposP1-2{
+        width: 185px;
+    }
+    .textAPropos .aProposP3{
+        width: 100%;
     }
     .interets {
         top: 410px;
@@ -113,6 +126,9 @@
     /*----------------------------------------------- PARCOURS -----------------------------------------------*/
     .card .imgBx p, .card .details p {
         font-size: 12px;
+    }
+    .card .details {
+        padding: 10px 15px;
     }
     .divParcours-1{
         top: 80px;
@@ -193,7 +209,7 @@
     }
     /*----------------------------------------------- PROJETS -----------------------------------------------*/
     .intro-block {
-        left:-110px;
+        left:-130px;
         height: 450px;
     }
     .border-1,
@@ -221,15 +237,15 @@
     }
     .hover-notify {
         top: 310px;
-        left: 110px;
+        left: 130px;
         width: 420px;
         text-align: center;
         font-size: 20px;
     }
     .code-display {
-        left: -590px;
+        left: -570px;
         top: 270px;
-        width: 440px;
+        width: 390px;
         height: 260px;
     }
     p.code-title {
