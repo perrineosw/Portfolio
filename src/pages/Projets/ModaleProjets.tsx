@@ -53,30 +53,30 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                     aria-modal="true"
                     aria-labelledby="modal-headline"
                 >
-                    <div className="bg-white dark:bg-gray-800 p-10 sm:p-6 sm:pb-4">
-                        <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                            <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
+                    <div className="bg-white p-10 sm:p-6 sm:pb-4">
+                        <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh] scrollbarLight">
+                            <h2 className="text-[#ef4060] text-4xl text-center font-bold">
                                 {title}
                             </h2>
                             <div className="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
                                 <div className="space-y-2">
-                                    <p className="dark:text-white flex items-center text-[15px] sm:text-lg">
+                                    <p className="flex items-center text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faFile} />&nbsp;
                                         Projet :&nbsp;
                                         <span className="font-medium">{category}</span>
                                     </p>
-                                    <p className="dark:text-white flex items-center text-[15px] sm:text-lg">
+                                    <p className="flex items-center text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faLanguage} />&nbsp;
                                         Langages :&nbsp;
                                         <span className="font-medium">{languages}</span>
                                     </p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
+                                    <p className="flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faUsers} />&nbsp;
                                         Client :&nbsp; <span className="font-medium">{customer}</span>
                                     </p>
-                                    <p className="dark:text-white flex items-center text-[15px] sm:text-lg">
+                                    <p className="flex items-center text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faExternalLink} />&nbsp;
                                         Site web :&nbsp;
                                         <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
@@ -86,7 +86,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                                 </div>
                             </div>
 
-                            <p className="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
+                            <p className="text-2line font-normal text-[15px] sm:text-sm">
                                 {description}
                             </p>
                             <div className="pr-3">
@@ -95,7 +95,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                             </div>
 
                         </div>
-                        <button onClick={onClose} className="close bg-close-light dark:bg-close-dark">
+                        <button onClick={onClose} className="close bg-close-light">
                             Close
                         </button>
                     </div>

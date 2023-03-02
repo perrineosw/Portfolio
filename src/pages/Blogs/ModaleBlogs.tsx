@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faFile, faExternalLink} from '@fortawesome/free-solid-svg-icons';
+import {faExternalLink} from '@fortawesome/free-solid-svg-icons';
 
 
 type ModaleProps = {
@@ -53,14 +53,14 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                     aria-modal="true"
                     aria-labelledby="modal-headline"
                 >
-                    <div className="bg-white dark:bg-gray-800 p-10 sm:p-6 sm:pb-4">
-                        <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                            <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
+                    <div className="bg-white p-10 sm:p-6 sm:pb-4">
+                        <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh]">
+                            <h2 className="text-[#ef4060] text-4xl text-center font-bold">
                                 {title}
                             </h2>
                             {website !== '' && (
                                 <div className="space-y-2 my-5">
-                                    <p className="dark:text-white flex items-center text-[15px] sm:text-lg">
+                                    <p className="flex items-center text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faExternalLink} />&nbsp;
                                         Site web :&nbsp;
                                         <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
@@ -70,10 +70,10 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                 </div>
                             )}
 
-                            <p className="mt-5 dark:text-white text-2line font-normal text-[15px] sm:text-sm">
+                            <p className="mt-5 text-2line font-normal text-[15px] sm:text-sm">
                                 {description.title.map((title, index) => (
                                     <div key={index}>
-                                        <p className="dark:text-white flex items-center font-bold text-[15px] sm:text-lg">
+                                        <p className="flex items-center font-bold text-[15px] sm:text-lg">
                                             {title}
                                         </p>
                                         <p className="my-5">
@@ -89,11 +89,11 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                             </p>
                             <img className="w-[50%] mx-auto mt-12 rounded-lg h-auto border-2 border-[#B5B5B5]"
                                  src={image} alt={`Image du blog : ${title}`}/>
-                            <span className="mt-10 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">
+                            <span className="mt-10 text-[14px] font-normal text-gray-lite block">
                                 Rédigé par : Perrine Oswald
                             </span>
                         </div>
-                        <button onClick={onClose} className="close bg-close-light dark:bg-close-dark">
+                        <button onClick={onClose} className="close bg-close-light">
                             Close
                         </button>
                     </div>

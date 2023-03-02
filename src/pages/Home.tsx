@@ -16,8 +16,8 @@ const Home = (): JSX.Element => {
                     data-aos="fade">
                     {/* personal image */}
                     <img className="mt-10 rounded-full w-[250px] h-[250px] 2xl:w-[280px] 2xl:h-[280px]" src={profile} alt="about avatar"/>
-                    <h1 className="mt-6 mb-1 text-6xl font-semibold dark:text-white">Perrine Oswald</h1>
-                    <p className="my-4 text-center text-2xl dark:text-white">Développeuse web<br/>Experte en Accessibilité et Qualité web</p>
+                    <h1 className="mt-6 mb-1 text-6xl font-semibold">Perrine Oswald</h1>
+                    <p className="my-4 text-center text-2xl">Développeuse web<br/>Experte en Accessibilité et Qualité web</p>
                     {/* social link and social  buttons */}
                     <div className="flex space-x-3">
                         {/* facebook link */}

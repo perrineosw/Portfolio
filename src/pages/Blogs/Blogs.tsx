@@ -121,10 +121,10 @@ const Blogs = (): JSX.Element => {
 
     return (
         <div>
-            <section className="container lg:rounded-2xl bg-white dark:bg-[#111111] px-4 sm:px-5 md:px-10 lg:px-20">
+            <section className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20">
                 <div className="container mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
                     <div className="py-12">
-                        <h2 className="border-b-2 border-b-pink-600 text-[35px] dark:text-white font-medium pb-5 mb-5">
+                        <h2 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 mb-5">
                             Mon blog
                         </h2>
                     </div>
@@ -134,13 +134,13 @@ const Blogs = (): JSX.Element => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6">
                             {/* portfolio items start */}
                             {blogs.map((blog, index) => (
-                                <div key={index} className={`py-4 dark:bg-transparent bg-[${blog.color}] pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2`}>
+                                <div key={index} className={`py-4 bg-[${blog.color}] pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
                                     <button onClick={() => toggleModal(blog)} className="w-full">
                                         <div className="overflow-hidden rounded-lg">
                                             <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
                                                  src={blog.image} alt={`Image du blog : ${blog.title}`}/>
                                         </div>
-                                        <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
+                                        <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
                                             {blog.title}
                                         </h2>
                                     </button>

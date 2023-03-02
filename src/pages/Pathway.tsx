@@ -114,7 +114,7 @@ const works = [
 const Pathway = (): JSX.Element => {
     return (
         <div>
-            <section className="container lg:rounded-2xl bg-white dark:bg-[#111111] px-4 sm:px-5 md:px-10 lg:px-20">
+            <section className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20">
                 <div data-aos="fade" className="aos-init aos-animate">
                     <div className="container sm:px-5 md:px-10 lg:px-20">
                         <div className="py-12 px-4">
@@ -122,9 +122,9 @@ const Pathway = (): JSX.Element => {
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
                                 {etudes.map((etude, index) => (
                                     <div key={`${index}`}
-                                         className={`py-4 dark:bg-transparent ${etude.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2`}>
+                                         className={`py-4 ${etude.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
                                         <span className="text-tiny text-gray-lite">{etude.dates}</span>
-                                        <h3 className="text-xl dark:text-white">
+                                        <h3 className="text-xl">
                                             {etude.title.split('\n').map((line, index) => (
                                                 <React.Fragment key={index}>
                                                     {line}
@@ -155,9 +155,9 @@ const Pathway = (): JSX.Element => {
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
                                 {works.map((work, index) => (
                                     <div key={`${index}`}
-                                         className={`py-4 dark:bg-transparent ${work.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2`}>
+                                         className={`py-4 ${work.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
                                         <span className="text-tiny text-gray-lite">{work.dates}</span>
-                                        <h3 className="text-xl dark:text-white">
+                                        <h3 className="text-xl">
                                             {work.title.split('\n').map((line, index) => (
                                                 <React.Fragment key={index}>
                                                     {line}
