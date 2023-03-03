@@ -16,7 +16,7 @@ import NotFound from './pages/NotFound';
 const App = () => {
     return (
         <div className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full custom-class">
-            <Router>
+            <Router basename="/Portfolio">
                 <NavBar />
                 <Routes>
                     <Route path="/" element={<Home />} />
