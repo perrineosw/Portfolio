@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.87e7112b.css",
-    "main.js": "/Portfolio/static/js/main.54e05607.js",
+    "main.css": "/Portfolio/static/css/main.e739d7f6.css",
+    "main.js": "/Portfolio/static/js/main.c626d1eb.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/antigaspi.png": "/Portfolio/static/media/antigaspi.265ad0e20f256b18e95a.png",
     "static/media/petite-annonce.png": "/Portfolio/static/media/petite-annonce.88e16e35c069a6cc4c7f.png",
@@ -10,6 +10,7 @@
     "static/media/intermarche.jpeg": "/Portfolio/static/media/intermarche.2e7b27c8081cab486caa.jpeg",
     "static/media/ynov.jpeg": "/Portfolio/static/media/ynov.3d9bd9cd5945f7b1ef32.jpeg",
     "static/media/profile.jpeg": "/Portfolio/static/media/profile.8e50a1d4b82fcc6c69ec.jpeg",
+    "static/media/404page.jpg": "/Portfolio/static/media/404page.cbc64e02b0e61476cd8a.jpg",
     "static/media/harmonie.jpg": "/Portfolio/static/media/harmonie.e2c6e9d75e9ca5ec99a1.jpg",
     "static/media/accessibilite.png": "/Portfolio/static/media/accessibilite.048ea1638f8a59708b15.png",
     "static/media/profile-2.jpeg": "/Portfolio/static/media/profile-2.7ad8d35101ebb400bf9b.jpeg",
@@ -21,12 +22,12 @@
     "static/media/avenirdata.jpeg": "/Portfolio/static/media/avenirdata.4c59c180e49fcdc6a037.jpeg",
     "static/media/opquast.png": "/Portfolio/static/media/opquast.cb2b86188ddd8d66afd0.png",
     "index.html": "/Portfolio/index.html",
-    "main.87e7112b.css.map": "/Portfolio/static/css/main.87e7112b.css.map",
-    "main.54e05607.js.map": "/Portfolio/static/js/main.54e05607.js.map",
+    "main.e739d7f6.css.map": "/Portfolio/static/css/main.e739d7f6.css.map",
+    "main.c626d1eb.js.map": "/Portfolio/static/js/main.c626d1eb.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.87e7112b.css",
-    "static/js/main.54e05607.js"
+    "static/css/main.e739d7f6.css",
+    "static/js/main.c626d1eb.js"
   ]
 }
