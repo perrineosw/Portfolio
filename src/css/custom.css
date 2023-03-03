@@ -1,9 +1,9 @@
 .bg-homeBg {
-    background-image: url('./images/background.jpeg');
+    background-image: url('../media/background.jpeg');
 }
 
 .dark .bg-homeBg {
-    background-image: url('./images/background-dark.jpeg');
+    background-image: url('../media/background.jpeg');
 }
 
 *,
@@ -400,7 +400,7 @@ object {
 }
 
 /*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+Constrain media and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
 img,
@@ -910,7 +910,7 @@ video {
 }
 
 .bg-close-light {
-    background-image: url('../src/images/bouton-croix.png');
+    background-image: url('../media/bouton-croix.png');
 }
 
 .dot-icon {

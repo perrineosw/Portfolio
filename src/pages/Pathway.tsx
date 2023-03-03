@@ -1,12 +1,12 @@
 import React from "react";
-import ynov from '../images/pathway/ynov.jpeg';
-import uppa from '../images/pathway/uppa.jpeg';
-import harountazieff from '../images/pathway/harountazieff.jpeg';
-import avenirdata from '../images/pathway/avenirdata.jpeg';
-import intermarche from '../images/pathway/intermarche.jpeg';
-import stpaullesdax from '../images/pathway/stPaulLesDax.jpeg';
-import feria from '../images/pathway/feria.jpeg';
-import harmonie from '../images/pathway/harmonie.jpg';
+import ynov from '../media/pathway/ynov.jpeg';
+import uppa from '../media/pathway/uppa.jpeg';
+import harountazieff from '../media/pathway/harountazieff.jpeg';
+import avenirdata from '../media/pathway/avenirdata.jpeg';
+import intermarche from '../media/pathway/intermarche.jpeg';
+import stpaullesdax from '../media/pathway/stPaulLesDax.jpeg';
+import feria from '../media/pathway/feria.jpeg';
+import harmonie from '../media/pathway/harmonie.jpg';
 
 const etudes = [
     {

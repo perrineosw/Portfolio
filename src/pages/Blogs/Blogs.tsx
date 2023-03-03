@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ModaleBlogs from "./ModaleBlogs"
-import gaspillage from "../../images/blogs/gaspillage.jpeg";
-import accessibilite from "../../images/blogs/accessibilite.png";
+import gaspillage from "../../media/blogs/gaspillage.jpeg";
+import accessibilite from "../../media/blogs/accessibilite.png";
 
 interface Blog {
     color: string;

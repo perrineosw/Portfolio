@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import ModaleProjets from "./ModaleProjets"
-import antigaspi from "../../images/projets/antigaspi.png";
-import petiteannonce from "../../images/projets/petite-annonce.png";
+import antigaspi from "../../media/projets/antigaspi.png";
+import petiteannonce from "../../media/projets/petite-annonce.png";
 
 const projets = [
     {

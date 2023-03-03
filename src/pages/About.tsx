@@ -1,6 +1,6 @@
 import React from "react";
-import profile from "../images/profile-2.jpeg";
-import opquast from "../images/opquast.png";
+import profile from "../media/profile-2.jpeg";
+import opquast from "../media/opquast.png";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhone, faLocation, faMailBulk, faCar, faComputer, faPhotoVideo, faMusic, faHandHoldingHeart, faGlobeEurope,
@@ -110,7 +110,7 @@ const About = (): JSX.Element => {
                         en équipe comme les Avengers, de communiquer comme un talkie-walkie, d'être autonome comme un
                         astronaute, organisée comme un bullet journal, rigoureuse comme un juge, curieuse comme un chat et
                         réactive comme une super-héroïne. En bref, je suis le genre de personne que vous voulez avoir dans
-                        votre équipe et je suis même prête à apporter le café pour l'équipe, avec le sourire !
+                        votre équipe !
                     </p>
                     {/* whai i do contain */}
                     <div className="my-20">
