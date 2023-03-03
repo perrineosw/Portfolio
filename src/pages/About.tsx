@@ -45,11 +45,12 @@ const About = (): JSX.Element => {
                                         et un code mal structuré est aussi agréable qu'une chanson de Céline Dion
                                         mal chantée. Je suis l'alliée déterminée des utilisateurs malvoyants et
                                         des développeurs soucieux de leur santé mentale. Alors si vous cherchez quelqu'un
-                                        pour rendre votre site accessible et agréable à utiliser, je suis votre woman !
+                                        pour rendre votre site accessible et agréable à utiliser, je suis la développeuse
+                                        dont vous avez besoin  !
                                     </p>
                                     <div className="grid grid-cols-12 md:gap-10 items-center">
                                         <div className="col-span-10">
-                                            Je releve le défi et passe la certification OPQUAST pour devenir expert en accessibilité et qualité web.
+                                            Je relève le défi et passe la certification OPQUAST pour devenir expert en accessibilité et qualité web.
                                         </div>
                                         <div className="col-span-2">
                                             <img src={opquast} alt="Logo OPQUAST" className="h-20"/>
