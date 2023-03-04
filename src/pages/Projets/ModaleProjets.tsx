@@ -48,17 +48,17 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                 </span>
                 <div
                     className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl
-                                transform transition-all my-8 align-middle max-w-[80vw]"
+                                transform transition-all my-8 align-middle lg:max-w-[80vw]"
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="modal-headline"
                 >
-                    <div className="bg-white p-10 sm:p-6 sm:pb-4">
-                        <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh] scrollbarLight">
+                    <div className="bg-white lg:p-10 sm:p-2">
+                        <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh]">
                             <h2 className="text-[#ef4060] text-4xl text-center font-bold">
                                 {title}
                             </h2>
-                            <div className="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                            <div className="grid grid-cols-1 sm:flex-col lg:grid-cols-2 my-6">
                                 <div className="space-y-2">
                                     <p className="flex items-center text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faFile} />&nbsp;
@@ -90,7 +90,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                                 {description}
                             </p>
                             <div className="pr-3">
-                                <img className="w-[50%] mx-auto mt-12 rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out transform hover:scale-150"
+                                <img className="lg:w-[50%] mx-auto mt-12 rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out transform hover:scale-150"
                                      src={image} alt={`Image du projet : ${title}`} />
                             </div>
 

@@ -48,12 +48,12 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                 </span>
                 <div
                     className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl
-                                transform transition-all my-8 align-middle max-w-[80vw]"
+                                transform transition-all my-8 align-middle lg:max-w-[80vw]"
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="modal-headline"
                 >
-                    <div className="bg-white p-10 sm:p-6 sm:pb-4">
+                    <div className="bg-white lg:p-10 sm:p-2">
                         <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh]">
                             <h2 className="text-[#ef4060] text-4xl text-center font-bold">
                                 {title}
@@ -87,7 +87,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                     </div>
                                 ))}
                             </p>
-                            <img className="w-[50%] mx-auto mt-12 rounded-lg h-auto border-2 border-[#B5B5B5]"
+                            <img className="lg:w-[50%] mx-auto mt-12 rounded-lg h-auto border-2 border-[#B5B5B5]"
                                  src={image} alt={`Image du blog : ${title}`}/>
                             <span className="mt-10 text-[14px] font-normal text-gray-lite block">
                                 Rédigé par : Perrine Oswald

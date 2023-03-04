@@ -123,7 +123,7 @@ const Blogs = (): JSX.Element => {
         <div>
             <section className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20">
                 <div className="container mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
-                    <div className="py-12">
+                    <div className="lg:pt-12 lg:pb-12 pt-24">
                         <h2 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 mb-5">
                             Mon blog
                         </h2>

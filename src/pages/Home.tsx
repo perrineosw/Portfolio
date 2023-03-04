@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../media/profile.jpeg";
+import cv from "../media/CV_Perrine_Oswald.pdf";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faDownload} from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -7,7 +8,7 @@ import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Home = (): JSX.Element => {
     return (
-        <div className="z-50">
+        <div className="z-50 mb-10">
             {/* container start */}
             <div className="container">
                 {/* Home page contant start */}
@@ -34,7 +35,7 @@ const Home = (): JSX.Element => {
                         </a>
                     </div>
                     {/* dowanload button */}
-                    <a href="" download>
+                    <a href={cv} download="CV_Perrine_Oswald.pdf">
                         <button className="dowanload-btn">
                             <span className="mr-2 text-base">
                                 <FontAwesomeIcon icon={faDownload} />

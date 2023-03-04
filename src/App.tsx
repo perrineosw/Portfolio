@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import './css/custom.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
@@ -19,15 +19,15 @@ const App = () => {
             <Router>
                 <NavBar />
                 <Routes>
-                    <Route path="" element={<Home />} />
-                    <Route path="home" element={<Home />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="pathway" element={<Pathway />} />
-                    <Route path="projets" element={<Projets />} />
-                    <Route path="blogs" element={<Blogs />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/pathway" element={<Pathway />} />
+                    <Route path="/projets" element={<Projets />} />
+                    <Route path="/blogs" element={<Blogs />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-                {(window.location.pathname !== 'home') ? <Footer /> : ""}
+                {(window.location.pathname === '/home' || window.location.pathname === '/') && <Footer />}
             </Router>
         </div>
     );

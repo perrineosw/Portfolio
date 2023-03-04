@@ -2,6 +2,7 @@ import React from "react";
 import profile from "../media/profile-2.jpeg";
 import opquast from "../media/opquast.png";
 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhone, faLocation, faMailBulk, faCar, faComputer, faPhotoVideo, faMusic, faHandHoldingHeart, faGlobeEurope,
         faCookieBite} from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +13,7 @@ const About = (): JSX.Element => {
         <div>
             <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20">
                 <div data-aos="fade" className="aos-init aos-animate">
-                    <div className="py-12">
+                    <div className="lg:pt-12 lg:pb-12 pt-24">
                         {/* about page title */}
                         <h2 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 mb-5">A propos de moi</h2>
                         <h3 className="text-4xl font-medium pt-4 md:pt-[40px] mb-2.5">Qui suis-je ?</h3>
@@ -40,7 +41,7 @@ const About = (): JSX.Element => {
                                     </p>
                                     <br/>
                                     <p className="leading-7">
-                                        L'accessibilité et de la qualité web est une thématique qui me tient à coeur.
+                                        L'accessibilité et la qualité web est une thématique qui me tient à coeur.
                                         Pour moi, un site web inaccessible est aussi utile qu'une pelle à neige en Floride,
                                         et un code mal structuré est aussi agréable qu'une chanson de Céline Dion
                                         mal chantée. Je suis l'alliée déterminée des utilisateurs malvoyants et

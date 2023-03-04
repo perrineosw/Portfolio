@@ -117,7 +117,7 @@ const Pathway = (): JSX.Element => {
             <section className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20">
                 <div data-aos="fade" className="aos-init aos-animate">
                     <div className="container sm:px-5 md:px-10 lg:px-20">
-                        <div className="py-12 px-4">
+                        <div className="lg:pt-12 lg:pb-12 pt-24 px-4">
                             <h1 className="border-b-2 border-b-pink-600 text-6xl mb-5 pb-5">Parcours éducatif</h1>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
                                 {etudes.map((etude, index) => (
