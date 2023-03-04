@@ -31,7 +31,7 @@ const About = (): JSX.Element => {
                                 </div>
                             </div>
                             <div className="col-span-12 md:col-span-8 space-y-2.5">
-                                {/* who am i content  */}
+                                {/* who am I content  */}
                                 <div className="md:mr-12 xl:mr-16">
                                     <p className="leading-7">
                                         J'ai commencé par une licence en informatique NEC à ANGLET (64), et maintenant
@@ -88,7 +88,7 @@ const About = (): JSX.Element => {
                                             </span>
                                             <div className="space-y-1">
                                                 <p className="text-xs text-gray-lite">Email</p>
-                                                <h6 className="font-medium">oswald.perrinedu40@gmail.com</h6>
+                                                <h6 className="font-medium"><a href="oswald.perrinedu40@gmail.com"><u>oswald.perrinedu40@gmail.com</u></a></h6>
                                             </div>
                                         </div>
 

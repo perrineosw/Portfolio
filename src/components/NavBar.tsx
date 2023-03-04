@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 function NavBar() {
     const [open, setOpen] = useState(false);
 
-    const [activeLink, setActiveLink] = useState(window.location.hash);
+    const [, setActiveLink] = useState(window.location.hash);
 
     const handleLinkClick = (hash: React.SetStateAction<string>) => {
         setActiveLink(hash);
@@ -84,7 +84,7 @@ function NavBar() {
                 </div>
             </div>
         </header>
-    );
-};
+    )
+}
 
 export default NavBar;

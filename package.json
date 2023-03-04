@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm i --save test",
     "deploy": "gh-pages -b test -d build",
     "start": "react-scripts start",
     "build": "react-scripts build"

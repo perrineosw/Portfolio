@@ -3,7 +3,7 @@ import errorpage from "../media/404page.jpg";
 import {NavLink} from "react-router-dom";
 
 const NotFound = (): JSX.Element => {
-    const [activeLink, setActiveLink] = useState(window.location.hash);
+    const [, setActiveLink] = useState(window.location.hash);
 
     const handleLinkClick = (hash: React.SetStateAction<string>) => {
         setActiveLink(hash);
@@ -24,11 +24,9 @@ const NotFound = (): JSX.Element => {
                                     Mais pas de soucis, vous pouvez retourner sur la page d'accueil en cliquant sur
                                     le bouton :
                                 </p>
-
-                                    <NavLink to="/home" onClick={() => handleLinkClick('#/home')}>
-                                        <button className="menu-item-two-active">Retour vers l'accueil</button>
-                                    </NavLink>
-
+                                <NavLink to="/home" onClick={() => handleLinkClick('#/home')}>
+                                    <button className="menu-item-two-active">Retour vers l'accueil</button>
+                                </NavLink>
                             </div>
                             <div className="grid-col max-w-lg">
                                 <img src={errorpage} alt="Chat qui dort" className="mx-auto"/>

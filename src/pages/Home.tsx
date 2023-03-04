@@ -22,13 +22,13 @@ const Home = (): JSX.Element => {
                     {/* social link and social  buttons */}
                     <div className="flex space-x-3">
                         {/* facebook link */}
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/perrine.osw" target="_blank" rel="noopener noreferrer">
                             <span className="text-6xl socialbtn text-[#1C9CEA]">
                                 <FontAwesomeIcon icon={faFacebook} />
                             </span>
                         </a>
                         {/* linkedin icon and link */}
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/perrine-oswald/" target="_blank" rel="noopener noreferrer">
                             <span className="text-6xl socialbtn text-[#0072b1]">
                                 <FontAwesomeIcon icon={faLinkedin} />
                             </span>

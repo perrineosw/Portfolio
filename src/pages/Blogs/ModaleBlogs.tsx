@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExternalLink} from '@fortawesome/free-solid-svg-icons';
 
@@ -18,16 +18,6 @@ type ModaleProps = {
 
 const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                                   description, website}) => {
-    const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-    const [selectedList, setSelectedList] = useState("");
-
-    const handleDateChange = (date: Date | null) => {
-        if (date) {
-            setSelectedDate(date);
-            setSelectedList(""); // reset the value of selectedList
-        }
-    };
-
     if (!isOpen) return null;
 
     return (
