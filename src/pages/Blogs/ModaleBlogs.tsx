@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExternalLink} from '@fortawesome/free-solid-svg-icons';
+import classNames from "classnames";
 
 
 type ModaleProps = {
@@ -19,6 +20,21 @@ type ModaleProps = {
 const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                                   description, website}) => {
     if (!isOpen) return null;
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(!isClicked);
+    };
+
+    const imageClassName = classNames(
+        "mx-auto mt-5 rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out",
+        {
+            "lg:w-[50%]": !isClicked,
+            "lg:w-full": isClicked
+        }
+    );
 
     return (
         <div className="fixed z-10 inset-0 overflow-y-auto">
@@ -77,11 +93,14 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                     </div>
                                 ))}
                             </p>
-                            <img className="lg:w-[50%] mx-auto mt-12 rounded-lg h-auto border-2 border-[#B5B5B5]"
-                                 src={image} alt={`Image du blog : ${title}`}/>
-                            <span className="mt-10 text-[14px] font-normal text-gray-lite block">
-                                Rédigé par : Perrine Oswald
-                            </span>
+                            <div className="pr-3 mt-12">
+                                <p className="flex items-center text-[15px] sm:text-lg text-[#ef4080]">
+                                    <i>Cliquez sur l'image pour l'agrandir !</i>
+                                </p>
+                                <img id="my-image" className={imageClassName}
+                                     onClick={handleClick}
+                                     src={image} alt={`Image du projet : ${title}`} />
+                            </div>
                         </div>
                         <button onClick={onClose} className="close bg-close-light">
                             Close

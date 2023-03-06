@@ -16,7 +16,7 @@ interface Blog {
 
 const blogs: Blog[] = [
     {
-        color: '#fff0f0',
+        color: 'perso-bg-orange',
         image: gaspillage,
         title: 'Lutter contre le gaspillage alimentaire',
         description: {
@@ -61,7 +61,7 @@ const blogs: Blog[] = [
         website: ''
     },
     {
-        color: '#fff3fc',
+        color: 'perso-bg-green',
         image: accessibilite,
         title: 'Accessibilité numérique',
         description: {
@@ -134,13 +134,13 @@ const Blogs = (): JSX.Element => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6">
                             {/* portfolio items start */}
                             {blogs.map((blog, index) => (
-                                <div key={index} className={`py-4 bg-[${blog.color}] pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                                <div key={index} className={`py-4 ${blog.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
                                     <button onClick={() => toggleModal(blog)} className="w-full">
                                         <div className="overflow-hidden rounded-lg">
                                             <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
                                                  src={blog.image} alt={`Image du blog : ${blog.title}`}/>
                                         </div>
-                                        <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
+                                        <h2 className="pt-5 font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
                                             {blog.title}
                                         </h2>
                                     </button>

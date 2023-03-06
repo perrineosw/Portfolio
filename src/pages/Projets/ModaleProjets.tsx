@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+import classNames from "classnames";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faFile, faLanguage, faUsers, faExternalLink} from '@fortawesome/free-solid-svg-icons';
 
@@ -20,6 +21,21 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                                            languages, website, customer }) => {
 
     if (!isOpen) return null;
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [isClicked, setIsClicked] = useState(false);
+
+    const handleClick = () => {
+        setIsClicked(!isClicked);
+    };
+
+    const imageClassName = classNames(
+        "mx-auto mt-5 rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out",
+        {
+            "lg:w-[50%]": !isClicked,
+            "lg:w-full": isClicked
+        }
+    );
 
     return (
         <div className="fixed z-10 inset-0 overflow-y-auto">
@@ -67,21 +83,27 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                                         <FontAwesomeIcon icon={faUsers} />&nbsp;
                                         Client :&nbsp; <span className="font-medium">{customer}</span>
                                     </p>
-                                    <p className="flex items-center text-[15px] sm:text-lg">
-                                        <FontAwesomeIcon icon={faExternalLink} />&nbsp;
-                                        Site web :&nbsp;
-                                        <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                                          <a href={website} target="_blank" rel="noopener noreferrer">{website}</a>
-                                        </span>
-                                    </p>
+                                    {website !== '' && (
+                                        <p className="flex items-center text-[15px] sm:text-lg">
+                                            <FontAwesomeIcon icon={faExternalLink} />&nbsp;
+                                            Site web :&nbsp;
+                                            <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
+                                                <a href={website} target="_blank" rel="noopener noreferrer"><u>{website}</u></a>
+                                            </span>
+                                        </p>
+                                    )}
                                 </div>
                             </div>
 
                             <p className="text-2line font-normal text-[15px] sm:text-sm">
                                 {description}
                             </p>
-                            <div className="pr-3">
-                                <img className="lg:w-[50%] mx-auto mt-12 rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out transform hover:scale-150"
+                            <div className="pr-3 mt-12">
+                                <p className="flex items-center text-[15px] sm:text-lg text-[#ef4080]">
+                                    <i>Cliquez sur l'image pour l'agrandir !</i>
+                                </p>
+                                <img id="my-image" className={imageClassName}
+                                     onClick={handleClick}
                                      src={image} alt={`Image du projet : ${title}`} />
                             </div>
 

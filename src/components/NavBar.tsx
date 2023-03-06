@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import React from "react";
 import {NavLink} from "react-router-dom";
-import {faList} from '@fortawesome/free-solid-svg-icons';
+import {faList, faHouse, faUser, faListDots, faSuitcase, faFile} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function NavBar() {
@@ -25,28 +25,28 @@ function NavBar() {
                             <ul className="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white">
                                 <li>
                                     <NavLink to="/home" className={(window.location.hash === '#/home' || window.location.hash === '') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/home')}>
-                                        Accueil
+                                        <FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;&nbsp;&nbsp;Accueil
                                     </NavLink>
 
                                 </li>
                                 <li>
                                     <NavLink to="/about" className={(window.location.hash === '#/about') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/about')}>
-                                        A propos
+                                        <FontAwesomeIcon icon={faUser} />&nbsp;&nbsp;&nbsp;&nbsp;A propos
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/pathway" className={(window.location.hash === '#/pathway') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/pathway')}>
-                                        Mes parcours
+                                        <FontAwesomeIcon icon={faListDots} />&nbsp;&nbsp;&nbsp;&nbsp;Mes parcours
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/projets" className={(window.location.hash === '#/projets') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/projets')}>
-                                        Mes projets
+                                        <FontAwesomeIcon icon={faSuitcase} />&nbsp;&nbsp;&nbsp;&nbsp;Mes projets
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/blogs" className={(window.location.hash === '#/blogs') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/blogs')}>
-                                        Blogs
+                                        <FontAwesomeIcon icon={faFile} />&nbsp;&nbsp;&nbsp;&nbsp;Blogs
                                     </NavLink>
                                 </li>
                             </ul>
@@ -56,27 +56,27 @@ function NavBar() {
                         <ul className="flex">
                             <li>
                                 <NavLink to="/home" className={(window.location.hash === '#/home' || window.location.hash === '') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/home')}>
-                                    Accueil
+                                    <FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;&nbsp;&nbsp;Accueil
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/about" className={(window.location.hash === '#/about') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/about')}>
-                                    A propos
+                                    <FontAwesomeIcon icon={faUser} />&nbsp;&nbsp;&nbsp;&nbsp;A propos
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/pathway" className={(window.location.hash === '#/pathway') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/pathway')}>
-                                    Mes parcours
+                                    <FontAwesomeIcon icon={faListDots} />&nbsp;&nbsp;&nbsp;&nbsp;Mes parcours
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/projets" className={(window.location.hash === '#/projets') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/projets')}>
-                                    Mes projets
+                                    <FontAwesomeIcon icon={faSuitcase} />&nbsp;&nbsp;&nbsp;&nbsp;Mes projets
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/blogs" className={(window.location.hash === '#/blogs') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/blogs')}>
-                                    Blogs
+                                    <FontAwesomeIcon icon={faFile} />&nbsp;&nbsp;&nbsp;&nbsp;Blogs
                                 </NavLink>
                             </li>
                         </ul>

@@ -494,8 +494,8 @@ video {
 
 .socialbtn {
     display: flex;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
     align-items: center;
     justify-content: center;
     border-radius: 0.5rem;
@@ -789,7 +789,7 @@ video {
 .dowanload-btn {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1.5rem;
+    margin-top: 4rem;
     display: flex;
     align-items: center;
     border-radius: 35px;

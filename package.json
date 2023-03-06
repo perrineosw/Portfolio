@@ -22,10 +22,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "build": "react-scripts build",
     "predeploy": "npm i --save test",
     "deploy": "gh-pages -b test -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
