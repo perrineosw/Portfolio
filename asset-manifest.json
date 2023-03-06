@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.38b2a6c1.css",
-    "main.js": "/Portfolio/static/js/main.49695104.js",
+    "main.css": "/Portfolio/static/css/main.d9a696db.css",
+    "main.js": "/Portfolio/static/js/main.8bfa950a.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/antigaspi.png": "/Portfolio/static/media/antigaspi.265ad0e20f256b18e95a.png",
     "static/media/petite-annonce.png": "/Portfolio/static/media/petite-annonce.88e16e35c069a6cc4c7f.png",
-    "static/media/CV_Perrine_Oswald.pdf": "/Portfolio/static/media/CV_Perrine_Oswald.63eb6c0e4d34042b6220.pdf",
+    "static/media/cv_perrine_oswald.pdf": "/Portfolio/static/media/cv_perrine_oswald.63eb6c0e4d34042b6220.pdf",
+    "static/media/datactive.png": "/Portfolio/static/media/datactive.b45cd538bd0a780fbc6f.png",
+    "static/media/profile-2.jpeg": "/Portfolio/static/media/profile-2.175e956a22d633633319.jpeg",
+    "static/media/inway.png": "/Portfolio/static/media/inway.d14fd14148d7b3195526.png",
+    "static/media/profile.jpeg": "/Portfolio/static/media/profile.e63f9cd90ed081661146.jpeg",
     "static/media/feria.jpeg": "/Portfolio/static/media/feria.4290a3af6a0503940da5.jpeg",
     "static/media/intermarche.jpeg": "/Portfolio/static/media/intermarche.2e7b27c8081cab486caa.jpeg",
     "static/media/ynov.jpeg": "/Portfolio/static/media/ynov.3d9bd9cd5945f7b1ef32.jpeg",
-    "static/media/profile.jpeg": "/Portfolio/static/media/profile.8e50a1d4b82fcc6c69ec.jpeg",
     "static/media/404page.jpg": "/Portfolio/static/media/404page.cbc64e02b0e61476cd8a.jpg",
     "static/media/harmonie.jpg": "/Portfolio/static/media/harmonie.e2c6e9d75e9ca5ec99a1.jpg",
     "static/media/accessibilite.png": "/Portfolio/static/media/accessibilite.048ea1638f8a59708b15.png",
-    "static/media/profile-2.jpeg": "/Portfolio/static/media/profile-2.7ad8d35101ebb400bf9b.jpeg",
+    "static/media/data.jpeg": "/Portfolio/static/media/data.3dfcd415b0fd6df7956a.jpeg",
     "static/media/background.jpeg": "/Portfolio/static/media/background.050e5036530f155fa061.jpeg",
     "static/media/stPaulLesDax.jpeg": "/Portfolio/static/media/stPaulLesDax.6e8f049221bcddd2b08c.jpeg",
     "static/media/uppa.jpeg": "/Portfolio/static/media/uppa.e2beef45f960328d7dbb.jpeg",
@@ -22,12 +25,12 @@
     "static/media/avenirdata.jpeg": "/Portfolio/static/media/avenirdata.4c59c180e49fcdc6a037.jpeg",
     "static/media/opquast.png": "/Portfolio/static/media/opquast.cb2b86188ddd8d66afd0.png",
     "index.html": "/Portfolio/index.html",
-    "main.38b2a6c1.css.map": "/Portfolio/static/css/main.38b2a6c1.css.map",
-    "main.49695104.js.map": "/Portfolio/static/js/main.49695104.js.map",
+    "main.d9a696db.css.map": "/Portfolio/static/css/main.d9a696db.css.map",
+    "main.8bfa950a.js.map": "/Portfolio/static/js/main.8bfa950a.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.38b2a6c1.css",
-    "static/js/main.49695104.js"
+    "static/css/main.d9a696db.css",
+    "static/js/main.8bfa950a.js"
   ]
 }
