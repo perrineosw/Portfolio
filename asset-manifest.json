@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.a4c91bb7.css",
-    "main.js": "/Portfolio/static/js/main.62014140.js",
+    "main.js": "/Portfolio/static/js/main.ea74a513.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/antigaspi.png": "/Portfolio/static/media/antigaspi.265ad0e20f256b18e95a.png",
     "static/media/petite-annonce.png": "/Portfolio/static/media/petite-annonce.88e16e35c069a6cc4c7f.png",
     "static/media/cv_perrine_oswald.pdf": "/Portfolio/static/media/cv_perrine_oswald.63eb6c0e4d34042b6220.pdf",
     "static/media/datactive.png": "/Portfolio/static/media/datactive.b45cd538bd0a780fbc6f.png",
     "static/media/profile-2.jpeg": "/Portfolio/static/media/profile-2.175e956a22d633633319.jpeg",
+    "static/media/inway.png": "/Portfolio/static/media/inway.d14fd14148d7b3195526.png",
     "static/media/profile.jpeg": "/Portfolio/static/media/profile.e63f9cd90ed081661146.jpeg",
     "static/media/feria.jpeg": "/Portfolio/static/media/feria.4290a3af6a0503940da5.jpeg",
     "static/media/intermarche.jpeg": "/Portfolio/static/media/intermarche.2e7b27c8081cab486caa.jpeg",
@@ -25,11 +26,11 @@
     "static/media/opquast.png": "/Portfolio/static/media/opquast.cb2b86188ddd8d66afd0.png",
     "index.html": "/Portfolio/index.html",
     "main.a4c91bb7.css.map": "/Portfolio/static/css/main.a4c91bb7.css.map",
-    "main.62014140.js.map": "/Portfolio/static/js/main.62014140.js.map",
+    "main.ea74a513.js.map": "/Portfolio/static/js/main.ea74a513.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4c91bb7.css",
-    "static/js/main.62014140.js"
+    "static/js/main.ea74a513.js"
   ]
 }
