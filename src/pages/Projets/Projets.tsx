@@ -17,7 +17,7 @@ const projets = [
             "devions en équipe refaire leur site web avec des fonctionnalités supplémentaires. J'étais en charge du front " +
             "(mise en place du style, des composants, du nettoyage et du respect des règles), j'ai également participé à " +
             "bons nombres de fonctionnalités (fullstack) notamment par des appels API et création d'endpoints pour l'API.",
-        languages: 'Bootstrap, Django, Ajax',
+        languages: 'Bootstrap, Django, Ajax, JS, API',
         website: '',
         customer: 'InWay'
     },
@@ -70,7 +70,7 @@ const projets = [
             'augmenter leur audience web. J\'ai également eu a créer tout le process de paramétrage directement disponible ' +
             'sur l\'application pour permettre aux clients d\'avoir une autonomie et un contrôle sur leurs comptes, ' +
             'établissements et droits associés.',
-        languages: 'Bootstrap, Django, Python',
+        languages: 'Bootstrap, Django, Python, JS',
         website: 'https://app.datactive.io/accounts/login/?next=/',
         customer: 'Avenir Data'
     }
@@ -88,48 +88,35 @@ const Projets = (): JSX.Element => {
     };
 
     return (
-        <div>
-            <section className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20">
-                <div className="container mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
-                    <div className="lg:pt-12 lg:pb-12 pt-24">
-                        <h2 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 mb-5">
-                            Mes projets
-                        </h2>
-                    </div>
-                    {/* End py-12 */}
-
-                    <div id="isotop-gallery-wrapper" className="mymix portfolio_list-two three-col">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6">
-                        {/* portfolio items start */}
-                        {projets.map((projet, index) => (
-                            <div key={index} className={`py-4 ${projet.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
-                                <button onClick={() => toggleModal(projet)} className="w-full">
-                                    <div className="overflow-hidden rounded-lg">
-                                        <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
-                                            src={projet.image} alt={`Image du projet : ${projet.title}`}/>
-                                    </div>
-                                    <span className="pt-5 text-[14px] font-normal text-gray-lite block">
-                                        {projet.category}
-                                    </span>
-                                    <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
-                                        {projet.title}
-                                    </h2>
-                                </button>
+        <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
+            <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Mes projets</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6 pt-5">
+                {projets.map((projet, index) => (
+                    <div key={index} className={`py-4 ${projet.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                        <button onClick={() => toggleModal(projet)} className="w-full">
+                            <div className="overflow-hidden rounded-lg">
+                                <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                    src={projet.image} alt={`Image du projet : ${projet.title}`}/>
                             </div>
-                        ))}
-                        </div>
+                            <span className="pt-5 text-[14px] font-normal text-gray-lite block">
+                                {projet.category}
+                            </span>
+                            <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
+                                {projet.title}
+                            </h2>
+                        </button>
                     </div>
-                    <ModaleProjets isOpen={showModal} onClose={() => setShowModal(false)}
-                                   image={selectedProjet.image}
-                                   title={selectedProjet.title}
-                                   category={selectedProjet.category}
-                                   description={selectedProjet.description}
-                                   languages={selectedProjet.languages}
-                                   website={selectedProjet.website}
-                                   customer={selectedProjet.customer}
-                    />
-                </div>
-            </section>
+                ))}
+            </div>
+            <ModaleProjets isOpen={showModal} onClose={() => setShowModal(false)}
+                           image={selectedProjet.image}
+                           title={selectedProjet.title}
+                           category={selectedProjet.category}
+                           description={selectedProjet.description}
+                           languages={selectedProjet.languages}
+                           website={selectedProjet.website}
+                           customer={selectedProjet.customer}
+            />
         </div>
     )
 }

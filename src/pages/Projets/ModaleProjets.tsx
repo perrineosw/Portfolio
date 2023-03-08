@@ -30,7 +30,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
     };
 
     const imageClassName = classNames(
-        "mx-auto mt-5 rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out",
+        "mx-auto rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out",
         {
             "lg:w-[50%]": !isClicked,
             "lg:w-full": isClicked
@@ -55,7 +55,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                 </span>
                 <div
                     className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl
-                                transform transition-all my-8 align-middle lg:max-w-[80vw]"
+                                transform transition-all py-8 align-middle lg:max-w-[80vw]"
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="modal-headline"
@@ -65,7 +65,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                             <h2 className="text-[#ef4060] text-4xl text-center font-bold">
                                 {title}
                             </h2>
-                            <div className="grid grid-cols-1 sm:flex-col lg:grid-cols-2 my-6">
+                            <div className="grid grid-cols-1 sm:flex-col lg:grid-cols-2 py-6">
                                 <div className="space-y-2">
                                     <p className="flex items-center text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faFile} />&nbsp;
@@ -74,12 +74,12 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                                     </p>
                                     <p className="flex items-center text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faLanguage} />&nbsp;
-                                        Langages :&nbsp;
+                                        Technologies :&nbsp;
                                         <span className="font-medium">{languages}</span>
                                     </p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
+                                    <p className="flex items-center pt-2 lg:pt-0 text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faUsers} />&nbsp;
                                         Client :&nbsp; <span className="font-medium">{customer}</span>
                                     </p>
@@ -95,12 +95,12 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                                 </div>
                             </div>
 
-                            <p className="text-2line font-normal text-[15px] sm:text-sm">
+                            <p className="text-2line font-normal text-[15px] sm:text-lg">
                                 {description}
                             </p>
-                            <div className="pr-3 mt-12">
-                                <p className="flex items-center text-[15px] sm:text-lg text-[#ef4080]">
-                                    <i>Cliquez sur l'image pour l'agrandir !</i>
+                            <div className="pr-3 pt-12">
+                                <p className="flex items-center text-[15px] sm:text-lg pb-5">
+                                    <i>Cliquer sur l'image pour l'agrandir !</i>
                                 </p>
                                 <img id="my-image" className={imageClassName}
                                      onClick={handleClick}

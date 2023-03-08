@@ -113,77 +113,65 @@ const works = [
 
 const Pathway = (): JSX.Element => {
     return (
-        <div>
-            <section className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20">
-                <div data-aos="fade" className="aos-init aos-animate">
-                    <div className="container sm:px-5 md:px-10 lg:px-20">
-                        <div className="lg:pt-12 lg:pb-12 pt-24 px-4">
-                            <h1 className="border-b-2 border-b-pink-600 text-6xl mb-5 pb-5">Parcours éducatif</h1>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
-                                {etudes.map((etude, index) => (
-                                    <div key={`${index}`}
-                                         className={`py-4 ${etude.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
-                                        <span className="text-tiny text-gray-lite">{etude.dates}</span>
-                                        <h3 className="text-xl">
-                                            {etude.title.split('\n').map((line, index) => (
-                                                <React.Fragment key={index}>
-                                                    {line}
-                                                    <br />
-                                                </React.Fragment>
-                                            ))}
-                                        </h3>
-                                        {etude.description.split('\n').map((line, index) => (
-                                            <React.Fragment key={index}>
-                                                {line}
-                                                <br />
-                                            </React.Fragment>
-                                        ))}
-                                        <p className="text-tiny text-gray-lite">{etude.city}</p>
-                                        <div className="overflow-hidden rounded-lg">
-                                            <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
-                                                 src={etude.image} alt={`Image de l'école : ${etude.description}`}/>
-                                        </div>
-                                        <a className="text-xs" href={etude.link}><u>A propos de l'école</u></a>
-                                    </div>
-                                ))}
-                            </div>
+        <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
+            <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Parcours éducatif</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
+                {etudes.map((etude, index) => (
+                    <div key={`${index}`}
+                         className={`py-4 ${etude.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                        <span className="text-tiny text-gray-lite">{etude.dates}</span>
+                        <h3 className="text-xl">
+                            {etude.title.split('\n').map((line, index) => (
+                                <React.Fragment key={index}>
+                                    {line}
+                                    <br />
+                                </React.Fragment>
+                            ))}
+                        </h3>
+                        {etude.description.split('\n').map((line, index) => (
+                            <React.Fragment key={index}>
+                                {line}
+                                <br />
+                            </React.Fragment>
+                        ))}
+                        <p className="text-tiny text-gray-lite">{etude.city}</p>
+                        <div className="overflow-hidden rounded-lg">
+                            <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
+                                 src={etude.image} alt={`Image de l'école : ${etude.description}`}/>
                         </div>
+                        <a className="text-xs" href={etude.link}><u>A propos de l'école</u></a>
                     </div>
-                    <div className="container sm:px-5 md:px-10 lg:px-20">
-                        <div className="py-12 px-4">
-                            <h1 className="border-b-2 border-b-pink-600 text-6xl mb-5 pb-5">Parcours professionnel</h1>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6">
-                                {works.map((work, index) => (
-                                    <div key={`${index}`}
-                                         className={`py-4 ${work.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
-                                        <span className="text-tiny text-gray-lite">{work.dates}</span>
-                                        <h3 className="text-xl">
-                                            {work.title.split('\n').map((line, index) => (
-                                                <React.Fragment key={index}>
-                                                    {line}
-                                                    <br />
-                                                </React.Fragment>
-                                            ))}
-                                        </h3>
-                                        {work.description.split('\n').map((line, index) => (
-                                            <React.Fragment key={index}>
-                                                {line}
-                                                <br />
-                                            </React.Fragment>
-                                        ))}
-                                        <p className="text-tiny text-gray-lite">{work.city}</p>
-                                        <div className="overflow-hidden rounded-lg">
-                                            <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
-                                                 src={work.image} alt={`Image de : ${work.image_work}`}/>
-                                        </div>
-                                        <a className="text-xs" href={work.link}><u>A propos de la société</u></a>
-                                    </div>
-                                ))}
-                            </div>
+                ))}
+            </div>
+            <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Parcours professionnel</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
+                {works.map((work, index) => (
+                    <div key={`${index}`}
+                         className={`py-4 ${work.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                        <span className="text-tiny text-gray-lite">{work.dates}</span>
+                        <h3 className="text-xl">
+                            {work.title.split('\n').map((line, index) => (
+                                <React.Fragment key={index}>
+                                    {line}
+                                    <br />
+                                </React.Fragment>
+                            ))}
+                        </h3>
+                        {work.description.split('\n').map((line, index) => (
+                            <React.Fragment key={index}>
+                                {line}
+                                <br />
+                            </React.Fragment>
+                        ))}
+                        <p className="text-tiny text-gray-lite">{work.city}</p>
+                        <div className="overflow-hidden rounded-lg">
+                            <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
+                                 src={work.image} alt={`Image de : ${work.image_work}`}/>
                         </div>
+                        <a className="text-xs" href={work.link}><u>A propos de la société</u></a>
                     </div>
-                </div>
-            </section>
+                ))}
+            </div>
         </div>
     )
 }

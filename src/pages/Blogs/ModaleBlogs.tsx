@@ -29,7 +29,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
     };
 
     const imageClassName = classNames(
-        "mx-auto mt-5 rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out",
+        "mx-auto rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out",
         {
             "lg:w-[50%]": !isClicked,
             "lg:w-full": isClicked
@@ -54,7 +54,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                 </span>
                 <div
                     className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl
-                                transform transition-all my-8 align-middle lg:max-w-[80vw]"
+                                transform transition-all py-8 align-middle lg:max-w-[80vw]"
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="modal-headline"
@@ -65,7 +65,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                 {title}
                             </h2>
                             {website !== '' && (
-                                <div className="space-y-2 my-5">
+                                <div className="space-y-2 mp-5">
                                     <p className="flex items-center text-[15px] sm:text-lg">
                                         <FontAwesomeIcon icon={faExternalLink} />&nbsp;
                                         Site web :&nbsp;
@@ -76,13 +76,13 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                 </div>
                             )}
 
-                            <p className="mt-5 text-2line font-normal text-[15px] sm:text-sm">
+                            <p className="pt-5 text-2line font-normal text-[15px] sm:text-sm">
                                 {description.title.map((title, index) => (
                                     <div key={index}>
                                         <p className="flex items-center font-bold text-[15px] sm:text-lg">
                                             {title}
                                         </p>
-                                        <p className="my-5">
+                                        <p className="py-5 text-[15px] sm:text-lg">
                                             {description.content[index].split('\n').map((line, index) => (
                                                 <React.Fragment key={index}>
                                                     {line}
@@ -92,10 +92,11 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                         </p>
                                     </div>
                                 ))}
+                                <p className="py-5 text-[15px] sm:text-lg text-[#ef4060]"><i>Rédigé par : Perrine Oswald</i></p>
                             </p>
-                            <div className="pr-3 mt-12">
-                                <p className="flex items-center text-[15px] sm:text-lg text-[#ef4080]">
-                                    <i>Cliquez sur l'image pour l'agrandir !</i>
+                            <div className="pr-3 pt-12">
+                                <p className="flex items-center text-[15px] sm:text-lg pb-5">
+                                    <i>Cliquer sur l'image pour l'agrandir !</i>
                                 </p>
                                 <img id="my-image" className={imageClassName}
                                      onClick={handleClick}

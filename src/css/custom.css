@@ -789,7 +789,6 @@ video {
 .dowanload-btn {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4rem;
     display: flex;
     align-items: center;
     border-radius: 35px;
@@ -2382,24 +2381,24 @@ video {
     color: rgb(68 86 108 / var(--tw-text-opacity));
 }
 
-.text-oriange {
+.text-red{
     --tw-text-opacity: 1;
-    color: rgb(233 59 129 / var(--tw-text-opacity));
+    color: rgb(199 36 117 / var(--tw-text-opacity));
 }
 
-.text-oriange-lite {
+.text-orange {
     --tw-text-opacity: 1;
-    color: rgb(253 117 144 / var(--tw-text-opacity));
+    color: rgb(233 100 100 / var(--tw-text-opacity));
 }
 
 .text-green {
     --tw-text-opacity: 1;
-    color: rgb(106 181 185 / var(--tw-text-opacity));
+    color: rgb(72 194 146 / var(--tw-text-opacity));
 }
 
-.text-color-50 {
+.text-blue {
     --tw-text-opacity: 1;
-    color: rgb(193 124 235 / var(--tw-text-opacity));
+    color: rgb(36 179 199 / var(--tw-text-opacity));
 }
 
 .text-black {

@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import ModaleBlogs from "./ModaleBlogs"
 import gaspillage from "../../media/blogs/gaspillage.jpeg";
 import accessibilite from "../../media/blogs/accessibilite.png";
+import veilletechno from "../../media/blogs/rapport_veille_technologique.pdf";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faDownload} from "@fortawesome/free-solid-svg-icons";
+import cv from "../../media/cv_perrine_oswald.pdf";
 
 interface Blog {
     color: string;
@@ -120,42 +124,46 @@ const Blogs = (): JSX.Element => {
     };
 
     return (
-        <div>
-            <section className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20">
-                <div className="container mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
-                    <div className="lg:pt-12 lg:pb-12 pt-24">
-                        <h2 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 mb-5">
-                            Mon blog
-                        </h2>
-                    </div>
-                    {/* End py-12 */}
-
-                    <div id="isotop-gallery-wrapper" className="mymix portfolio_list-two three-col">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6">
-                            {/* portfolio items start */}
-                            {blogs.map((blog, index) => (
-                                <div key={index} className={`py-4 ${blog.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
-                                    <button onClick={() => toggleModal(blog)} className="w-full">
-                                        <div className="overflow-hidden rounded-lg">
-                                            <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
-                                                 src={blog.image} alt={`Image du blog : ${blog.title}`}/>
-                                        </div>
-                                        <h2 className="pt-5 font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
-                                            {blog.title}
-                                        </h2>
-                                    </button>
+        <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
+            <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Mon blog</h1>
+            <div className="pt-5 pb-10">
+                <button className="dowanload-btn mt-12">
+                    <a href={veilletechno} download="Comprendre_Eco_Conception.pdf">
+                        <span className="text-base">
+                            <FontAwesomeIcon icon={faDownload} />
+                        </span>
+                        <span className="ml-2">
+                            Qu'est ce que l'Éco-Conception ?
+                        </span>
+                    </a>
+                </button>
+                <span className="flex justify-center text-sm mt-2 text-gray-600">
+                    .pdf - 337,08 Ko
+                </span>
+            </div>
+            <div id="isotop-gallery-wrapper" className="mymix portfolio_list-two three-col">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6">
+                    {blogs.map((blog, index) => (
+                        <div key={index} className={`py-4 ${blog.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                            <button onClick={() => toggleModal(blog)} className="w-full">
+                                <div className="overflow-hidden rounded-lg">
+                                    <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                         src={blog.image} alt={`Image du blog : ${blog.title}`}/>
                                 </div>
-                            ))}
+                                <h2 className="pt-5 font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
+                                    {blog.title}
+                                </h2>
+                            </button>
                         </div>
-                    </div>
-                    <ModaleBlogs isOpen={showModal} onClose={() => setShowModal(false)}
-                                   image={selectedBlog.image}
-                                   title={selectedBlog.title}
-                                   description={selectedBlog.description}
-                                   website={selectedBlog.website}
-                    />
+                    ))}
                 </div>
-            </section>
+            </div>
+            <ModaleBlogs isOpen={showModal} onClose={() => setShowModal(false)}
+                           image={selectedBlog.image}
+                           title={selectedBlog.title}
+                           description={selectedBlog.description}
+                           website={selectedBlog.website}
+            />
         </div>
     )
 }
