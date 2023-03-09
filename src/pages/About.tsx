@@ -14,10 +14,10 @@ const About = (): JSX.Element => {
             <h2 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">A propos de moi</h2>
             <h3 className="text-4xl font-medium pt-4 md:pt-[40px] mb-2.5">Qui suis-je ?</h3>
             <div className="grid grid-cols-12 md:gap-10 items-center">
-                <div className="col-span-12 md:col-span-4">
+                <div className="col-span-12 lg:col-span-4">
                     <img src={profile} alt="Photo de profile" className="rounded"/>
                 </div>
-                <div className="col-span-12 md:col-span-8 space-y-2.5">
+                <div className="col-span-12 lg:col-span-8 space-y-2.5">
                     <div className="md:mr-12 xl:mr-16">
                         <p className="leading-7 pt-5">
                             J'ai commencé par une licence en informatique NEC à ANGLET (64), et maintenant
@@ -104,7 +104,7 @@ const About = (): JSX.Element => {
             </p>
             <div className="pt-10">
                 <h3 className="text-[35px] font-medium pb-5">Mes centres d'intérêts</h3>
-                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                <div className="grid gap-8 grid-cols-1 xl:grid-cols-3">
                     <div className="about-box perso-bg-red">
                         <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faComputer} />
                         <div className="space-y-2">
@@ -175,7 +175,7 @@ const About = (): JSX.Element => {
                 </div>
             </div>
             <div className="container pb-20 pt-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div className="col-span-1 lg:pr-10 pr-0">
                         <h4 className="text-5xl font-medium mb-6">Langues étrangères</h4>
                         <div className="mb-5">

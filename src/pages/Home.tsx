@@ -35,7 +35,7 @@ const Home = (): JSX.Element => {
                                     <span className="text-base">
                                         <FontAwesomeIcon icon={faDownload} />
                                     </span>
-                                        <span className="ml-2">
+                                    <span className="ml-2">
                                         Télécharger mon CV
                                     </span>
                                 </a>

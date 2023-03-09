@@ -39,26 +39,12 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
     return (
         <div className="fixed z-10 inset-0 overflow-y-auto">
             <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                <div
-                    className="fixed inset-0 transition-opacity"
-                    aria-hidden="true"
-                    onClick={onClose}
-                >
+                <div className="fixed inset-0 transition-opacity" aria-hidden="true" onClick={onClose} onTouchStart={onClose}>
                     <div className={`absolute inset-0 bg-gray-300 opacity-80`}></div>
                 </div>
-                <span
-                    className="hidden sm:inline-block sm:align-middle sm:h-screen"
-                    aria-hidden="true"
-                >
-
-                </span>
-                <div
-                    className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl
-                                transform transition-all py-8 align-middle lg:max-w-[80vw]"
-                    role="dialog"
-                    aria-modal="true"
-                    aria-labelledby="modal-headline"
-                >
+                <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true"></span>
+                <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all py-8 align-middle lg:max-w-[80vw]"
+                    role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                     <div className="bg-white lg:p-10 sm:p-2">
                         <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh]">
                             <h2 className="text-[#ef4060] text-4xl text-center font-bold">
@@ -98,12 +84,10 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                 <p className="flex items-center text-[15px] sm:text-lg pb-5">
                                     <i>Cliquer sur l'image pour l'agrandir !</i>
                                 </p>
-                                <img id="my-image" className={imageClassName}
-                                     onClick={handleClick}
-                                     src={image} alt={`Image du projet : ${title}`} />
+                                <img id="my-image" className={imageClassName} onClick={handleClick} src={image} alt={`Image du projet : ${title}`} />
                             </div>
                         </div>
-                        <button onClick={onClose} className="close bg-close-light">
+                        <button onClick={onClose} onTouchStart={onClose} className="close bg-close-light">
                             Close
                         </button>
                     </div>

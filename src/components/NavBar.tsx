@@ -14,7 +14,7 @@ function NavBar() {
     };
 
     return (
-        <header className="flex py-5 justify-between items-center px-10 bg-gray-300 fixed top-0 left-0 w-full bg-transparent lg:static z-[1111111111]">
+        <header className="flex py-5 justify-between items-center px-10 bg-gray-300 fixed top-0 left-0 bg-transparent lg:static z-[1111111111]">
             <div className="flex">
                 <div className="flex justify-between w-full items-center space-x-4">
                     <div className="flex items-center">

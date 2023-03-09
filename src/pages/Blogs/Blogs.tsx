@@ -142,7 +142,7 @@ const Blogs = (): JSX.Element => {
                 </span>
             </div>
             <div id="isotop-gallery-wrapper" className="mymix portfolio_list-two three-col">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6">
                     {blogs.map((blog, index) => (
                         <div key={index} className={`py-4 ${blog.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
                             <button onClick={() => toggleModal(blog)} className="w-full">

@@ -115,7 +115,7 @@ const Pathway = (): JSX.Element => {
     return (
         <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
             <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Parcours éducatif</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
                 {etudes.map((etude, index) => (
                     <div key={`${index}`}
                          className={`py-4 ${etude.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
@@ -144,7 +144,7 @@ const Pathway = (): JSX.Element => {
                 ))}
             </div>
             <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Parcours professionnel</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
                 {works.map((work, index) => (
                     <div key={`${index}`}
                          className={`py-4 ${work.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
