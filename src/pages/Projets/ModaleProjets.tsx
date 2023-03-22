@@ -30,11 +30,11 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
     };
 
     const imageClassName = classNames(
-        "mx-auto rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out",
-        {
+        "mx-auto rounded-lg h-auto transition duration-200 ease-in-out",
+        /*{
             "lg:w-[50%]": !isClicked,
             "lg:w-full": isClicked
-        }
+        }*/
     );
 
     return (

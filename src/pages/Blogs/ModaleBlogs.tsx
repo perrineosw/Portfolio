@@ -29,11 +29,11 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
     };
 
     const imageClassName = classNames(
-        "mx-auto rounded-lg h-auto border-2 border-[#B5B5B5] transition duration-200 ease-in-out",
-        {
+        "mx-auto rounded-lg h-auto transition duration-200 ease-in-out",
+        /*{
             "lg:w-[50%]": !isClicked,
             "lg:w-full": isClicked
-        }
+        }*/
     );
 
     return (
@@ -81,9 +81,6 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                 <p className="py-5 text-[15px] sm:text-lg text-[#ef4060]"><i>Rédigé par : Perrine Oswald</i></p>
                             </p>
                             <div className="pr-3 pt-12">
-                                <p className="flex items-center text-[15px] sm:text-lg pb-5">
-                                    <i>Cliquer sur l'image pour l'agrandir !</i>
-                                </p>
                                 <img id="my-image" className={imageClassName} onClick={handleClick} src={image} alt={`Image du projet : ${title}`} />
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ModaleBlogs from "./ModaleBlogs"
-import gaspillage from "../../media/blogs/gaspillage.jpeg";
+import gaspillage from "../../media/blogs/gaspillage.png";
 import accessibilite from "../../media/blogs/accessibilite.png";
 import veilletechno from "../../media/blogs/rapport_veille_technologique.pdf";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

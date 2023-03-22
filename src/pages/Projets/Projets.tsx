@@ -1,15 +1,19 @@
 import React, {useState} from "react";
 import ModaleProjets from "./ModaleProjets"
 import antigaspi from "../../media/projets/antigaspi.png";
+import antigaspi2 from "../../media/projets/antigaspi2.png";
 import petiteannonce from "../../media/projets/petite-annonce.png";
+import petiteannonce2 from "../../media/projets/petite-annonce2.png";
 import datactive from "../../media/projets/datactive.png";
-import data from "../../media/projets/data.jpeg";
+import data from "../../media/projets/data.png";
+import data2 from "../../media/projets/data2.png";
 import inway from "../../media/projets/inway.png";
 
 const projets = [
     {
         color: 'perso-bg-red',
         image: inway,
+        image_detail: inway,
         title: 'Atlas InWay',
         category: 'Site web',
         description: "L'Atlas InWay est une base de données universelle à destination des utilisateurs d'instrumentation " +
@@ -24,6 +28,7 @@ const projets = [
     {
         color: 'perso-bg-yellow',
         image: petiteannonce,
+        image_detail: petiteannonce2,
         title: 'Petite-annonce',
         category: 'Site web',
         description: 'Site web réalisé en équipe de 6 étudiants. Notre objectif était de créer un site web qui permet aux ' +
@@ -36,6 +41,7 @@ const projets = [
     {
         color: 'perso-bg-orange',
         image: antigaspi,
+        image_detail: antigaspi2,
         title: 'AntiGaspi',
         category: 'Site web',
         description: 'Site web réalisé en binôme avec un autre étudiant de ma promotion. Notre objectif via la création de se site était de créer un site fullstack et notre thématique est : accélérer le troc et lutter ensemble et gratuitement contre le gaspillage alimentaire !',
@@ -46,6 +52,7 @@ const projets = [
     {
         color: 'perso-bg-green',
         image: data,
+        image_detail: data2,
         title: 'Socle de données & export',
         category: 'Data',
         description: "Pour la société d'Avenir Data, l'une des missions principales était la constitution d'un socle de " +
@@ -60,6 +67,7 @@ const projets = [
     {
         color: 'perso-bg-purple',
         image: datactive,
+        image_detail: datactive,
         title: 'Datactive',
         category: 'Site web',
         description: 'Datactive est une plateforme d’automatisation commerciale et d’engagement client pour développer ' +
@@ -78,10 +86,10 @@ const projets = [
 
 const Projets = (): JSX.Element => {
     const [showModal, setShowModal] = useState(false);
-    const [selectedProjet, setSelectedProjet] = useState({ image: '', title: '', category: '',
+    const [selectedProjet, setSelectedProjet] = useState({ image: '', image_detail: '', title: '', category: '',
                                                 description: '', languages: '', website: '', customer: ''});
 
-    const toggleModal = (projet: { image: string, title: string, category: string, description: string,
+    const toggleModal = (projet: { image: string, image_detail: string, title: string, category: string, description: string,
         languages: string, website: string, customer: string }) => {
         setSelectedProjet(projet);
         setShowModal(!showModal);
@@ -109,7 +117,7 @@ const Projets = (): JSX.Element => {
                 ))}
             </div>
             <ModaleProjets isOpen={showModal} onClose={() => setShowModal(false)}
-                           image={selectedProjet.image}
+                           image={selectedProjet.image_detail}
                            title={selectedProjet.title}
                            category={selectedProjet.category}
                            description={selectedProjet.description}
