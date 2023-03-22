@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.31eb934e.css",
-    "main.js": "/Portfolio/static/js/main.919f86b2.js",
-    "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "main.css": "/Portfolio/static/css/main.f9f5749c.css",
+    "main.js": "/Portfolio/static/js/main.d62b873b.js",
+    "static/js/787.f6e65957.chunk.js": "/Portfolio/static/js/787.f6e65957.chunk.js",
+    "static/media/antigaspi2.png": "/Portfolio/static/media/antigaspi2.aa5bb8c4a58647c8c1b0.png",
+    "static/media/data2.png": "/Portfolio/static/media/data2.bcacc86105467864346b.png",
     "static/media/antigaspi.png": "/Portfolio/static/media/antigaspi.265ad0e20f256b18e95a.png",
+    "static/media/data.png": "/Portfolio/static/media/data.d1e6d3675ae9d48cc67c.png",
+    "static/media/petite-annonce2.png": "/Portfolio/static/media/petite-annonce2.d913d7811f8ad2548fb2.png",
     "static/media/petite-annonce.png": "/Portfolio/static/media/petite-annonce.88e16e35c069a6cc4c7f.png",
     "static/media/cv_perrine_oswald.pdf": "/Portfolio/static/media/cv_perrine_oswald.63eb6c0e4d34042b6220.pdf",
     "static/media/datactive.png": "/Portfolio/static/media/datactive.b45cd538bd0a780fbc6f.png",
     "static/media/profile-2.jpeg": "/Portfolio/static/media/profile-2.175e956a22d633633319.jpeg",
     "static/media/inway.png": "/Portfolio/static/media/inway.d14fd14148d7b3195526.png",
     "static/media/profile.jpeg": "/Portfolio/static/media/profile.e63f9cd90ed081661146.jpeg",
+    "static/media/gaspillage.png": "/Portfolio/static/media/gaspillage.e515368f9e53c2a97de2.png",
     "static/media/rapport_veille_technologique.pdf": "/Portfolio/static/media/rapport_veille_technologique.238092a7f1e631db6184.pdf",
     "static/media/feria.jpeg": "/Portfolio/static/media/feria.4290a3af6a0503940da5.jpeg",
     "static/media/intermarche.jpeg": "/Portfolio/static/media/intermarche.2e7b27c8081cab486caa.jpeg",
@@ -17,21 +22,19 @@
     "static/media/404page.jpg": "/Portfolio/static/media/404page.cbc64e02b0e61476cd8a.jpg",
     "static/media/harmonie.jpg": "/Portfolio/static/media/harmonie.e2c6e9d75e9ca5ec99a1.jpg",
     "static/media/accessibilite.png": "/Portfolio/static/media/accessibilite.048ea1638f8a59708b15.png",
-    "static/media/data.jpeg": "/Portfolio/static/media/data.3dfcd415b0fd6df7956a.jpeg",
     "static/media/background.jpeg": "/Portfolio/static/media/background.050e5036530f155fa061.jpeg",
     "static/media/stPaulLesDax.jpeg": "/Portfolio/static/media/stPaulLesDax.6e8f049221bcddd2b08c.jpeg",
     "static/media/uppa.jpeg": "/Portfolio/static/media/uppa.e2beef45f960328d7dbb.jpeg",
-    "static/media/gaspillage.jpeg": "/Portfolio/static/media/gaspillage.f21b13f0351b92df9ee7.jpeg",
     "static/media/harountazieff.jpeg": "/Portfolio/static/media/harountazieff.6b7985d6e7783511e093.jpeg",
     "static/media/avenirdata.jpeg": "/Portfolio/static/media/avenirdata.4c59c180e49fcdc6a037.jpeg",
     "static/media/opquast.png": "/Portfolio/static/media/opquast.cb2b86188ddd8d66afd0.png",
     "index.html": "/Portfolio/index.html",
-    "main.31eb934e.css.map": "/Portfolio/static/css/main.31eb934e.css.map",
-    "main.919f86b2.js.map": "/Portfolio/static/js/main.919f86b2.js.map",
-    "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.f9f5749c.css.map": "/Portfolio/static/css/main.f9f5749c.css.map",
+    "main.d62b873b.js.map": "/Portfolio/static/js/main.d62b873b.js.map",
+    "787.f6e65957.chunk.js.map": "/Portfolio/static/js/787.f6e65957.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31eb934e.css",
-    "static/js/main.919f86b2.js"
+    "static/css/main.f9f5749c.css",
+    "static/js/main.d62b873b.js"
   ]
 }
