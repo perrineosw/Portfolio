@@ -150,7 +150,7 @@ const Blogs = (): JSX.Element => {
                                     <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
                                          src={blog.image} alt={`Image du blog : ${blog.title}`}/>
                                 </div>
-                                <h2 className="pt-5 font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
+                                <h2 className="pt-5 font-medium cursor-pointer text-xl duration-300 transition hover:text-[#C72475FF]">
                                     {blog.title}
                                 </h2>
                             </button>

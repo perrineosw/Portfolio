@@ -58,7 +58,7 @@ const About = (): JSX.Element => {
                 <h3 className="text-4xl font-medium mb-5">Informations personnelles</h3>
                 <div className="flex mx-auto gap-x-16 gap-y-6 my-5 flex-wrap">
                     <div className="flex">
-                        <span className="text-red shadow-icon mr-2.5 flex items-center justify-center rounded-md text-2xl w-12 text-">
+                        <span className="text-red mr-2.5 flex items-center justify-center rounded-md text-2xl w-12">
                             <FontAwesomeIcon icon={faPhone} />
                         </span>
                         <div className="space-y-1">
@@ -67,7 +67,7 @@ const About = (): JSX.Element => {
                         </div>
                     </div>
                     <div className="flex">
-                        <span className="text-orange shadow-icon mr-2.5 flex items-center justify-center rounded-md text-2xl w-12 text-">
+                        <span className="text-orange mr-2.5 flex items-center justify-center rounded-md text-2xl w-12">
                             <FontAwesomeIcon icon={faLocation} />
                         </span>
                         <div className="space-y-1">
@@ -76,7 +76,7 @@ const About = (): JSX.Element => {
                         </div>
                     </div>
                     <div className="flex">
-                        <span className="text-green shadow-icon mr-2.5 flex items-center justify-center rounded-md text-2xl w-12 text-">
+                        <span className="text-green mr-2.5 flex items-center justify-center rounded-md text-2xl w-12">
                             <FontAwesomeIcon icon={faMailBulk} />
                         </span>
                         <div className="space-y-1">
@@ -85,7 +85,7 @@ const About = (): JSX.Element => {
                         </div>
                     </div>
                     <div className="flex">
-                        <span className="text-blue shadow-icon mr-2.5 flex items-center justify-center rounded-md text-2xl w-12 text-">
+                        <span className="text-blue mr-2.5 flex items-center justify-center rounded-md text-2xl w-12">
                             <FontAwesomeIcon icon={faCar} />
                         </span>
                         <div className="space-y-1">
@@ -103,7 +103,7 @@ const About = (): JSX.Element => {
                 votre équipe !
             </p>
             <div className="pt-10">
-                <h3 className="text-[35px] font-medium pb-5">Mes centres d'intérêts</h3>
+                <h3 className="text-4xl font-medium mb-5">Mes centres d'intérêts</h3>
                 <div className="grid gap-8 grid-cols-1 xl:grid-cols-3">
                     <div className="about-box perso-bg-red">
                         <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faComputer} />
@@ -177,7 +177,7 @@ const About = (): JSX.Element => {
             <div className="container pb-20 pt-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div className="col-span-1 lg:pr-10 pr-0">
-                        <h4 className="text-5xl font-medium mb-6">Langues étrangères</h4>
+                        <h3 className="text-4xl font-medium mb-5">Langues étrangères</h3>
                         <div className="mb-5">
                             <div className="flex justify-between mb-1">
                                     <span className=" font-semibold">Espagnol</span>
@@ -198,7 +198,7 @@ const About = (): JSX.Element => {
                         </div>
                     </div>
                     <div className="col-span-1 lg:pl-10 pl-0">
-                        <h4 className="text-5xl font-medium mb-8">Connaissances</h4>
+                        <h3 className="text-4xl font-medium mb-5">Connaissances</h3>
                         <div className="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
                             <div className="resume perso-bg-gray mx-auto">Web fullstack</div>
                             <div className="resume perso-bg-gray mx-auto">Python</div>

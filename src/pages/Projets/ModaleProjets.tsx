@@ -48,43 +48,43 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title, ca
                     role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                     <div className="bg-white lg:p-10 sm:p-2">
                         <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh]">
-                            <h2 className="text-[#ef4060] text-4xl text-center font-bold">
+                            <h2 className="text-red text-4xl text-center font-bold">
                                 {title}
                             </h2>
                             <div className="grid grid-cols-1 sm:flex-col lg:grid-cols-2 py-6">
                                 <div className="space-y-2">
-                                    <p className="flex items-center text-[15px] sm:text-lg">
+                                    <p className="flex items-center">
                                         <FontAwesomeIcon icon={faFile} />&nbsp;
                                         Projet :&nbsp;
                                         <span className="font-medium">{category}</span>
                                     </p>
-                                    <p className="flex items-center text-[15px] sm:text-lg">
+                                    <p className="flex items-center">
                                         <FontAwesomeIcon icon={faLanguage} />&nbsp;
                                         Technologies :&nbsp;
                                         <span className="font-medium">{languages}</span>
                                     </p>
                                 </div>
                                 <div className="space-y-2">
-                                    <p className="flex items-center pt-2 lg:pt-0 text-[15px] sm:text-lg">
+                                    <p className="flex items-center pt-2 lg:pt-0">
                                         <FontAwesomeIcon icon={faUsers} />&nbsp;
                                         Client :&nbsp; <span className="font-medium">{customer}</span>
                                     </p>
                                     {website !== '' && (
-                                        <p className="flex items-center text-[15px] sm:text-lg">
+                                        <p className="flex items-center">
                                             <FontAwesomeIcon icon={faExternalLink} />&nbsp;
                                             Site web :&nbsp;
-                                            <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
+                                            <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#C72475FF]">
                                                 <a href={website} target="_blank" rel="noopener noreferrer"><u>{website}</u></a>
                                             </span>
                                         </p>
                                     )}
                                 </div>
                             </div>
-                            <p className="text-2line font-normal text-[15px] sm:text-lg">
+                            <p className="text-2line font-normal">
                                 {description}
                             </p>
                             <div className="pr-3 pt-12">
-                                <p className="hidden sm:flex items-center text-[15px] sm:text-lg pb-5">
+                                <p className="hidden sm:flex items-center pb-5">
                                     <i>Cliquer sur l'image pour l'agrandir !</i>
                                 </p>
                                 <img id="my-image" className={imageClassName} onClick={handleClick} src={image} alt={`Image du projet : ${title}`} />

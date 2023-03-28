@@ -106,10 +106,10 @@ const Projets = (): JSX.Element => {
                                 <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
                                     src={projet.image} alt={`Image du projet : ${projet.title}`}/>
                             </div>
-                            <span className="pt-5 text-[14px] font-normal text-gray-lite block">
+                            <span className="pt-5 font-normal text-gray-lite block">
                                 {projet.category}
                             </span>
-                            <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252]">
+                            <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#C72475FF]">
                                 {projet.title}
                             </h2>
                         </button>

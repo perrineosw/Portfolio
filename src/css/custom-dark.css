@@ -1,17 +1,6 @@
 :root {
-    --var-gray2: rgb(68 86 108 / 1);
-    --var-pink2: rgb(199 36 117 / 1);
-    --var-orange2: rgb(233 100 100 / 1);
-    --var-green2: rgb(72 194 146 / 1);
-    --var-blue2: rgb(36 179 199 / 1);
-
-    --var-red: #FFE4F2;
-    --var-yellow: #EFFFC9;
-    --var-orange: #FFDCD6;
-    --var-green: #C9FFE7;
-    --var-purple: #F4D6FF;
-    --var-blue: #D6FBFF;
-    --var-gray: #E1E1E1;
+    --var-gray2: black;
+    --var-pink2: black;
 }
 
 .bg-homeBg {
