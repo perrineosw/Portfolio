@@ -8,6 +8,7 @@ type ModaleProps = {
     isOpen: boolean;
     onClose: () => void;
     image: string;
+    date: string;
     title: string;
     description: {
         title: string[];
@@ -17,7 +18,7 @@ type ModaleProps = {
     children?: React.ReactNode;
 };
 
-const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
+const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image, date, title,
                                                   description, website}) => {
     if (!isOpen) return null;
 
@@ -78,7 +79,8 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image,title,
                                         </p>
                                     </div>
                                 ))}
-                                <p className="py-5 text-red"><i>Rédigé par : Perrine Oswald</i></p>
+                                <p className="pt-5 text-red"><i>Rédigé par : Perrine Oswald</i></p>
+                                <p className="pb-5"><i>Publié le {date}</i></p>
                             </p>
                             <div className="pr-3 pt-12">
                                 <img id="my-image" className={imageClassName} onClick={handleClick} src={image} alt={`Image du projet : ${title}`} />
