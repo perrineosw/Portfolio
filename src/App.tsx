@@ -28,7 +28,6 @@ const App = () => {
                     <Route path="/blogs" element={<Blogs />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-                {(window.location.pathname === '/home' || window.location.pathname === '/') && <Footer />}
             </Router>
         </div>
     );

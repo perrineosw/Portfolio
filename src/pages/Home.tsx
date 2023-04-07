@@ -17,13 +17,9 @@ const Home = (): JSX.Element => {
                         </div>
                         <div className="w-full my-auto pb-10">
                             <h1 className="mb-1 text-7xl text-center font-semibold">Perrine Oswald</h1>
-                            <p className="lg:my-8 my-4 text-center text-4xl">Développeuse web fullstack<br/>Experte en Accessibilité et Qualité web</p>
-                            <div className="flex justify-center items-center space-x-3 lg:pt-5 pt-2">
-                                <a href="https://www.facebook.com/perrine.osw" target="_blank" rel="noopener noreferrer">
-                                    <span className="text-6xl socialbtn facebook">
-                                        <FontAwesomeIcon icon={faFacebook} />
-                                    </span>
-                                </a>
+                            <p className="py-8 text-center text-4xl">Développeuse web fullstack</p>
+                            <p className="py-8 text-center text-4xl">Experte en Accessibilité et Qualité web</p>
+                            <div className="flex justify-center items-center pt-5">
                                 <a href="https://www.linkedin.com/in/perrine-oswald/" target="_blank" rel="noopener noreferrer">
                                     <span className="text-6xl socialbtn linkedin">
                                         <FontAwesomeIcon icon={faLinkedin} />

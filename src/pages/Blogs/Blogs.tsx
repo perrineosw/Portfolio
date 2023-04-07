@@ -7,6 +7,7 @@ import veilletechno from "../../media/blogs/rapport_veille_technologique.pdf";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
 import cv from "../../media/cv_perrine_oswald.pdf";
+import Footer from "../../components/Footer";
 
 interface Blog {
     color: string;
@@ -176,50 +177,53 @@ const Blogs = (): JSX.Element => {
     };
 
     return (
-        <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
-            <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Mon blog</h1>
-            <div className="pt-5 pb-10">
-                <button className="dowanload-btn mt-12">
-                    <a href={veilletechno} download="Comprendre_Eco_Conception.pdf">
-                        <span className="text-base">
-                            <FontAwesomeIcon icon={faDownload} />
-                        </span>
-                        <span className="ml-2">
-                            Qu'est ce que l'Éco-Conception ?
-                        </span>
-                    </a>
-                </button>
-                <span className="flex justify-center text-sm text-center mt-2 text-gray-600">
-                    .pdf - 337,08 Ko<br/>Publié le 8 mars 2023
-                </span>
-            </div>
-            <div id="isotop-gallery-wrapper" className="mymix portfolio_list-two three-col">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6">
-                    {blogs.map((blog, index) => (
-                        <div key={index} className={`py-4 ${blog.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
-                            <button onClick={() => toggleModal(blog)} className="w-full">
-                                <div className="overflow-hidden rounded-lg">
-                                    <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
-                                         src={blog.image} alt={`Image du blog : ${blog.title}`}/>
-                                </div>
-                                <h2 className="py-5 font-medium cursor-pointer text-xl duration-300 transition hover:text-[#C72475FF]">
-                                    {blog.title}
-                                </h2>
-                                <i className="pt-5">
-                                    Publié le {blog.date}
-                                </i>
-                            </button>
-                        </div>
-                    ))}
+        <div>
+            <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
+                <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Mon blog</h1>
+                <div className="pt-5 pb-10">
+                    <button className="dowanload-btn mt-12">
+                        <a href={veilletechno} download="Comprendre_Eco_Conception.pdf">
+                            <span className="text-base">
+                                <FontAwesomeIcon icon={faDownload} />
+                            </span>
+                            <span className="ml-2">
+                                Qu'est ce que l'Éco-Conception ?
+                            </span>
+                        </a>
+                    </button>
+                    <span className="flex justify-center text-sm text-center mt-2 text-gray-600">
+                        .pdf - 337,08 Ko<br/>Publié le 8 mars 2023
+                    </span>
                 </div>
+                <div id="isotop-gallery-wrapper" className="mymix portfolio_list-two three-col">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6">
+                        {blogs.map((blog, index) => (
+                            <div key={index} className={`py-4 ${blog.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                                <button onClick={() => toggleModal(blog)} className="w-full">
+                                    <div className="overflow-hidden rounded-lg">
+                                        <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+                                             src={blog.image} alt={`Image du blog : ${blog.title}`}/>
+                                    </div>
+                                    <h2 className="py-5 font-medium cursor-pointer text-xl duration-300 transition hover:text-[#C72475FF]">
+                                        {blog.title}
+                                    </h2>
+                                    <i className="pt-5">
+                                        Publié le {blog.date}
+                                    </i>
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <ModaleBlogs isOpen={showModal} onClose={() => setShowModal(false)}
+                               image={selectedBlog.image}
+                               date={selectedBlog.date}
+                               title={selectedBlog.title}
+                               description={selectedBlog.description}
+                               website={selectedBlog.website}
+                />
             </div>
-            <ModaleBlogs isOpen={showModal} onClose={() => setShowModal(false)}
-                           image={selectedBlog.image}
-                           date={selectedBlog.date}
-                           title={selectedBlog.title}
-                           description={selectedBlog.description}
-                           website={selectedBlog.website}
-            />
+            <Footer />
         </div>
     )
 }
