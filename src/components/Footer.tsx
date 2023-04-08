@@ -4,7 +4,7 @@ const Footer = (): JSX.Element => {
     return (
         <div>
             <footer className="overflow-hidden rounded-b-2xl bg-transparent">
-                <p className="text-center py-6 text-gray-lite dark:text-white">
+                <p className="text-center py-6">
                     © 2023 Tous droits réservés par Perrine OSWALD
                 </p>
             </footer>

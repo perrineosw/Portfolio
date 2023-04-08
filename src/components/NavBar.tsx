@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 import {faList, faHouse, faUser, faListDots, faSuitcase, faFile} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-function NavBar() {
+const NavBar = ({toggleMode, isDarkMode}: {toggleMode: () => void, isDarkMode: boolean}) => {
     const [open, setOpen] = useState(false);
 
     const [, setActiveLink] = useState(window.location.hash);
@@ -54,6 +54,7 @@ function NavBar() {
                     </div>
                     <nav className="hidden lg:block">
                         <ul className="flex">
+                            <li><button onClick={toggleMode}>Toggle Mode</button></li>
                             <li>
                                 <NavLink to="/home" className={(window.location.hash === '#/home' || window.location.hash === '') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/home')}>
                                     <FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;&nbsp;&nbsp;Accueil

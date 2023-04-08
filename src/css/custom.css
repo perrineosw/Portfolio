@@ -18,6 +18,10 @@
     background-image: url('../media/background.jpeg');
 }
 
+.container {
+    background-color: white;
+}
+
 .socialbtn {
     background-color: rgb(243 246 246 / 1);
     --tw-gradient-stops: var(--var-orange2), var(--var-pink2);

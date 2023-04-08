@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import profile from "../media/profile-2.jpeg";
 import opquast from "../media/opquast.png";
 
@@ -8,11 +8,10 @@ import {faPhone, faLocation, faMailBulk, faCar, faComputer, faPhotoVideo, faMusi
         faCookieBite, faClock, faPencil, faPersonRunning, faMagnifyingGlass, faFolderTree, faFaceSmile} from '@fortawesome/free-solid-svg-icons'
 import Footer from "../components/Footer";
 
-
-const About = (): JSX.Element => {
+const About = ({styles, stylesBgRed, isDarkMode}: {styles: object, stylesBgRed: object, isDarkMode: boolean}): JSX.Element => {
     return (
         <div>
-            <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
+            <div className="container lg:rounded-2xl px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20" style={styles}>
                 <h2 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">A propos de moi</h2>
                 <h3 className="text-4xl font-medium pt-4 md:pt-[40px] mb-2.5">Qui suis-je ?</h3>
                 <div className="grid grid-cols-12 md:gap-10 items-center">
@@ -64,7 +63,7 @@ const About = (): JSX.Element => {
                                 <FontAwesomeIcon icon={faPhone} />
                             </span>
                             <div className="space-y-1">
-                                <p className="text-xs text-gray-lite">Téléphone</p>
+                                <p className="text-xs">Téléphone</p>
                                 <h6 className="font-medium">+33 7 68 84 74 01</h6>
                             </div>
                         </div>
@@ -73,7 +72,7 @@ const About = (): JSX.Element => {
                                 <FontAwesomeIcon icon={faLocation} />
                             </span>
                             <div className="space-y-1">
-                                <p className="text-xs text-gray-lite">Localisation</p>
+                                <p className="text-xs">Localisation</p>
                                 <h6 className="font-medium">Dax - France</h6>
                             </div>
                         </div>
@@ -82,7 +81,7 @@ const About = (): JSX.Element => {
                                 <FontAwesomeIcon icon={faMailBulk} />
                             </span>
                             <div className="space-y-1">
-                                <p className="text-xs text-gray-lite">Email</p>
+                                <p className="text-xs">Email</p>
                                 <h6 className="font-medium"><a href="mailto:oswald.perrinedu40@gmail.com"><u>oswald.perrinedu40@gmail.com</u></a></h6>
                             </div>
                         </div>
@@ -91,7 +90,7 @@ const About = (): JSX.Element => {
                                 <FontAwesomeIcon icon={faCar} />
                             </span>
                             <div className="space-y-1">
-                                <p className="text-xs text-gray-lite">Véhiculée</p>
+                                <p className="text-xs">Véhiculée</p>
                                 <h6 className="font-medium">Permis B</h6>
                             </div>
                         </div>
@@ -107,7 +106,7 @@ const About = (): JSX.Element => {
                 <div className="pt-10">
                     <h3 className="text-4xl font-medium mb-5">Mes centres d'intérêts</h3>
                     <div className="grid gap-8 grid-cols-1 xl:grid-cols-3">
-                        <div className="about-box perso-bg-red">
+                        <div className={`about-box ${isDarkMode ? 'perso-bg-red-dark' : 'perso-bg-red'}`} style={stylesBgRed}>
                             <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faComputer} />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold">Programmation</h3>
@@ -176,7 +175,7 @@ const About = (): JSX.Element => {
                         </div>
                     </div>
                 </div>
-                <div className="container pb-20 pt-10">
+                <div className="pb-20 pt-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                         <div className="col-span-1 lg:pr-10 pr-0">
                             <h3 className="text-4xl font-medium mb-5">Langues étrangères</h3>
