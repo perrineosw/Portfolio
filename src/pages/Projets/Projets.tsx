@@ -85,7 +85,11 @@ const projets = [
     }
 ];
 
-const Projets = (): JSX.Element => {
+const Projets = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGreen, stylesBgPurple, stylesBgBlue, stylesBgGray,
+                     isDarkMode}:
+                     {styles: object, stylesBgRed: object, stylesBgYellow: object, stylesBgOrange: object, stylesBgGreen: object,
+                         stylesBgPurple: object, stylesBgBlue: object, stylesBgGray: object, isDarkMode: boolean}):
+    JSX.Element => {
     const [showModal, setShowModal] = useState(false);
     const [selectedProjet, setSelectedProjet] = useState({ image: '', image_detail: '', title: '', category: '',
                                                 description: '', languages: '', website: '', customer: ''});
@@ -98,7 +102,7 @@ const Projets = (): JSX.Element => {
 
     return (
         <div>
-            <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
+            <div className="container lg:rounded-2xl px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20" style={styles}>
                 <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Mes projets</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 pt-5">
                     {projets.map((projet, index) => (
@@ -108,7 +112,7 @@ const Projets = (): JSX.Element => {
                                     <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
                                         src={projet.image} alt={`Image du projet : ${projet.title}`}/>
                                 </div>
-                                <span className="pt-5 font-normal text-gray-lite block">
+                                <span className="pt-5 font-normal block">
                                     {projet.category}
                                 </span>
                                 <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#C72475FF]">

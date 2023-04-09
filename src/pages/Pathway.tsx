@@ -112,10 +112,14 @@ const works = [
     }
 ];
 
-const Pathway = (): JSX.Element => {
+const Pathway = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGreen, stylesBgPurple, stylesBgBlue, stylesBgGray,
+                   isDarkMode}:
+                   {styles: object, stylesBgRed: object, stylesBgYellow: object, stylesBgOrange: object, stylesBgGreen: object,
+                       stylesBgPurple: object, stylesBgBlue: object, stylesBgGray: object, isDarkMode: boolean}):
+    JSX.Element => {
     return (
         <div>
-            <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
+            <div className="container lg:rounded-2xl px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20" style={styles}>
                 <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Parcours éducatif</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
                     {etudes.map((etude, index) => (
@@ -136,7 +140,7 @@ const Pathway = (): JSX.Element => {
                                         <br />
                                     </React.Fragment>
                                 ))}
-                                <p className="text-tiny text-gray-lite">{etude.city}</p>
+                                <p className="text-tiny">{etude.city}</p>
                                 <div className="overflow-hidden rounded-lg">
                                     <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
                                          src={etude.image} alt={`Image de l'école : ${etude.description}`}/>
@@ -166,7 +170,7 @@ const Pathway = (): JSX.Element => {
                                         <br />
                                     </React.Fragment>
                                 ))}
-                                <p className="text-tiny text-gray-lite">{work.city}</p>
+                                <p className="text-tiny">{work.city}</p>
                                 <div className="overflow-hidden rounded-lg">
                                     <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
                                          src={work.image} alt={`Image de : ${work.image_work}`}/>

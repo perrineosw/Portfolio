@@ -72,10 +72,34 @@ const App = () => {
                                                          stylesBgPurple={isDarkMode ? darkstylesBgPurple : lightstylesBgPurple}
                                                          stylesBgBlue={isDarkMode ? darkstylesBgBlue : lightstylesBgBlue}
                                                          stylesBgGray={isDarkMode ? darkstylesBgGray : lightstylesBgGray}
-                                                         isDarkMode={isDarkMode}/>} />
-                    <Route path="/pathway" element={<Pathway />} />
-                    <Route path="/projets" element={<Projets />} />
-                    <Route path="/blogs" element={<Blogs />} />
+                                                         isDarkMode={isDarkMode} />} />
+                    <Route path="/pathway" element={<Pathway styles={isDarkMode ? darkStyles : lightStyles}
+                                                             stylesBgRed={isDarkMode ? darkstylesBgRed : lightstylesBgRed}
+                                                             stylesBgYellow={isDarkMode ? darkstylesBgYellow : lightstylesBgYellow}
+                                                             stylesBgOrange={isDarkMode ? darkstylesBgOrange : lightstylesBgOrange}
+                                                             stylesBgGreen={isDarkMode ? darkstylesBgGreen : lightstylesBgGreen}
+                                                             stylesBgPurple={isDarkMode ? darkstylesBgPurple : lightstylesBgPurple}
+                                                             stylesBgBlue={isDarkMode ? darkstylesBgBlue : lightstylesBgBlue}
+                                                             stylesBgGray={isDarkMode ? darkstylesBgGray : lightstylesBgGray}
+                                                             isDarkMode={isDarkMode} />} />
+                    <Route path="/projets" element={<Projets styles={isDarkMode ? darkStyles : lightStyles}
+                                                             stylesBgRed={isDarkMode ? darkstylesBgRed : lightstylesBgRed}
+                                                             stylesBgYellow={isDarkMode ? darkstylesBgYellow : lightstylesBgYellow}
+                                                             stylesBgOrange={isDarkMode ? darkstylesBgOrange : lightstylesBgOrange}
+                                                             stylesBgGreen={isDarkMode ? darkstylesBgGreen : lightstylesBgGreen}
+                                                             stylesBgPurple={isDarkMode ? darkstylesBgPurple : lightstylesBgPurple}
+                                                             stylesBgBlue={isDarkMode ? darkstylesBgBlue : lightstylesBgBlue}
+                                                             stylesBgGray={isDarkMode ? darkstylesBgGray : lightstylesBgGray}
+                                                             isDarkMode={isDarkMode} />} />
+                    <Route path="/blogs" element={<Blogs styles={isDarkMode ? darkStyles : lightStyles}
+                                                         stylesBgRed={isDarkMode ? darkstylesBgRed : lightstylesBgRed}
+                                                         stylesBgYellow={isDarkMode ? darkstylesBgYellow : lightstylesBgYellow}
+                                                         stylesBgOrange={isDarkMode ? darkstylesBgOrange : lightstylesBgOrange}
+                                                         stylesBgGreen={isDarkMode ? darkstylesBgGreen : lightstylesBgGreen}
+                                                         stylesBgPurple={isDarkMode ? darkstylesBgPurple : lightstylesBgPurple}
+                                                         stylesBgBlue={isDarkMode ? darkstylesBgBlue : lightstylesBgBlue}
+                                                         stylesBgGray={isDarkMode ? darkstylesBgGray : lightstylesBgGray}
+                                                         isDarkMode={isDarkMode} />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>

@@ -167,7 +167,11 @@ const blogs: Blog[] = [
     },
 ];
 
-const Blogs = (): JSX.Element => {
+const Blogs = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGreen, stylesBgPurple, stylesBgBlue, stylesBgGray,
+                   isDarkMode}:
+                   {styles: object, stylesBgRed: object, stylesBgYellow: object, stylesBgOrange: object, stylesBgGreen: object,
+                       stylesBgPurple: object, stylesBgBlue: object, stylesBgGray: object, isDarkMode: boolean}):
+    JSX.Element => {
     const [showModal, setShowModal] = useState(false);
     const [selectedBlog, setSelectedBlog] = useState({ image: '', date: '', title: '', description: { title: [''], content: [''] }, website: '' });
 
@@ -178,7 +182,7 @@ const Blogs = (): JSX.Element => {
 
     return (
         <div>
-            <div className="container lg:rounded-2xl bg-white px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20">
+            <div className="container lg:rounded-2xl px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20" style={styles}>
                 <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Mon blog</h1>
                 <div className="pt-5 pb-10">
                     <button className="dowanload-btn mt-12">
@@ -191,7 +195,7 @@ const Blogs = (): JSX.Element => {
                             </span>
                         </a>
                     </button>
-                    <span className="flex justify-center text-sm text-center mt-2 text-gray-600">
+                    <span className="flex justify-center text-sm text-center mt-2">
                         .pdf - 337,08 Ko<br/>Publié le 8 mars 2023
                     </span>
                 </div>
