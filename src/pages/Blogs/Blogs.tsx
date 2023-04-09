@@ -167,11 +167,7 @@ const blogs: Blog[] = [
     },
 ];
 
-const Blogs = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGreen, stylesBgPurple, stylesBgBlue, stylesBgGray,
-                   isDarkMode}:
-                   {styles: object, stylesBgRed: object, stylesBgYellow: object, stylesBgOrange: object, stylesBgGreen: object,
-                       stylesBgPurple: object, stylesBgBlue: object, stylesBgGray: object, isDarkMode: boolean}):
-    JSX.Element => {
+const Blogs = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX.Element => {
     const [showModal, setShowModal] = useState(false);
     const [selectedBlog, setSelectedBlog] = useState({ image: '', date: '', title: '', description: { title: [''], content: [''] }, website: '' });
 
@@ -202,7 +198,15 @@ const Blogs = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                 <div id="isotop-gallery-wrapper" className="mymix portfolio_list-two three-col">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6">
                         {blogs.map((blog, index) => (
-                            <div key={index} className={`py-4 ${blog.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                            <div key={index} className={`py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg 
+                                ${
+                                    blog.color === 'perso-bg-red' ? (isDarkMode ? 'perso-bg-red-dark' : 'perso-bg-red') :
+                                    blog.color === 'perso-bg-yellow' ? (isDarkMode ? 'perso-bg-yellow-dark' : 'perso-bg-yellow') :
+                                    blog.color === 'perso-bg-orange' ? (isDarkMode ? 'perso-bg-orange-dark' : 'perso-bg-orange') :
+                                    blog.color === 'perso-bg-green' ? (isDarkMode ? 'perso-bg-green-dark' : 'perso-bg-green') :
+                                    blog.color === 'perso-bg-purple' ? (isDarkMode ? 'perso-bg-purple-dark' : 'perso-bg-purple') :
+                                    (blog.color === 'perso-bg-blue' ? (isDarkMode ? 'perso-bg-blue-dark' : 'perso-bg-blue') : '')
+                                }`}>
                                 <button onClick={() => toggleModal(blog)} className="w-full">
                                     <div className="overflow-hidden rounded-lg">
                                         <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
@@ -220,11 +224,12 @@ const Blogs = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                     </div>
                 </div>
                 <ModaleBlogs isOpen={showModal} onClose={() => setShowModal(false)}
-                               image={selectedBlog.image}
-                               date={selectedBlog.date}
-                               title={selectedBlog.title}
-                               description={selectedBlog.description}
-                               website={selectedBlog.website}
+                            isDarkMode={isDarkMode}
+                            image={selectedBlog.image}
+                            date={selectedBlog.date}
+                            title={selectedBlog.title}
+                            description={selectedBlog.description}
+                            website={selectedBlog.website}
                 />
             </div>
             <Footer />

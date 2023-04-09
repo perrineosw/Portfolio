@@ -6,11 +6,7 @@ import {faPhone, faLocation, faMailBulk, faCar, faComputer, faPhotoVideo, faMusi
         faCookieBite, faClock, faPencil, faPersonRunning, faMagnifyingGlass, faFolderTree, faFaceSmile} from '@fortawesome/free-solid-svg-icons'
 import Footer from "../components/Footer";
 
-const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGreen, stylesBgPurple, stylesBgBlue, stylesBgGray,
-                   isDarkMode}:
-                   {styles: object, stylesBgRed: object, stylesBgYellow: object, stylesBgOrange: object, stylesBgGreen: object,
-                       stylesBgPurple: object, stylesBgBlue: object, stylesBgGray: object, isDarkMode: boolean}):
-    JSX.Element => {
+const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX.Element => {
     return (
         <div>
             <div className="container lg:rounded-2xl px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20" style={styles}>
@@ -108,7 +104,7 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                 <div className="pt-10">
                     <h3 className="text-4xl font-medium mb-5">Mes centres d'intérêts</h3>
                     <div className="grid gap-8 grid-cols-1 xl:grid-cols-3">
-                        <div className={`about-box ${isDarkMode ? 'perso-bg-red-dark' : 'perso-bg-red'}`} style={stylesBgRed}>
+                        <div className={`about-box ${isDarkMode ? 'perso-bg-red-dark' : 'perso-bg-red'}`}>
                             <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faComputer} />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold">Programmation</h3>
@@ -119,7 +115,7 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                                 </p>
                             </div>
                         </div>
-                        <div className={`about-box ${isDarkMode ? 'perso-bg-yellow-dark' : 'perso-bg-yellow'}`} style={stylesBgYellow}>
+                        <div className={`about-box ${isDarkMode ? 'perso-bg-yellow-dark' : 'perso-bg-yellow'}`}>
                             <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faPhotoVideo} />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold">Photographie</h3>
@@ -129,7 +125,7 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                                     satisfaisante.                                    </p>
                             </div>
                         </div>
-                        <div className={`about-box ${isDarkMode ? 'perso-bg-orange-dark' : 'perso-bg-orange'}`} style={stylesBgOrange}>
+                        <div className={`about-box ${isDarkMode ? 'perso-bg-orange-dark' : 'perso-bg-orange'}`}>
                             <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faMusic} />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold">Musique</h3>
@@ -140,7 +136,7 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                                 </p>
                             </div>
                         </div>
-                        <div className={`about-box ${isDarkMode ? 'perso-bg-green-dark' : 'perso-bg-green'}`} style={stylesBgGreen}>
+                        <div className={`about-box ${isDarkMode ? 'perso-bg-green-dark' : 'perso-bg-green'}`}>
                             <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faHandHoldingHeart} />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold">B&eacute;n&eacute;volat</h3>
@@ -152,7 +148,7 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                                 </p>
                             </div>
                         </div>
-                        <div className={`about-box ${isDarkMode ? 'perso-bg-purple-dark' : 'perso-bg-purple'}`} style={stylesBgPurple}>
+                        <div className={`about-box ${isDarkMode ? 'perso-bg-purple-dark' : 'perso-bg-purple'}`}>
                             <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faGlobeEurope} />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold">Voyager</h3>
@@ -164,7 +160,7 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                                 </p>
                             </div>
                         </div>
-                        <div className={`about-box ${isDarkMode ? 'perso-bg-blue-dark' : 'perso-bg-blue'}`} style={stylesBgBlue}>
+                        <div className={`about-box ${isDarkMode ? 'perso-bg-blue-dark' : 'perso-bg-blue'}`}>
                             <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faCookieBite} />
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold">Cuisiner</h3>
@@ -186,7 +182,7 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                                         <span className=" font-semibold">Espagnol</span>
                                     <span className=" font-semibold">70%</span>
                                 </div>
-                                <div className={`w-full rounded-full h-1 ${isDarkMode ? '' : 'bg-[#E1E1E1]'}`} style={stylesBgGray}>
+                                <div className={`w-full rounded-full h-1 ${isDarkMode ? '' : 'bg-[#E1E1E1]'}`}>
                                     <div className="bg-[#E96464] h-1 rounded-full" style={{ width: '70%' }}></div>
                                 </div>
                             </div>
@@ -195,7 +191,7 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                                         <span className=" font-semibold">Anglais</span>
                                     <span className=" font-semibold">60%</span>
                                 </div>
-                                <div className={`w-full rounded-full h-1 ${isDarkMode ? '' : 'bg-[#E1E1E1]'}`} style={stylesBgGray}>
+                                <div className={`w-full rounded-full h-1 ${isDarkMode ? '' : 'bg-[#E1E1E1]'}`}>
                                     <div className="bg-[#24B3C7] h-1 rounded-full" style={{ width: '60%' }}></div>
                                 </div>
                             </div>
@@ -203,17 +199,17 @@ const About = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGre
                         <div className="col-span-1 lg:pl-10 pl-0">
                             <h3 className="text-4xl font-medium mb-5">Connaissances</h3>
                             <div className="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Web fullstack</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Python</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>SQL</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Django</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>React JS</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Node JS</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Tailwind</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Java</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Php</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Laravel</div>
-                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`} style={stylesBgGray}>Accessibilté et Qualité web</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Web fullstack</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Python</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>SQL</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Django</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>React JS</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Node JS</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Tailwind</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Java</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Php</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Laravel</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Accessibilté et Qualité web</div>
                             </div>
                         </div>
                     </div>

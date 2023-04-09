@@ -85,11 +85,7 @@ const projets = [
     }
 ];
 
-const Projets = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGreen, stylesBgPurple, stylesBgBlue, stylesBgGray,
-                     isDarkMode}:
-                     {styles: object, stylesBgRed: object, stylesBgYellow: object, stylesBgOrange: object, stylesBgGreen: object,
-                         stylesBgPurple: object, stylesBgBlue: object, stylesBgGray: object, isDarkMode: boolean}):
-    JSX.Element => {
+const Projets = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX.Element => {
     const [showModal, setShowModal] = useState(false);
     const [selectedProjet, setSelectedProjet] = useState({ image: '', image_detail: '', title: '', category: '',
                                                 description: '', languages: '', website: '', customer: ''});
@@ -106,7 +102,15 @@ const Projets = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgG
                 <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Mes projets</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6 pt-5">
                     {projets.map((projet, index) => (
-                        <div key={index} className={`py-4 ${projet.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                        <div key={index} className={`py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg 
+                                ${
+                                    projet.color === 'perso-bg-red' ? (isDarkMode ? 'perso-bg-red-dark' : 'perso-bg-red') :
+                                    projet.color === 'perso-bg-yellow' ? (isDarkMode ? 'perso-bg-yellow-dark' : 'perso-bg-yellow') :
+                                    projet.color === 'perso-bg-orange' ? (isDarkMode ? 'perso-bg-orange-dark' : 'perso-bg-orange') :
+                                    projet.color === 'perso-bg-green' ? (isDarkMode ? 'perso-bg-green-dark' : 'perso-bg-green') :
+                                    projet.color === 'perso-bg-purple' ? (isDarkMode ? 'perso-bg-purple-dark' : 'perso-bg-purple') :
+                                    (projet.color === 'perso-bg-blue' ? (isDarkMode ? 'perso-bg-blue-dark' : 'perso-bg-blue') : '')
+                                }`}>
                             <button onClick={() => toggleModal(projet)} className="w-full">
                                 <div className="overflow-hidden rounded-lg">
                                     <img className="object-cover w-full h-40 rounded-lg cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
@@ -123,6 +127,7 @@ const Projets = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgG
                     ))}
                 </div>
                 <ModaleProjets isOpen={showModal} onClose={() => setShowModal(false)}
+                               isDarkMode={isDarkMode}
                                image={selectedProjet.image_detail}
                                title={selectedProjet.title}
                                category={selectedProjet.category}

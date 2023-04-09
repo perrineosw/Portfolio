@@ -112,11 +112,7 @@ const works = [
     }
 ];
 
-const Pathway = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgGreen, stylesBgPurple, stylesBgBlue, stylesBgGray,
-                   isDarkMode}:
-                   {styles: object, stylesBgRed: object, stylesBgYellow: object, stylesBgOrange: object, stylesBgGreen: object,
-                       stylesBgPurple: object, stylesBgBlue: object, stylesBgGray: object, isDarkMode: boolean}):
-    JSX.Element => {
+const Pathway = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX.Element => {
     return (
         <div>
             <div className="container lg:rounded-2xl px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20" style={styles}>
@@ -124,8 +120,12 @@ const Pathway = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgG
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
                     {etudes.map((etude, index) => (
                         <div key={`${index}`}>
-                            <span className="text-red font-bold">{etude.dates}</span>
-                            <div className={`py-4 ${etude.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                            <span className={`font-bold ${isDarkMode ? 'text-white' : 'text-red'}`}>{etude.dates}</span>
+                            <div className={`py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg 
+                                ${
+                                    etude.color === 'perso-bg-red' ? (isDarkMode ? 'perso-bg-red-dark' : 'perso-bg-red') : 
+                                    (etude.color === 'perso-bg-purple' ? (isDarkMode ? 'perso-bg-purple-dark' : 'perso-bg-purple') : '')
+                                }`}>
                                 <h3 className="text-xl font-bold">
                                     {etude.title.split('\n').map((line, index) => (
                                         <React.Fragment key={index}>
@@ -154,8 +154,12 @@ const Pathway = ({styles, stylesBgRed, stylesBgYellow, stylesBgOrange, stylesBgG
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
                     {works.map((work, index) => (
                         <div key={`${index}`}>
-                            <span className="text-red font-bold">{work.dates}</span>
-                            <div className={`py-4 ${work.color} pl-5 pr-3 space-y-2 mb-6 rounded-lg`}>
+                            <span className={`font-bold ${isDarkMode ? 'text-white' : 'text-red'}`}>{work.dates}</span>
+                            <div className={`py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg 
+                                ${
+                                    work.color === 'perso-bg-green' ? (isDarkMode ? 'perso-bg-green-dark' : 'perso-bg-green') :
+                                    (work.color === 'perso-bg-blue' ? (isDarkMode ? 'perso-bg-blue-dark' : 'perso-bg-blue') : '')
+                                }`}>
                                 <h3 className="text-xl font-bold">
                                     {work.title.split('\n').map((line, index) => (
                                         <React.Fragment key={index}>

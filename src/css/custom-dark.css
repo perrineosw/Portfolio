@@ -36,3 +36,11 @@
     background-color: #5e5e5e;
     border: var(--var-gray) 1px solid;
 }
+
+.perso-bg-dark {
+    background-color: #3b3b3b;
+}
+
+.text-red-dark {
+    color: #e785b4;
+}

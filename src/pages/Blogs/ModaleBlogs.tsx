@@ -7,6 +7,7 @@ import classNames from "classnames";
 type ModaleProps = {
     isOpen: boolean;
     onClose: () => void;
+    isDarkMode: boolean;
     image: string;
     date: string;
     title: string;
@@ -18,7 +19,7 @@ type ModaleProps = {
     children?: React.ReactNode;
 };
 
-const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image, date, title,
+const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, isDarkMode, image, date, title,
                                                   description, website}) => {
     if (!isOpen) return null;
 
@@ -44,11 +45,12 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image, date, ti
                     <div className={`absolute inset-0 bg-gray-300 opacity-80`}></div>
                 </div>
                 <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true"></span>
-                <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all py-8 align-middle lg:max-w-[80vw]"
+                <div className={`inline-block align-bottom rounded-lg text-left overflow-hidden shadow-xl transform 
+                    transition-all py-8 align-middle lg:max-w-[80vw] ${isDarkMode ? 'perso-bg-dark' : 'bg-white'}`}
                     role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-                    <div className="bg-white lg:p-10 sm:p-2">
+                    <div className={`lg:p-10 sm:p-2 ${isDarkMode ? 'perso-bg-dark' : 'bg-white'}`}>
                         <div className="overflow-y-scroll scroll-hide-1700 p-5 max-h-[80vh]">
-                            <h2 className="text-red text-4xl text-center font-bold">
+                            <h2 className={`text-4xl text-center font-bold ${isDarkMode ? 'text-red-dark' : 'text-red'}`}>
                                 {title}
                             </h2>
                             {website !== '' && (
@@ -79,7 +81,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, image, date, ti
                                         </p>
                                     </div>
                                 ))}
-                                <p className="pt-5 text-red"><i>Rédigé par : Perrine Oswald</i></p>
+                                <p className={`pt-5 ${isDarkMode ? 'text-red-dark' : 'text-red'}`}><i>Rédigé par : Perrine Oswald</i></p>
                                 <p className="pb-5"><i>Publié le {date}</i></p>
                             </p>
                             <div className="pr-3 pt-12">
