@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.298c73d6.css",
-    "main.js": "/Portfolio/static/js/main.217899e9.js",
+    "main.css": "/Portfolio/static/css/main.9f11bcce.css",
+    "main.js": "/Portfolio/static/js/main.9b3cbd0d.js",
     "static/js/787.f6e65957.chunk.js": "/Portfolio/static/js/787.f6e65957.chunk.js",
     "static/media/antigaspi2.png": "/Portfolio/static/media/antigaspi2.aa5bb8c4a58647c8c1b0.png",
     "static/media/data2.png": "/Portfolio/static/media/data2.bcacc86105467864346b.png",
@@ -22,6 +22,7 @@
     "static/media/404page.jpg": "/Portfolio/static/media/404page.cbc64e02b0e61476cd8a.jpg",
     "static/media/harmonie.jpg": "/Portfolio/static/media/harmonie.e2c6e9d75e9ca5ec99a1.jpg",
     "static/media/accessibilite.png": "/Portfolio/static/media/accessibilite.048ea1638f8a59708b15.png",
+    "static/media/background-dark.jpeg": "/Portfolio/static/media/background-dark.75522afde401f1a254c1.jpeg",
     "static/media/accessibilite-hand.jpeg": "/Portfolio/static/media/accessibilite-hand.c1a46864c0e67b956292.jpeg",
     "static/media/background.jpeg": "/Portfolio/static/media/background.050e5036530f155fa061.jpeg",
     "static/media/stPaulLesDax.jpeg": "/Portfolio/static/media/stPaulLesDax.6e8f049221bcddd2b08c.jpeg",
@@ -30,12 +31,12 @@
     "static/media/avenirdata.jpeg": "/Portfolio/static/media/avenirdata.4c59c180e49fcdc6a037.jpeg",
     "static/media/opquast.png": "/Portfolio/static/media/opquast.cb2b86188ddd8d66afd0.png",
     "index.html": "/Portfolio/index.html",
-    "main.298c73d6.css.map": "/Portfolio/static/css/main.298c73d6.css.map",
-    "main.217899e9.js.map": "/Portfolio/static/js/main.217899e9.js.map",
+    "main.9f11bcce.css.map": "/Portfolio/static/css/main.9f11bcce.css.map",
+    "main.9b3cbd0d.js.map": "/Portfolio/static/js/main.9b3cbd0d.js.map",
     "787.f6e65957.chunk.js.map": "/Portfolio/static/js/787.f6e65957.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.298c73d6.css",
-    "static/js/main.217899e9.js"
+    "static/css/main.9f11bcce.css",
+    "static/js/main.9b3cbd0d.js"
   ]
 }
