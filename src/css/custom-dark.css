@@ -3,29 +3,36 @@
 }
 
 .perso-bg-red-dark {
-    background-color: #83184d;
+    background-color: #592d43;
+    border: var(--var-red) 1px solid;
 }
 
-.perso-bg-yellow {
-    background-color: var(--var-yellow);
+.perso-bg-yellow-dark {
+    background-color: #444f27;
+    border: var(--var-yellow) 1px solid;
 }
 
-.perso-bg-orange {
-    background-color: var(--var-orange);
+.perso-bg-orange-dark {
+    background-color: #542e2a;
+    border: var(--var-orange) 1px solid;
 }
 
-.perso-bg-green {
-    background-color: var(--var-green);
+.perso-bg-green-dark {
+    background-color: #2e5b46;
+    border: var(--var-green) 1px solid;
 }
 
-.perso-bg-purple {
-    background-color: var(--var-purple);
+.perso-bg-purple-dark {
+    background-color: #533060;
+    border: var(--var-purple) 1px solid;
 }
 
-.perso-bg-blue {
-    background-color: var(--var-blue);
+.perso-bg-blue-dark {
+    background-color: #284c50;
+    border: var(--var-blue) 1px solid;
 }
 
-.perso-bg-gray {
-    background-color: var(--var-gray);
+.perso-bg-gray-dark {
+    background-color: #5e5e5e;
+    border: var(--var-gray) 1px solid;
 }

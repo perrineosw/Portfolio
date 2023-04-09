@@ -22,6 +22,10 @@
     background-color: white;
 }
 
+.containerHome {
+    background-color: transparent !important;
+}
+
 .socialbtn {
     background-color: rgb(243 246 246 / 1);
     --tw-gradient-stops: var(--var-orange2), var(--var-pink2);

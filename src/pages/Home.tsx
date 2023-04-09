@@ -3,13 +3,15 @@ import profile from "../media/profile.jpeg";
 import cv from "../media/cv_perrine_oswald.pdf";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faDownload} from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
-const Home = (): JSX.Element => {
+const Home = ({styles}:
+                  {styles: object}):
+    JSX.Element => {
     return (
         <div className="z-50 pb-10 lg:pt-0 pt-10">
-            <div className="container">
+            <div className="container containerHome">
                 <div className="flex flex-col items-center justify-center mt-20 h-[100vh] md:h-[90vh] lg:h-[80vh] xl:h-[71vh] px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 m-auto">
                         <div className="w-full">
@@ -36,7 +38,7 @@ const Home = (): JSX.Element => {
                                     </span>
                                 </a>
                             </button>
-                            <span className="flex justify-center text-sm mt-2 text-gray-600">
+                            <span className="flex justify-center text-sm mt-2">
                                 .pdf - 905,54 Ko
                             </span>
                         </div>
