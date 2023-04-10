@@ -27,28 +27,28 @@ const NavBar = ({toggleMode, isDarkMode}: {toggleMode: () => void, isDarkMode: b
                         <nav id="navbar" className={`flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row ${open ? 'flex' : 'hidden'}`}>
                             <ul className="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] bg-white mobile-ul-size">
                                 <li>
-                                    <NavLink to="/home" className={(window.location.hash === '#/home' || window.location.hash === '') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/home')}>
+                                    <NavLink to="/home" className={(window.location.hash === '#/home' || window.location.hash === '') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/home'); setOpen(false);}}>
                                         <FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;&nbsp;&nbsp;Accueil
                                     </NavLink>
 
                                 </li>
                                 <li>
-                                    <NavLink to="/about" className={(window.location.hash === '#/about') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/about')}>
+                                    <NavLink to="/about" className={(window.location.hash === '#/about') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/about'); setOpen(false);}}>
                                         <FontAwesomeIcon icon={faUser} />&nbsp;&nbsp;&nbsp;&nbsp;A propos
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/pathway" className={(window.location.hash === '#/pathway') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/pathway')}>
+                                    <NavLink to="/pathway" className={(window.location.hash === '#/pathway') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/pathway'); setOpen(false);}}>
                                         <FontAwesomeIcon icon={faListDots} />&nbsp;&nbsp;&nbsp;&nbsp;Mes parcours
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/projets" className={(window.location.hash === '#/projets') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/projets')}>
+                                    <NavLink to="/projets" className={(window.location.hash === '#/projets') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/projets'); setOpen(false);}}>
                                         <FontAwesomeIcon icon={faSuitcase} />&nbsp;&nbsp;&nbsp;&nbsp;Mes projets
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/blogs" className={(window.location.hash === '#/blogs') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => handleLinkClick('#/blogs')}>
+                                    <NavLink to="/blogs" className={(window.location.hash === '#/blogs') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/blogs'); setOpen(false);}}>
                                         <FontAwesomeIcon icon={faFile} />&nbsp;&nbsp;&nbsp;&nbsp;Blogs
                                     </NavLink>
                                 </li>
