@@ -4,10 +4,9 @@ import cv from "../media/cv_perrine_oswald.pdf";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faDownload} from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import opquast from "../media/badge_confirme.svg";
 
-
-const Home = ({styles}:
-                  {styles: object}):
+const Home = ():
     JSX.Element => {
     return (
         <div className="z-50 pb-10 lg:pt-0 pt-10">
@@ -26,6 +25,9 @@ const Home = ({styles}:
                                     <span className="text-6xl socialbtn linkedin">
                                         <FontAwesomeIcon icon={faLinkedin} />
                                     </span>
+                                </a>
+                                <a href="https://directory.opquast.com/fr/certificat/PRBTQG/" className="ml-20">
+                                    <u>Ma certification : <img src={opquast} alt="Logo OPQUAST" className="w-20 mx-auto"/></u>
                                 </a>
                             </div>
                             <button className="dowanload-btn mt-12">

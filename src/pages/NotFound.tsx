@@ -17,15 +17,15 @@ const NotFound = (): JSX.Element => {
                             <div className="grid-col m-auto lg:pl-10">
                                 <div className="text-5xl font-dark font-bold">404</div>
                                 <p className="text-2xl md:text-3xl font-light leading-normal">
-                                    Désolé, nous n'avons pas pu trouver cette page.
+                                    Désolé, nous n&apos;avons pas pu trouver cette page.
                                 </p>
                                 <p className="mb-8">
                                     Oups ! On dirait que vous vous êtes égaré sur mon site.
-                                    Mais pas de soucis, vous pouvez retourner sur la page d'accueil en cliquant sur
+                                    Mais pas de soucis, vous pouvez retourner sur la page d&apos;accueil en cliquant sur
                                     le bouton :
                                 </p>
                                 <NavLink to="/home" onClick={() => handleLinkClick('#/home')}>
-                                    <button className="menu-item-two-active">Retour vers l'accueil</button>
+                                    <button className="menu-item-two-active">Retour vers l&apos;accueil</button>
                                 </NavLink>
                             </div>
                             <div className="grid-col max-w-lg">

@@ -23,7 +23,6 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, isDarkMode, ima
                                                   description, website}) => {
     if (!isOpen) return null;
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {

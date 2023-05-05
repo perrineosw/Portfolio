@@ -1,6 +1,6 @@
 import React from "react";
 import profile from "../media/profile-2.jpeg";
-import opquast from "../media/opquast.png";
+import opquast from "../media/badge_confirme.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhone, faLocation, faMailBulk, faCar, faComputer, faPhotoVideo, faMusic, faHandHoldingHeart, faGlobeEurope,
         faCookieBite, faClock, faPencil, faPersonRunning, faMagnifyingGlass, faFolderTree, faFaceSmile} from '@fortawesome/free-solid-svg-icons'
@@ -19,27 +19,29 @@ const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                     <div className="col-span-12 lg:col-span-8 space-y-2.5">
                         <div className="md:mr-12 xl:mr-16">
                             <p className="leading-7 pt-5">
-                                J'ai commencé par une licence en informatique NEC à ANGLET (64), et maintenant
-                                j'étudie en alternance le développement d'applications web à YNOV tout en
+                                J&apos;ai commencé par une licence en informatique NEC à ANGLET (64), et maintenant
+                                j&apos;étudie en alternance le développement d&apos;applications web à YNOV tout en
                                 travaillant chez Avenir Data à Dax (40). Je travaille sur des projets variés,
-                                allant de l'environnement à la logistique industrielle et la donnée B2B.
+                                allant de l&apos;environnement à la logistique industrielle et la donnée B2B.
                             </p>
                             <br/>
                             <p className="leading-7">
-                                L'accessibilité et la qualité web est une thématique qui me tient à coeur.
-                                Pour moi, un site web inaccessible est aussi utile qu'une pelle à neige en Floride,
-                                et un code mal structuré est aussi agréable qu'une chanson de Céline Dion
-                                mal chantée. Je suis l'alliée déterminée des utilisateurs malvoyants et
-                                des développeurs soucieux de leur santé mentale. Alors si vous cherchez quelqu'un
+                                L&apos;accessibilité et la qualité web est une thématique qui me tient à coeur.
+                                Pour moi, un site web inaccessible est aussi utile qu&apos;une pelle à neige en Floride,
+                                et un code mal structuré est aussi agréable qu&apos;une chanson de Céline Dion
+                                mal chantée. Je suis l&apos;alliée déterminée des utilisateurs malvoyants et
+                                des développeurs soucieux de leur santé mentale. Alors si vous cherchez quelqu&apos;un
                                 pour rendre votre site accessible et agréable à utiliser, je suis la développeuse
                                 dont vous avez besoin !
                             </p>
                             <div className="grid grid-cols-12 gap-x-6 items-center pt-5">
-                                <div className="lg:col-span-10 col-span-8">
-                                    Je relève le défi et passe la certification OPQUAST pour devenir expert en accessibilité et qualité web.
+                                <div className="col-span-8">
+                                    Je suis certifiée OPQUAST avec 790 points et le niveau &quot;Confirmée&quot;.
                                 </div>
-                                <div className="lg:col-span-2 col-span-4">
-                                    <img src={opquast} alt="Logo OPQUAST" className="w-full"/>
+                                <div className="col-span-4 mx-auto">
+                                    <a href="https://directory.opquast.com/fr/certificat/PRBTQG/">
+                                        <u>Ma certification : <img src={opquast} alt="Logo OPQUAST" className="w-20 mx-auto"/></u>
+                                    </a>
                                 </div>
                             </div>
                             <div className="flex gap-x-6 gap-y-3 lg:pt-5 pt-10 md:gap-y-6 md:gap-x-4 flex-wrap">
@@ -95,14 +97,14 @@ const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                     </div>
                 </div>
                 <p className="leading-8 pt-10">
-                    Je suis capable de m'adapter à toutes les situations, de gérer le stress comme un Jedi, de travailler
-                    en équipe comme les Avengers, de communiquer comme un talkie-walkie, d'être autonome comme un
+                    Je suis capable de m&apos;adapter à toutes les situations, de gérer le stress comme un Jedi, de travailler
+                    en équipe comme les Avengers, de communiquer comme un talkie-walkie, d&apos;être autonome comme un
                     astronaute, organisée comme un bullet journal, rigoureuse comme un juge, curieuse comme un chat et
                     réactive comme une super-héroïne. En bref, je suis le genre de personne que vous voulez avoir dans
                     votre équipe !
                 </p>
                 <div className="pt-10">
-                    <h3 className="text-4xl font-medium mb-5">Mes centres d'intérêts</h3>
+                    <h3 className="text-4xl font-medium mb-5">Mes centres d&apos;intérêts</h3>
                     <div className="grid gap-8 grid-cols-1 xl:grid-cols-3">
                         <div className={`about-box ${isDarkMode ? 'perso-bg-red-dark' : 'perso-bg-red'}`}>
                             <FontAwesomeIcon className="w-10 h-10 object-contain block" icon={faComputer} />
@@ -110,7 +112,7 @@ const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                                 <h3 className="text-2xl font-semibold">Programmation</h3>
                                 <p className="leading-8">
                                     (Maman disait toujours) le développement web est comme une boîte de chocolats :
-                                    vous ne savez jamais sur quel navigateur votre site va s'afficher.
+                                    vous ne savez jamais sur quel navigateur votre site va s&apos;afficher.
                                     <br/>#ForrestGump
                                 </p>
                             </div>
@@ -155,7 +157,7 @@ const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                                 <p className="leading-8">
                                     Voyager et développer un site web sont deux aventures qui se ressemblent :
                                     elles nécessitent une planification minutieuse, une capacité à résoudre des
-                                    problèmes et à s'adapter aux imprévus. Et dans les deux cas, le résultat peut
+                                    problèmes et à s&apos;adapter aux imprévus. Et dans les deux cas, le résultat peut
                                     être incroyablement gratifiant !
                                 </p>
                             </div>
@@ -165,8 +167,8 @@ const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                             <div className="space-y-2">
                                 <h3 className="text-2xl font-semibold">Cuisiner</h3>
                                 <p className="leading-8">
-                                    La cuisine et le développement web ont un point commun : dans l'un,
-                                    on mélange des ingrédients pour créer un plat, et dans l'autre, on
+                                    La cuisine et le développement web ont un point commun : dans l&apos;un,
+                                    on mélange des ingrédients pour créer un plat, et dans l&apos;autre, on
                                     mélange des codes pour créer un site web. Mais attention, dans les
                                     deux cas, il faut faire attention aux bugs et aux goûts différents des utilisateurs !                                    </p>
                             </div>

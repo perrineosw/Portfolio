@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.39.0",
     "gh-pages": "^5.0.0",
     "tailwindcss-dark-mode": "^1.1.7"
   }

@@ -23,7 +23,6 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, isDarkMode, ima
 
     if (!isOpen) return null;
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isClicked, setIsClicked] = useState(false);
 
     const handleClick = () => {
@@ -87,7 +86,7 @@ const ModaleProjets: React.FC<ModaleProps> = ({ isOpen, onClose, isDarkMode, ima
                             </p>
                             <div className="pr-3 pt-12">
                                 <p className="hidden sm:flex items-center pb-5">
-                                    <i>Cliquer sur l'image pour l'agrandir !</i>
+                                    <i>Cliquer sur l&apos;image pour l&apos;agrandir !</i>
                                 </p>
                                 <img id="my-image" className={imageClassName} onClick={handleClick} src={image} alt={`Image du projet : ${title}`} />
                             </div>

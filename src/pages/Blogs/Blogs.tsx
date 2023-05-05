@@ -6,7 +6,6 @@ import accessibilite_hand from "../../media/blogs/accessibilite-hand.jpeg";
 import veilletechno from "../../media/blogs/rapport_veille_technologique.pdf";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDownload} from "@fortawesome/free-solid-svg-icons";
-import cv from "../../media/cv_perrine_oswald.pdf";
 import Footer from "../../components/Footer";
 
 interface Blog {
@@ -187,7 +186,7 @@ const Blogs = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                                 <FontAwesomeIcon icon={faDownload} />
                             </span>
                             <span className="ml-2">
-                                Qu'est ce que l'Éco-Conception ?
+                                Qu&apos;est ce que l&apos;Éco-Conception ?
                             </span>
                         </a>
                     </button>

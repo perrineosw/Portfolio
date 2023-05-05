@@ -33,8 +33,8 @@ const App = () => {
             <Router>
                 <NavBar toggleMode={toggleMode} isDarkMode={isDarkMode}/>
                 <Routes>
-                    <Route path="/" element={<Home styles={isDarkMode ? darkStyles : lightStyles} />} />
-                    <Route path="/home" element={<Home styles={isDarkMode ? darkStyles : lightStyles} />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<About styles={isDarkMode ? darkStyles : lightStyles} isDarkMode={isDarkMode} />} />
                     <Route path="/pathway" element={<Pathway styles={isDarkMode ? darkStyles : lightStyles} isDarkMode={isDarkMode} />} />
                     <Route path="/projets" element={<Projets styles={isDarkMode ? darkStyles : lightStyles} isDarkMode={isDarkMode} />} />

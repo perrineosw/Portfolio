@@ -145,7 +145,7 @@ const Pathway = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): J
                                     <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
                                          src={etude.image} alt={`Image de l'école : ${etude.description}`}/>
                                 </div>
-                                <a className="text-xs" href={etude.link}><u>A propos de l'école</u></a>
+                                <a className="text-xs" href={etude.link}><u>A propos de l&apos;école</u></a>
                             </div>
                         </div>
                     ))}
