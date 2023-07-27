@@ -20,9 +20,11 @@ const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                         <div className="md:mr-12 xl:mr-16">
                             <p className="leading-7 pt-5">
                                 J&apos;ai commencé par une licence en informatique NEC à ANGLET (64), et maintenant
-                                j&apos;étudie en alternance le développement d&apos;applications web à YNOV tout en
-                                travaillant chez Avenir Data à Dax (40). Je travaille sur des projets variés,
-                                allant de l&apos;environnement à la logistique industrielle et la donnée B2B.
+                                j&apos;étudie en alternance le développement d&apos;applications web à&nbsp;
+                                <a href="https://www.ynov.com/"><u>YNOV</u></a> tout en travaillant chez&nbsp;
+                                <a href="https://www.okina.fr/"><u>Okina</u></a> à Dax (40). Je peux travailler sur des projets
+                                variés, allant de l&apos;environnement à la logistique industrielle, la donnée B2B et
+                                la gestion de transport.
                             </p>
                             <br/>
                             <p className="leading-7">
@@ -177,7 +179,7 @@ const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                 </div>
                 <div className="pb-20 pt-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                        <div className="col-span-1 lg:pr-10 pr-0">
+                        <div className="col-span-1 lg:pr-10 pr-0 my-auto">
                             <h3 className="text-4xl font-medium mb-5">Langues étrangères</h3>
                             <div className="mb-5">
                                 <div className="flex justify-between mb-1">
@@ -205,10 +207,12 @@ const About = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Python</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>SQL</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Django</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Angular JS</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>React JS</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Node JS</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Tailwind</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Java</div>
+                                <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>SpringBoot</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Php</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Laravel</div>
                                 <div className={`resume mx-auto ${isDarkMode ? 'perso-bg-gray-dark' : 'perso-bg-gray'}`}>Accessibilté et Qualité web</div>

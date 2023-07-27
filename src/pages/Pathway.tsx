@@ -2,6 +2,7 @@ import React from "react";
 import ynov from '../media/pathway/ynov.jpeg';
 import uppa from '../media/pathway/uppa.jpeg';
 import harountazieff from '../media/pathway/harountazieff.jpeg';
+import okina from '../media/pathway/okina.png';
 import avenirdata from '../media/pathway/avenirdata.jpeg';
 import intermarche from '../media/pathway/intermarche.jpeg';
 import stpaullesdax from '../media/pathway/stPaulLesDax.jpeg';
@@ -41,10 +42,20 @@ const etudes = [
 
 const works = [
     {
+        image: okina,
+        image_work: 'Okina',
+        title: 'Alternance développement web fullstack\n',
+        dates: 'Avril 2023 - Septembre 2024',
+        description: 'Développement de site web fullstack en Java (SpringBoot), React JS, Angular JS et Docker',
+        city: '40100 Dax',
+        color: 'perso-bg-blue',
+        link: 'https://www.okina.fr/'
+    },
+    {
         image: avenirdata,
         image_work: 'Avenir Data',
-        title: 'Alternance informatique et data\n',
-        dates: '2022 - 2024',
+        title: 'Alternance développement web fullstack et data\n',
+        dates: 'Septembre 2022 - Mars 2023',
         description: 'Développement web en Django\nExploitation, compréhension, modélisation de la donnée B2B',
         city: '40100 Dax',
         color: 'perso-bg-green',
