@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../media/profile-2.jpeg";
+import profile from "../media/profile.jpeg";
 import opquast from "../media/badge_confirme.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhone, faLocation, faMailBulk, faCar, faComputer, faPhotoVideo, faMusic, faHandHoldingHeart, faGlobeEurope,

@@ -14,7 +14,7 @@ const Home = ():
                 <div className="flex flex-col items-center justify-center mt-20 h-[100vh] md:h-[90vh] lg:h-[80vh] xl:h-[71vh] px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 m-auto">
                         <div className="w-full">
-                            <img className="rounded-full lg:px-10 lg:py-10 py-0 px-20" src={profile} alt="about avatar"/>
+                            <img className="rounded-full lg:px-10 lg:py-10 py-0 px-20" src={profile} alt="Photo de Perrine Oswald"/>
                         </div>
                         <div className="w-full my-auto pb-10">
                             <h1 className="mb-1 text-7xl text-center font-semibold">Perrine Oswald</h1>
