@@ -8,7 +8,11 @@ import intermarche from '../media/pathway/intermarche.jpeg';
 import stpaullesdax from '../media/pathway/stPaulLesDax.jpeg';
 import feria from '../media/pathway/feria.jpeg';
 import harmonie from '../media/pathway/harmonie.jpg';
+import myLogo from "../media/logo-big.png";
 import Footer from "../components/Footer";
+import { Box, Card, CardContent, CardMedia, Grid, Link, Typography } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComputer } from "@fortawesome/free-solid-svg-icons";
 
 const etudes = [
     {
@@ -27,7 +31,7 @@ const etudes = [
         dates: '2019 - 2022',
         city: '64600 Anglet',
         color: 'perso-bg-purple',
-        link: 'https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-12/licence-informatique-45_1/l1-l2-l3-informatique-parcours-numerique-pour-les-environnements-connectes-nec-JDODLMEJ.html'
+        link: 'https://formation.univ-pau.fr/fr/catalogue/sciences-technologies-sante-STS/licence-XA/licence-informatique-L3VENPWZ.html'
     },
     {
         image: harountazieff,
@@ -125,79 +129,87 @@ const works = [
 
 const Pathway = ({styles, isDarkMode}: {styles: object, isDarkMode: boolean}): JSX.Element => {
     return (
-        <div>
-            <div className="container lg:rounded-2xl px-4 sm:px-5 md:px-10 lg:px-20 lg:pt-0 pt-20" style={styles}>
-                <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Parcours éducatif</h1>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
+        <Box sx={{ mx: { xs: 2, sm: 5, md: 10 }, p: 2, borderRadius: { lg: '16px' } }} className={isDarkMode ? 'transparent' : 'bg-white'}>
+            <Box sx={{ styles }}>
+                <Grid item sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', textAlign: { xs: 'center', sm: 'left' }, mb: 4, borderBottom: 2, borderColor: 'pink', pb: 2 }} >
+                    <Box component="img" src={myLogo} alt="Logo de Perrine Oswald" sx={{ width: 60, marginRight: { sm: 2 } }} className={isDarkMode ? 'bg-white rounded-full p-1' : 'transparent'}/>
+                    <Typography variant="h4" sx={{ my: 'auto' }}>
+                        Parcours éducatif
+                    </Typography>
+                </Grid>
+                <Grid container spacing={{ xs: 5, lg: 10 }}>
                     {etudes.map((etude, index) => (
-                        <div key={`${index}`}>
-                            <span className={`font-bold ${isDarkMode ? 'text-white' : 'text-red'}`}>{etude.dates}</span>
-                            <div className={`py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg 
-                                ${
-                                    etude.color === 'perso-bg-red' ? (isDarkMode ? 'perso-bg-red-dark' : 'perso-bg-red') : 
-                                    (etude.color === 'perso-bg-purple' ? (isDarkMode ? 'perso-bg-purple-dark' : 'perso-bg-purple') : '')
-                                }`}>
-                                <h3 className="text-xl font-bold">
-                                    {etude.title.split('\n').map((line, index) => (
-                                        <React.Fragment key={index}>
-                                            {line}
-                                            <br />
-                                        </React.Fragment>
-                                    ))}
-                                </h3>
-                                {etude.description.split('\n').map((line, index) => (
-                                    <React.Fragment key={index}>
-                                        {line}
-                                        <br />
-                                    </React.Fragment>
-                                ))}
-                                <p className="text-tiny">{etude.city}</p>
-                                <div className="overflow-hidden rounded-lg">
-                                    <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
-                                         src={etude.image} alt={`Image de l'école : ${etude.description}`}/>
-                                </div>
-                                <a className="text-xs" href={etude.link}><u>A propos de l&apos;école</u></a>
-                            </div>
-                        </div>
+                        <Grid item xs={12} lg={4} key={`${index}`}>
+                            <Typography variant="h5" className={isDarkMode ? 'text-white' : 'text-red'}>
+                                {etude.dates}
+                            </Typography>
+                            <Card className={isDarkMode ? etude.color+'-dark' : etude.color}>
+                                <CardContent className={isDarkMode ? 'text-white' : 'text-black'}>
+                                    <Typography variant="h5" component="div">
+                                        {etude.title}
+                                    </Typography>
+                                    <Typography mt={2}>
+                                        {etude.description}
+                                    </Typography>
+                                    <Typography mt={2}>
+                                        {etude.city}
+                                    </Typography>
+                                    <CardMedia
+                                        sx={{ height: 140, my: 4 }}
+                                        image={etude.image}
+                                        title="green iguana"
+                                    />
+                                    <Link href={etude.link} target="_blank" rel="noopener noreferrer">
+                                        <Typography>
+                                            Lien vers le site
+                                        </Typography>
+                                    </Link>
+                                </CardContent>
+                            </Card>
+                        </Grid>
                     ))}
-                </div>
-                <h1 className="border-b-2 border-b-pink-600 text-[35px] font-medium pb-5 lg:pt-5">Parcours professionnel</h1>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 pt-5">
+                </Grid>
+                <Grid item sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', textAlign: { xs: 'center', sm: 'left' }, my: 4, borderBottom: 2, borderColor: 'pink', pb: 2 }} >
+                    <Box component="img" src={myLogo} alt="Logo de Perrine Oswald" sx={{ width: 60, marginRight: { sm: 2 } }} />
+                    <Typography variant="h4" sx={{ my: 'auto' }}>
+                        Parcours professionnel
+                    </Typography>
+                </Grid>
+                <Grid container spacing={5}>
                     {works.map((work, index) => (
-                        <div key={`${index}`}>
-                            <span className={`font-bold ${isDarkMode ? 'text-white' : 'text-red'}`}>{work.dates}</span>
-                            <div className={`py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg 
-                                ${
-                                    work.color === 'perso-bg-green' ? (isDarkMode ? 'perso-bg-green-dark' : 'perso-bg-green') :
-                                    (work.color === 'perso-bg-blue' ? (isDarkMode ? 'perso-bg-blue-dark' : 'perso-bg-blue') : '')
-                                }`}>
-                                <h3 className="text-xl font-bold">
-                                    {work.title.split('\n').map((line, index) => (
-                                        <React.Fragment key={index}>
-                                            {line}
-                                            <br />
-                                        </React.Fragment>
-                                    ))}
-                                </h3>
-                                {work.description.split('\n').map((line, index) => (
-                                    <React.Fragment key={index}>
-                                        {line}
-                                        <br />
-                                    </React.Fragment>
-                                ))}
-                                <p className="text-tiny">{work.city}</p>
-                                <div className="overflow-hidden rounded-lg">
-                                    <img className="object-cover w-full h-40 rounded-lg transition duration-200 ease-in-out transform hover:scale-110"
-                                         src={work.image} alt={`Image de : ${work.image_work}`}/>
-                                </div>
-                                <a className="text-xs" href={work.link}><u>A propos de la société</u></a>
-                            </div>
-                        </div>
+                        <Grid item xs={12} lg={4} key={`${index}`}>
+                            <Typography variant="h5" className={isDarkMode ? 'text-white' : 'text-red'}>
+                                {work.dates}
+                            </Typography>
+                            <Card className={isDarkMode ? work.color+'-dark' : work.color}>
+                                <CardContent className={isDarkMode ? 'text-white' : 'text-black'}>
+                                    <Typography variant="h5" component="div">
+                                        {work.title}
+                                    </Typography>
+                                    <Typography mt={2}>
+                                        {work.description}
+                                    </Typography>
+                                    <Typography mt={2}>
+                                        {work.city}
+                                    </Typography>
+                                    <CardMedia
+                                        sx={{ height: 140, my: 4 }}
+                                        image={work.image}
+                                        title="green iguana"
+                                    />
+                                    <Link href={work.link} target="_blank" rel="noopener noreferrer">
+                                        <Typography>
+                                            Lien vers le site
+                                        </Typography>
+                                    </Link>
+                                </CardContent>
+                            </Card>
+                        </Grid>
                     ))}
-                </div>
-            </div>
+                </Grid>
+            </Box>
             <Footer />
-        </div>
+        </Box>
     )
 }
 

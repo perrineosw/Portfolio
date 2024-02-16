@@ -130,29 +130,29 @@
 }
 
 .perso-bg-red {
-    background-color: var(--var-red);
+    background-color: var(--var-red) !important;
 }
 
 .perso-bg-yellow {
-    background-color: var(--var-yellow);
+    background-color: var(--var-yellow) !important;
 }
 
 .perso-bg-orange {
-    background-color: var(--var-orange);
+    background-color: var(--var-orange) !important;
 }
 
 .perso-bg-green {
-    background-color: var(--var-green);
+    background-color: var(--var-green) !important;
 }
 
 .perso-bg-purple {
-    background-color: var(--var-purple);
+    background-color: var(--var-purple) !important;
 }
 
 .perso-bg-blue {
-    background-color: var(--var-blue);
+    background-color: var(--var-blue) !important;
 }
 
 .perso-bg-gray {
-    background-color: var(--var-gray);
+    background-color: var(--var-gray) !important;
 }

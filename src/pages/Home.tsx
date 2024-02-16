@@ -1,56 +1,60 @@
 import React from "react";
 import profile from "../media/profile.jpeg";
+import myLogo from "../media/logo-big.png";
 import cv from "../media/cv_perrine_oswald.pdf";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faDownload} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import opquast from "../media/badge_confirme.svg";
+import { Box, Grid, Typography, Button, Link, Avatar, Stack } from '@mui/material';
 
-const Home = ():
-    JSX.Element => {
+const Home= ({isDarkMode}: {isDarkMode: boolean}): JSX.Element => {
     return (
-        <div className="z-50 pb-10 lg:pt-0 pt-10">
-            <div className="container containerHome">
-                <div className="flex flex-col items-center justify-center mt-20 h-[100vh] md:h-[90vh] lg:h-[80vh] xl:h-[71vh] px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 m-auto">
-                        <div className="w-full">
-                            <img className="rounded-full lg:px-10 lg:py-10 py-0 px-20" src={profile} alt="Photo de Perrine Oswald"/>
-                        </div>
-                        <div className="w-full my-auto pb-10">
-                            <h1 className="mb-1 text-7xl text-center font-semibold">Perrine Oswald</h1>
-                            <p className="py-8 text-center text-4xl">Développeuse web fullstack</p>
-                            <p className="py-8 text-center text-4xl">Experte en Accessibilité et Qualité web</p>
-                            <div className="flex justify-center items-center pt-5">
-                                <a href="https://www.linkedin.com/in/perrine-oswald/" target="_blank" rel="noopener noreferrer">
-                                    <span className="text-6xl socialbtn linkedin">
-                                        <FontAwesomeIcon icon={faLinkedin} />
-                                    </span>
-                                </a>
-                                <a href="https://directory.opquast.com/fr/certificat/PRBTQG/" className="ml-20">
-                                    <u>Ma certification : <img src={opquast} alt="Logo OPQUAST" className="w-20 mx-auto"/></u>
-                                </a>
-                            </div>
-                            <button className="dowanload-btn mt-12">
-                                <a href={cv} download="CV_Perrine_Oswald.pdf">
-                                    <span className="text-base">
-                                        <FontAwesomeIcon icon={faDownload} />
-                                    </span>
-                                    <span className="ml-2">
-                                        Télécharger mon CV
-                                    </span>
-                                </a>
-                            </button>
-                            <span className="flex justify-center text-sm mt-2">
+        <Box sx={{ pb: 10, pt: { xs: 10, lg: 0 }, zIndex: 'tooltip' }}>
+            <Box className="containerHome">
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: { md: '90vh', lg: '80vh', xl: '71vh' }, px: { xs: 4, sm: 6, lg: 8 } }}>
+                    <Grid container spacing={6} justifyContent="center" alignItems="center">
+                        <Grid item xs={12} lg={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+                            <Avatar src={profile} alt="Photo de Perrine Oswald" sx={{ width: '80%', height: 'auto', m: { lg: 5 } }} />
+                        </Grid>
+                        <Grid item xs={12} lg={4} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <Grid item sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center', textAlign: { xs: 'center', sm: 'left' } }} >
+                                <img src={myLogo} alt="Logo de Perrine Oswald" width={150} className={isDarkMode ? 'bg-white rounded-full p-1' : 'transparent'}/>
+                                <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold', marginLeft: { xs: 0, lg: 5 }}}>
+                                    Perrine<br/>Oswald
+                                </Typography>
+                            </Grid>
+                            <Typography variant="h5" sx={{ mt: 4, py: 2, textAlign: 'center' }}>
+                                Développeuse web fullstack
+                            </Typography>
+                            <Typography variant="h5" sx={{ py: 2, textAlign: 'center' }}>
+                                Experte en Accessibilité et Qualité web
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12} lg={4} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <Link href="https://www.linkedin.com/in/perrine-oswald/" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faLinkedin} className="w-20 h-20"/>
+                            </Link>
+                            <br/>
+                            <Link href="https://directory.opquast.com/fr/certificat/PRBTQG/" target="_blank" rel="noopener noreferrer" sx={{ textAlign: 'center', color: 'black' }}>
+                                <Box component="img" src={opquast} alt="Logo OPQUAST" sx={{ width: 120, mx: 'auto' }} />
+                            </Link>
+                            <br/>
+                            <Button variant="contained" sx={{ mt: 3 }} className="dowanload-btn" component="a" href={cv} download="CV_Perrine_Oswald.pdf">
+                                <FontAwesomeIcon icon={faDownload} />
+                                <Typography sx={{ ml: 1 }}>
+                                    Télécharger mon CV
+                                </Typography>
+                            </Button>
+                            <Typography sx={{ mt: 2 }}>
                                 .pdf - 905,54 Ko
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                {/* Home page contant End */}
-            </div>
-        </div>
-
-    )
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                </Box>
+            </Box>
+        </Box>
+    );
 }
 
-export default Home
+export default Home;

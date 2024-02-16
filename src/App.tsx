@@ -12,8 +12,6 @@ import Projets from './pages/Projets/Projets';
 import Blogs from './pages/Blogs/Blogs';
 import NotFound from './pages/NotFound';
 
-/* https://bostamihtml.ibthemespro.com/homePage.html */
-
 const App = () => {
     // Define state to toggle between light and dark modes
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -33,8 +31,8 @@ const App = () => {
             <Router>
                 <NavBar toggleMode={toggleMode} isDarkMode={isDarkMode}/>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/home" element={<Home />} />
+                    <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+                    <Route path="/home" element={<Home isDarkMode={isDarkMode} />} />
                     <Route path="/about" element={<About styles={isDarkMode ? darkStyles : lightStyles} isDarkMode={isDarkMode} />} />
                     <Route path="/pathway" element={<Pathway styles={isDarkMode ? darkStyles : lightStyles} isDarkMode={isDarkMode} />} />
                     <Route path="/projets" element={<Projets styles={isDarkMode ? darkStyles : lightStyles} isDarkMode={isDarkMode} />} />
