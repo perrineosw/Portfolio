@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Install Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '19.6.0' # ou la version de Node.js que vous utilisez
+        node-version: '20' # ou la version de Node.js que vous utilisez
 
     - name: Build Project
       run: |
