@@ -31,3 +31,4 @@ jobs:
         rm: true
         source: "build/*"
         target: "/home/cone7496/public_html"
+        
