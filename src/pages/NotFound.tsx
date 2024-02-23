@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import errorpage from "../media/404page.jpg";
+import errorpage from "../media/404-cat.png";
 import {NavLink} from "react-router-dom";
 
 const NotFound = (): JSX.Element => {

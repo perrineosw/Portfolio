@@ -1,158 +1,164 @@
 :root {
-    --var-gray2: rgb(68 86 108 / 1);
-    --var-pink2: rgb(199 36 117 / 1);
-    --var-orange2: rgb(233 100 100 / 1);
-    --var-green2: rgb(72 194 146 / 1);
-    --var-blue2: rgb(36 179 199 / 1);
+  --var-gray2: rgb(68 86 108 / 1);
+  --var-pink2: rgb(199 36 117 / 1);
+  --var-orange2: rgb(233 100 100 / 1);
+  --var-green2: rgb(72 194 146 / 1);
+  --var-blue2: rgb(36 179 199 / 1);
 
-    --var-red: #FFE4F2;
-    --var-yellow: #EFFFC9;
-    --var-orange: #FFDCD6;
-    --var-green: #C9FFE7;
-    --var-purple: #F4D6FF;
-    --var-blue: #D6FBFF;
-    --var-gray: #E1E1E1;
+  --var-red: #ffe4f2;
+  --var-yellow: #efffc9;
+  --var-orange: #ffdcd6;
+  --var-green: #c9ffe7;
+  --var-purple: #f4d6ff;
+  --var-blue: #d6fbff;
+  --var-gray: #e1e1e1;
+
+  --blue-navbar: rgb(184, 242, 255);
+  --blue-dark: rgb(50, 88, 96);
+  --blue: rgb(115, 207, 228);
+  --blue-card: rgb(115, 207, 228, 0.5);
+
+  --pink-dark: #5c3363;
+  --pink: #d575e4;
+  --pink-card: rgb(213, 117, 228, 0.5);
+  --pink-date: rgba(207, 34, 95);
+  --pink-date-light: rgb(255, 216, 252);
+
+  --beige: #F47A83;
+
+  --green-dark: #395A53;
+  --green: #6ad1bb;
+  --green-card: rgb(106, 209, 187, 0.5);
+
+  --purple-grey: #7a7d95;
+  --purple-dark: #373d69;
+  --purple: #7b88e6;
+  --purple-card: rgb(123, 136, 230, 0.5);
+
+  --red-dark: #521028;
+  --red: #e07575;
+  --red-card: rgb(224, 117, 117, 0.5);
+
+  --black-dark: #363636;
+  --black: #d9d9d9;
 }
 
 .bg-homeBg {
-    background-image: url('../media/background.jpeg');
+  background-image: url("../media/test.png");
 }
 
 .container {
-    background-color: white;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.containerHome {
-    background-color: transparent !important;
+.btn {
+    background-color: var(--beige) !important;
+    color: black !important
+}
+.btn:hover {
+    background-color: var(--purple-grey) !important;
+    color: white !important;
 }
 
-.socialbtn {
-    background-color: rgb(243 246 246 / 1);
-    --tw-gradient-stops: var(--var-orange2), var(--var-pink2);
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-}
 
-.socialbtn:hover {
-    background-image: linear-gradient(to right, var(--tw-gradient-stops));
-    color: white;
-}
+
 
 .mobile-menu-items {
-    color: var(--var-gray2);
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  color: var(--var-gray2);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, -webkit-text-decoration-color;
 }
 
 .mobile-menu-items:hover {
-    color: var(--var-orange2);
+  color: var(--var-orange2);
 }
 
 .mobile-menu-items-active {
-    color: var(--var-orange2);
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  color: var(--var-orange2);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, -webkit-text-decoration-color;
 }
 
 .mobile-menu-items-active:hover {
-    color: var(--var-orange2);
-}
-
-.dowanload-btn {
-    background-image: linear-gradient(to right, var(--var-orange2), var(--var-pink2));
-    color: white;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-}
-
-.dowanload-btn:hover {
-    background-image: linear-gradient(to left, var(--var-orange2), var(--var-pink2));
-}
-
-.menu-toggle-btn {
-    background-color: white;
-    background-image: linear-gradient(to right, var(--var-orange2), var(--var-pink2));
-    color: rgb(0 0 0 / 1);
-}
-
-.menu-toggle-btn:hover {
-    background-color: white !important;
-    border: 2px solid var(--var-pink2);
-}
-
-.bg-close-light {
-    background-image: url('../media/bouton-croix.png');
+  color: var(--var-orange2);
 }
 
 .menu-item-two-active {
-    background-color: white;
-    background-image: linear-gradient(to right, var(--var-orange2), var(--var-pink2));
-    color: white;
+  background-color: var(--beige);
 }
 
 .menu-item-two-active:hover {
-    background-image: linear-gradient(to left, var(--var-orange2), var(--var-pink2));
-    color: white;
+  background-color: var(--purple-grey);
+  color: white;
 }
 
 .menu-item-two {
-    background-color: white;
-    color: var(--var-gray2);
+  background-color: white;
+  color: var(--var-gray2);
 }
 
 .menu-item-two:hover {
-    background-image: linear-gradient(to right, var(--var-orange2), var(--var-pink2));
-    color: white;
+  background-image: linear-gradient(
+    to right,
+    var(--var-orange2),
+    var(--var-pink2)
+  );
+  color: white;
 }
 
 .linkedin {
-    color: #0072b1;
+  color: #0072b1;
 }
 
 .facebook {
-    color: #1C9CEA;
+  color: #1c9cea;
 }
 
 .text-gray-lite {
-    color: var(--var-gray2);
+  color: var(--var-gray2);
 }
 
-.text-red{
-    color: var(--var-pink2);
+.text-red {
+  color: var(--var-pink2);
 }
 
 .text-orange {
-    color: var(--var-orange2);
+  color: var(--var-orange2);
 }
 
 .text-green {
-    color: var(--var-green2);
+  color: var(--var-green2);
 }
 
 .text-blue {
-    color: var(--var-blue2);
+  color: var(--var-blue2);
 }
 
 .perso-bg-red {
-    background-color: var(--var-red) !important;
+  background-color: var(--var-red) !important;
 }
 
 .perso-bg-yellow {
-    background-color: var(--var-yellow) !important;
+  background-color: var(--var-yellow) !important;
 }
 
 .perso-bg-orange {
-    background-color: var(--var-orange) !important;
+  background-color: var(--var-orange) !important;
 }
 
 .perso-bg-green {
-    background-color: var(--var-green) !important;
+  background-color: var(--var-green) !important;
 }
 
 .perso-bg-purple {
-    background-color: var(--var-purple) !important;
+  background-color: var(--var-purple) !important;
 }
 
 .perso-bg-blue {
-    background-color: var(--var-blue) !important;
+  background-color: var(--var-blue) !important;
 }
 
 .perso-bg-gray {
-    background-color: var(--var-gray) !important;
+  background-color: var(--var-gray) !important;
 }

@@ -1,46 +1,46 @@
 .bg-homeBg-dark {
-    background-image: url('../media/background-dark.jpeg');
+  background-image: url("../media/test2.png");
 }
 
 .perso-bg-red-dark {
-    background-color: #592d43 !important;
-    border: var(--var-red) 1px solid !important;
+  background-color: #592d43 !important;
+  border: var(--var-red) 1px solid !important;
 }
 
 .perso-bg-yellow-dark {
-    background-color: #444f27 !important;
-    border: var(--var-yellow) 1px solid !important;
+  background-color: #444f27 !important;
+  border: var(--var-yellow) 1px solid !important;
 }
 
 .perso-bg-orange-dark {
-    background-color: #542e2a !important;
-    border: var(--var-orange) 1px solid !important;
+  background-color: #542e2a !important;
+  border: var(--var-orange) 1px solid !important;
 }
 
 .perso-bg-green-dark {
-    background-color: #2e5b46 !important;
-    border: var(--var-green) 1px solid !important;
+  background-color: #2e5b46 !important;
+  border: var(--var-green) 1px solid !important;
 }
 
 .perso-bg-purple-dark {
-    background-color: #533060 !important;
-    border: var(--var-purple) 1px solid !important;
+  background-color: #533060 !important;
+  border: var(--var-purple) 1px solid !important;
 }
 
 .perso-bg-blue-dark {
-    background-color: #284c50 !important;
-    border: var(--var-blue) 1px solid !important;
+  background-color: #284c50 !important;
+  border: var(--var-blue) 1px solid !important;
 }
 
 .perso-bg-gray-dark {
-    background-color: #5e5e5e !important;
-    border: var(--var-gray) 1px solid !important;
+  background-color: #5e5e5e !important;
+  border: var(--var-gray) 1px solid !important;
 }
 
 .perso-bg-dark {
-    background-color: #3b3b3b;
+  background-color: #3b3b3b;
 }
 
 .text-red-dark {
-    color: #e785b4;
+  color: #e785b4;
 }

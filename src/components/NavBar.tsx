@@ -1,93 +1,174 @@
-import React, { useState } from 'react';
+import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  Container,
+  Button,
+  MenuItem,
+} from "@mui/material";
+import { faSun, faMoon, faList } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import myLogo from "../media/logo-big.png";
 
-import {NavLink} from "react-router-dom";
-import {faSun, faMoon, faList, faHouse, faUser, faListDots, faSuitcase, faFile} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+const pages = [
+  {
+    title: "Accueil",
+    url: "/",
+  },
+  {
+    title: "A propos",
+    url: "/about",
+  },
+  {
+    title: "Parcours",
+    url: "/pathway",
+  },
+  // {
+  //   title: "Projets",
+  //   url: "/projets",
+  // },
+  {
+    title: "Blog",
+    url: "/blogs",
+  },
+];
 
-const NavBar = ({toggleMode, isDarkMode}: {toggleMode: () => void, isDarkMode: boolean}) => {
-    const [open, setOpen] = useState(false);
+const NavBar = ({
+  toggleMode,
+  isDarkMode,
+}: {
+  toggleMode: () => void;
+  isDarkMode: boolean;
+}) => {
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null
+  );
 
-    const [, setActiveLink] = useState(window.location.hash);
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorElNav(event.currentTarget);
+  };
 
-    const handleLinkClick = (hash: React.SetStateAction<string>) => {
-        setActiveLink(hash);
-    };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-    return (
-        <header className="flex py-5 justify-between items-center px-10 bg-gray-300 fixed top-0 left-0 bg-transparent lg:static z-[1111111111]">
-            <div className="flex">
-                <div className="flex justify-between w-full items-center space-x-4">
-                    <button className="menu-item-two" onClick={toggleMode}>
-                        {isDarkMode ? <FontAwesomeIcon icon={faMoon} /> : <FontAwesomeIcon icon={faSun} />}
-                    </button>
-                    <div className="flex items-center">
-                        <button id="menu-toggle" type="button" className="menu-toggle-btn" onClick={() => setOpen(!open)}>
-                            <FontAwesomeIcon icon={faList}/>
-                        </button>
-                        <nav id="navbar" className={`flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row ${open ? 'flex' : 'hidden'}`}>
-                            <ul className="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] bg-white mobile-ul-size">
-                                <li>
-                                    <NavLink to="/home" className={(window.location.hash === '#/home' || window.location.hash === '') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/home'); setOpen(false);}}>
-                                        <FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;&nbsp;&nbsp;Accueil
-                                    </NavLink>
+  const navigate = useNavigate();
 
-                                </li>
-                                <li>
-                                    <NavLink to="/about" className={(window.location.hash === '#/about') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/about'); setOpen(false);}}>
-                                        <FontAwesomeIcon icon={faUser} />&nbsp;&nbsp;&nbsp;&nbsp;A propos
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/pathway" className={(window.location.hash === '#/pathway') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/pathway'); setOpen(false);}}>
-                                        <FontAwesomeIcon icon={faListDots} />&nbsp;&nbsp;&nbsp;&nbsp;Mes parcours
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/projets" className={(window.location.hash === '#/projets') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/projets'); setOpen(false);}}>
-                                        <FontAwesomeIcon icon={faSuitcase} />&nbsp;&nbsp;&nbsp;&nbsp;Mes projets
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/blogs" className={(window.location.hash === '#/blogs') ? "mobile-menu-items-active" : "mobile-menu-items"} onClick={() => {handleLinkClick('#/blogs'); setOpen(false);}}>
-                                        <FontAwesomeIcon icon={faFile} />&nbsp;&nbsp;&nbsp;&nbsp;Blogs
-                                    </NavLink>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <nav className="hidden lg:block">
-                        <ul className="flex">
-                            <li>
-                                <NavLink to="/home" className={(window.location.hash === '#/home' || window.location.hash === '') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/home')}>
-                                    <FontAwesomeIcon icon={faHouse} />&nbsp;&nbsp;&nbsp;&nbsp;Accueil
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/about" className={(window.location.hash === '#/about') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/about')}>
-                                    <FontAwesomeIcon icon={faUser} />&nbsp;&nbsp;&nbsp;&nbsp;A propos
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/pathway" className={(window.location.hash === '#/pathway') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/pathway')}>
-                                    <FontAwesomeIcon icon={faListDots} />&nbsp;&nbsp;&nbsp;&nbsp;Mes parcours
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/projets" className={(window.location.hash === '#/projets') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/projets')}>
-                                    <FontAwesomeIcon icon={faSuitcase} />&nbsp;&nbsp;&nbsp;&nbsp;Mes projets
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/blogs" className={(window.location.hash === '#/blogs') ? "menu-item-two-active" : "menu-item-two"} onClick={() => handleLinkClick('#/blogs')}>
-                                    <FontAwesomeIcon icon={faFile} />&nbsp;&nbsp;&nbsp;&nbsp;Blogs
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-    )
-}
+  return (
+    <AppBar
+      position="static"
+      sx={{
+        mx: { xs: 0, sm: 5, md: 10 },
+        width: "auto",
+        backgroundColor: isDarkMode ? "var(--red-dark)" : "var(--blue-navbar)",
+        borderRadius: "5px",
+        mb: 2,
+      }}
+    >
+      <Container>
+        <Toolbar disableGutters>
+          <IconButton
+            size="large"
+            aria-label="Button pour changer de mode : clair ou sombre"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={toggleMode}
+            sx={{ color: isDarkMode ? "white" : "black" }}
+          >
+            {isDarkMode ? (
+              <FontAwesomeIcon icon={faMoon} />
+            ) : (
+              <FontAwesomeIcon icon={faSun} />
+            )}
+          </IconButton>
+          <Button onClick={() => navigate("/")}>
+            <Box
+              component="img"
+              src={myLogo}
+              alt="Logo de Perrine Oswald"
+              sx={{
+                width: 60,
+                mx: "auto",
+                backgroundColor: "white",
+                p: 1,
+                borderRadius: "50%",
+              }}
+            />
+          </Button>
+
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="Button pour changer de mode : clair ou sombre"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              sx={{ color: isDarkMode ? "white" : "black" }}
+            >
+              <FontAwesomeIcon icon={faList} />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={() => { handleCloseNavMenu(); navigate(page.url); }}>
+                  <Typography
+                    textAlign="center"
+                  >
+                    {page.title}
+                  </Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button
+                key={page.title}
+                onClick={() => navigate(page.url)}
+                sx={{
+                  height: "100%",
+                  color:
+                    window.location.pathname === page.url
+                      ? "black"
+                      : isDarkMode
+                      ? "white"
+                      : "black",
+                  mx: 4,
+                  backgroundColor:
+                    window.location.pathname === page.url
+                      ? "var(--beige)"
+                      : "transparent",
+                }}
+              >
+                {page.title}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+};
 
 export default NavBar;
