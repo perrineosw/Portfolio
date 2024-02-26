@@ -3,22 +3,22 @@ import profile from "../media/profile.jpeg";
 import opquast from "../media/badge_confirme.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPhone,
-  faLocation,
-  faMailBulk,
   faCar,
-  faComputer,
-  faPhotoVideo,
-  faMusic,
-  faHandHoldingHeart,
-  faGlobeEurope,
-  faCookieBite,
   faClock,
+  faComputer,
+  faCookieBite,
+  faFaceSmile,
+  faFolderTree,
+  faGlobeEurope,
+  faHandHoldingHeart,
+  faLocation,
+  faMagnifyingGlass,
+  faMailBulk,
+  faMusic,
   faPencil,
   faPersonRunning,
-  faMagnifyingGlass,
-  faFolderTree,
-  faFaceSmile,
+  faPhone,
+  faPhotoVideo,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
 import {
@@ -28,17 +28,13 @@ import {
   CardContent,
   Grid,
   LinearProgress,
+  linearProgressClasses,
   Link,
   Paper,
   Typography,
-  linearProgressClasses,
 } from "@mui/material";
 
-const About = ({
-  isDarkMode,
-}: {
-  isDarkMode: boolean;
-}): JSX.Element => {
+const About = ({ isDarkMode }: { isDarkMode: boolean }): JSX.Element => {
   const skills = [
     "Web fullstack",
     "Python",
@@ -102,67 +98,94 @@ const About = ({
           </Typography>
           <br />
           <Grid container spacing={10} alignItems="center">
-            <Grid item xs={12} lg={8}>
+            <Grid item xs={12} lg={7}>
               <Typography>
                 Je suis certifiée OPQUAST avec 790 points et le niveau{" "}
                 <strong>Confirmée</strong>.
               </Typography>
             </Grid>
-            <Grid item xs={12} lg={2}>
+            <Grid item xs={12} lg={3}>
               <Link
                 href="https://directory.opquast.com/fr/certificat/PRBTQG/"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{ textAlign: "center", color: "black" }}
+                aria-label="Lien vers les résultats de ma certification OPQUAST"
               >
                 <Box
                   component="img"
                   src={opquast}
                   alt="Logo OPQUAST"
-                  sx={{ width: 80, mx: "auto" }}
+                  sx={{ width: 120, mx: "auto" }}
                 />
               </Link>
             </Grid>
           </Grid>
-          <br />
-          <Grid container alignItems="center" textAlign="center">
+          <Grid
+            container
+            alignItems="center"
+            textAlign="center"
+            sx={{ mt: 5 }}
+            spacing={2}
+          >
             <Grid item xs={6} lg={2}>
-              <FontAwesomeIcon icon={faClock} style={{ color: "var(--red)" }} />
+              <Typography variant="h5">
+                <FontAwesomeIcon
+                  icon={faClock}
+                  style={{ color: "var(--red)" }}
+                  aria-label="Icône d'une horloge"
+                />
+              </Typography>
               <Typography>Ponctuelle</Typography>
             </Grid>
             <Grid item xs={6} lg={2}>
-              <FontAwesomeIcon
-                icon={faPencil}
-                style={{ color: "var(--pink)" }}
-              />
+              <Typography variant="h5">
+                <FontAwesomeIcon
+                  icon={faPencil}
+                  style={{ color: "var(--pink)" }}
+                  aria-label="Icône d'un crayon"
+                />
+              </Typography>
               <Typography>Créative</Typography>
             </Grid>
             <Grid item xs={6} lg={2}>
-              <FontAwesomeIcon
-                icon={faPersonRunning}
-                style={{ color: "var(--purple)" }}
-              />
+              <Typography variant="h5">
+                <FontAwesomeIcon
+                  icon={faPersonRunning}
+                  style={{ color: "var(--purple)" }}
+                  aria-label="Icône d'une peronne entrain de courir"
+                />
+              </Typography>
               <Typography>Réactive</Typography>
             </Grid>
             <Grid item xs={6} lg={2}>
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                style={{ color: "var(--blue)" }}
-              />
+              <Typography variant="h5">
+                <FontAwesomeIcon
+                  icon={faMagnifyingGlass}
+                  style={{ color: "var(--blue)" }}
+                  aria-label="Icône d'une loupe"
+                />
+              </Typography>
               <Typography>Curieuse</Typography>
             </Grid>
             <Grid item xs={6} lg={2}>
-              <FontAwesomeIcon
-                icon={faFolderTree}
-                style={{ color: "var(--green)" }}
-              />
+              <Typography variant="h5">
+                <FontAwesomeIcon
+                  icon={faFolderTree}
+                  style={{ color: "var(--green)" }}
+                  aria-label="Icône d'une organisation de fichier numérique (arborescence)"
+                />
+              </Typography>
               <Typography>Organisée</Typography>
             </Grid>
             <Grid item xs={6} lg={2}>
-              <FontAwesomeIcon
-                icon={faFaceSmile}
-                style={{ color: "var(--red)" }}
-              />
+              <Typography variant="h5">
+                <FontAwesomeIcon
+                  icon={faFaceSmile}
+                  style={{ color: "var(--red)" }}
+                  aria-label="Icône d'un smiley qui sourit"
+                />
+              </Typography>
               <Typography>Positive</Typography>
             </Grid>
           </Grid>
@@ -244,15 +267,13 @@ const About = ({
           >
             <CardContent className={isDarkMode ? "text-white" : "text-black"}>
               <Typography variant="h5" component="div">
-                <FontAwesomeIcon className="w-10 h-10" icon={faComputer} />
+                <FontAwesomeIcon icon={faComputer} />
                 &nbsp;Programmation
               </Typography>
               <Typography mt={2}>
                 (Maman disait toujours) le développement web est comme une boîte
                 de chocolats : vous ne savez jamais sur quel navigateur votre
-                site va s&apos;afficher.
-                <br />
-                #ForrestGump
+                site va s&apos;afficher. <br /> #ForrestGump
               </Typography>
             </CardContent>
           </Card>
@@ -267,15 +288,13 @@ const About = ({
           >
             <CardContent className={isDarkMode ? "text-white" : "text-black"}>
               <Typography variant="h5" component="div">
-                <FontAwesomeIcon className="w-10 h-10" icon={faPhotoVideo} />
+                <FontAwesomeIcon icon={faPhotoVideo} />
                 &nbsp;Photographie
               </Typography>
               <Typography mt={2}>
                 En développement web comme en photographie, il faut savoir
                 prendre le temps de régler les paramètres pour obtenir une image
                 nette et une expérience utilisateur satisfaisante.
-                <br />
-                <br />
               </Typography>
             </CardContent>
           </Card>
@@ -290,7 +309,7 @@ const About = ({
           >
             <CardContent className={isDarkMode ? "text-white" : "text-black"}>
               <Typography variant="h5" component="div">
-                <FontAwesomeIcon className="w-10 h-10" icon={faMusic} />
+                <FontAwesomeIcon icon={faMusic} />
                 &nbsp;Musique
               </Typography>
               <Typography mt={2}>
@@ -312,10 +331,7 @@ const About = ({
           >
             <CardContent className={isDarkMode ? "text-white" : "text-black"}>
               <Typography variant="h5" component="div">
-                <FontAwesomeIcon
-                  className="w-10 h-10"
-                  icon={faHandHoldingHeart}
-                />
+                <FontAwesomeIcon icon={faHandHoldingHeart} />
                 &nbsp;Bénévolat
               </Typography>
               <Typography mt={2}>
@@ -338,7 +354,7 @@ const About = ({
           >
             <CardContent className={isDarkMode ? "text-white" : "text-black"}>
               <Typography variant="h5" component="div">
-                <FontAwesomeIcon className="w-10 h-10" icon={faGlobeEurope} />
+                <FontAwesomeIcon icon={faGlobeEurope} />
                 &nbsp;Voyager
               </Typography>
               <Typography mt={2}>
@@ -361,7 +377,7 @@ const About = ({
           >
             <CardContent className={isDarkMode ? "text-white" : "text-black"}>
               <Typography variant="h5">
-                <FontAwesomeIcon className="w-10 h-10" icon={faCookieBite} />
+                <FontAwesomeIcon icon={faCookieBite} />
                 &nbsp;Cuisiner
               </Typography>
               <Typography mt={2}>

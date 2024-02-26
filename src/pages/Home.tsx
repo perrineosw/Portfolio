@@ -5,14 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import opquast from "../media/badge_confirme.svg";
-import {
-  Box,
-  Grid,
-  Typography,
-  Button,
-  Link,
-  Avatar,
-} from "@mui/material";
+import { Box, Grid, Typography, Button, Link, Avatar } from "@mui/material";
 
 const Home = (): JSX.Element => {
   return (

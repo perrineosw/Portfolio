@@ -1,4 +1,4 @@
-import IBlog from "../../interfaces/IBlog";
+import type IBlog from "../../interfaces/IBlog";
 
 import lois from "../../media/blogs/lois.png";
 
@@ -22,7 +22,7 @@ export const blogs: IBlog[] = [
       ],
     },
     website: {
-      title: ["Lien vers l'article", "Mon article LinkedIn"],
+      title: ["Lien vers l'article", "Lien vers mon article LinkedIn"],
       content: [
         "https://enzosandre.fr/blog/2021/08/16/le-monde-a-t-il-oublie-manny-lehman.html",
         "https://www.linkedin.com/feed/update/urn:li:activity:7135167938189254656/",

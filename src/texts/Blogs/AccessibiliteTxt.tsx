@@ -1,4 +1,4 @@
-import IBlog from "../../interfaces/IBlog";
+import type IBlog from "../../interfaces/IBlog";
 
 import accessibilite from "../../media/blogs/accessibilite.png";
 import accessibilite_hand from "../../media/blogs/accessibilite-hand.jpeg";
@@ -29,7 +29,7 @@ export const blogs: IBlog[] = [
       ],
     },
     website: {
-      title: ["Mon article LinkedIn"],
+      title: ["Lien vers mon article LinkedIn"],
       content: [
         "https://www.linkedin.com/feed/update/urn:li:activity:7165276362889498625/",
       ],
@@ -100,7 +100,7 @@ export const blogs: IBlog[] = [
       ],
     },
     website: {
-      title: ["Mon article LinkedIn"],
+      title: ["Lien vers mon article LinkedIn"],
       content: [
         "https://www.linkedin.com/posts/perrine-oswald_rendons-nos-sites-web-plus-accessibles-activity-7156215099836305409-jVlR/?originalSubdomain=fr",
       ],

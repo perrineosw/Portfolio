@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import IBlog from "../../../interfaces/IBlog";
+import type IBlog from "../../../interfaces/IBlog";
 import {
   Card,
   CardActionArea,
@@ -12,11 +12,7 @@ import Modale from "../Modale";
 import { blogs } from "../../../texts/Blogs/OtherTxt";
 import MyPagination from "../../../components/Pagination";
 
-const OtherBlock = ({
-  isDarkMode,
-}: {
-  isDarkMode: boolean;
-}): JSX.Element => {
+const OtherBlock = ({ isDarkMode }: { isDarkMode: boolean }): JSX.Element => {
   const [selectedBlog, setSelectedBlog] = useState({
     color: "",
     colorDark: "",
@@ -43,7 +39,7 @@ const OtherBlock = ({
 
   const handlePageChange = (
     event: React.ChangeEvent<unknown>,
-    newPage: number
+    newPage: number,
   ) => {
     setCurrentPage(newPage);
   };
@@ -81,7 +77,11 @@ const OtherBlock = ({
                 backgroundColor: isDarkMode ? blog.colorDark : blog.color,
               }}
             >
-              <CardActionArea onClick={() => handleOpen(blog)}>
+              <CardActionArea
+                onClick={() => {
+                  handleOpen(blog);
+                }}
+              >
                 <CardContent
                   className={isDarkMode ? "text-white" : "text-black"}
                 >
@@ -102,7 +102,7 @@ const OtherBlock = ({
             </Card>
           </Grid>
         ))}
-        {selectedBlog && (
+        {selectedBlog != null && (
           <Modale
             blog={selectedBlog}
             open={open}

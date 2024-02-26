@@ -1,4 +1,4 @@
-import IBlog from "../../interfaces/IBlog";
+import type IBlog from "../../interfaces/IBlog";
 import gaspillage from "../../media/blogs/gaspillage.png";
 
 export const blogs: IBlog[] = [

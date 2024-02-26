@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import IBlog from "../../../interfaces/IBlog";
+import type IBlog from "../../../interfaces/IBlog";
 import {
+  Button,
   Card,
   CardActionArea,
   CardContent,
   CardMedia,
   Grid,
   Typography,
-  Button,
 } from "@mui/material";
 import Modale from "../Modale";
 import { blogs } from "../../../texts/Blogs/WebTxt";
@@ -17,11 +17,7 @@ import veilletechno from "../../../media/blogs/rapport_veille_technologique.pdf"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
-const WebBlock = ({
-  isDarkMode,
-}: {
-  isDarkMode: boolean;
-}): JSX.Element => {
+const WebBlock = ({ isDarkMode }: { isDarkMode: boolean }): JSX.Element => {
   const [selectedBlog, setSelectedBlog] = useState({
     color: "",
     colorDark: "",
@@ -48,7 +44,7 @@ const WebBlock = ({
 
   const handlePageChange = (
     event: React.ChangeEvent<unknown>,
-    newPage: number
+    newPage: number,
   ) => {
     setCurrentPage(newPage);
   };
@@ -108,7 +104,11 @@ const WebBlock = ({
                 backgroundColor: isDarkMode ? blog.colorDark : blog.color,
               }}
             >
-              <CardActionArea onClick={() => handleOpen(blog)}>
+              <CardActionArea
+                onClick={() => {
+                  handleOpen(blog);
+                }}
+              >
                 <CardContent
                   className={isDarkMode ? "text-white" : "text-black"}
                 >
@@ -129,7 +129,7 @@ const WebBlock = ({
             </Card>
           </Grid>
         ))}
-        {selectedBlog && (
+        {selectedBlog != null && (
           <Modale
             blog={selectedBlog}
             open={open}

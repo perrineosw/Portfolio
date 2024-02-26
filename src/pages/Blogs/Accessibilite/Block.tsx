@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import IBlog from "../../../interfaces/IBlog";
+import type IBlog from "../../../interfaces/IBlog";
 import {
   Card,
   CardActionArea,
@@ -43,7 +43,7 @@ const AccessibiliteBlock = ({
 
   const handlePageChange = (
     event: React.ChangeEvent<unknown>,
-    newPage: number
+    newPage: number,
   ) => {
     setCurrentPage(newPage);
   };
@@ -81,7 +81,11 @@ const AccessibiliteBlock = ({
                 backgroundColor: isDarkMode ? blog.colorDark : blog.color,
               }}
             >
-              <CardActionArea onClick={() => handleOpen(blog)}>
+              <CardActionArea
+                onClick={() => {
+                  handleOpen(blog);
+                }}
+              >
                 <CardContent
                   className={isDarkMode ? "text-white" : "text-black"}
                 >
@@ -102,7 +106,7 @@ const AccessibiliteBlock = ({
             </Card>
           </Grid>
         ))}
-        {selectedBlog && (
+        {selectedBlog != null && (
           <Modale
             blog={selectedBlog}
             open={open}

@@ -1,22 +1,12 @@
 import React, { useState } from "react";
 import Footer from "../../components/Footer";
-import {
-  Box,
-  Grid,
-  Typography,
-  FormControl,
-  MenuItem,
-} from "@mui/material";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { Box, FormControl, Grid, MenuItem, Typography } from "@mui/material";
+import Select, { type SelectChangeEvent } from "@mui/material/Select";
 import AccessibiliteBlock from "./Accessibilite/Block";
 import OtherBlock from "./Other/Block";
 import WebBlock from "./Web/Block";
 
-const Blogs = ({
-  isDarkMode,
-}: {
-  isDarkMode: boolean;
-}): JSX.Element => {
+const Blogs = ({ isDarkMode }: { isDarkMode: boolean }): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState("tous");
 
   const handleCategoryChange = (event: SelectChangeEvent) => {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconButton, Box, Typography, Button } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 interface ImageProps {
@@ -32,7 +32,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   const handleBack = () => {
     if (maxSteps > 1) {
       setActiveStep(
-        (prevActiveStep) => (prevActiveStep + maxSteps - 1) % maxSteps
+        (prevActiveStep) => (prevActiveStep + maxSteps - 1) % maxSteps,
       );
     }
   };
@@ -41,7 +41,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     setShowAltText(!showAltText); // Cette fonction bascule l'affichage du texte alternatif.
   };
 
-  if (!images || images.length === 0) {
+  if (images == null || images.length === 0) {
     return null;
   }
 
@@ -74,7 +74,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
             <Typography
               key={lineIndex}
               sx={{ mx: 1 }}
-              className={isDarkMode ? "text-white" : "text-black"}
+              className={isDarkMode === true ? "text-white" : "text-black"}
             >
               {line}
             </Typography>

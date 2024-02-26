@@ -1,17 +1,17 @@
 import React from "react";
 import {
   Box,
+  Button,
   CardMedia,
+  Grid,
   IconButton,
   Link,
   Modal,
   Typography,
-  Button,
-  Grid,
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faDownload } from "@fortawesome/free-solid-svg-icons";
-import IBlog from "../../interfaces/IBlog";
+import type IBlog from "../../interfaces/IBlog";
 import ImageCarousel from "./ImageCarousel";
 
 interface ModaleProps {
@@ -41,7 +41,7 @@ const Modale: React.FC<ModaleProps> = ({
           transform: "translate(-50%, -50%)",
           maxHeight: "calc(100vh - 40px)",
           overflowY: "auto",
-          bgcolor: isDarkMode ? "var(--black-dark)" : "white",
+          bgcolor: isDarkMode === true ? "var(--black-dark)" : "white",
           boxShadow: 24,
           borderRadius: "20px",
           p: 4,
@@ -54,7 +54,7 @@ const Modale: React.FC<ModaleProps> = ({
         >
           <FontAwesomeIcon
             icon={faClose}
-            className={isDarkMode ? "text-white" : "inherit"}
+            className={isDarkMode === true ? "text-white" : "inherit"}
           />
         </IconButton>
         <Typography
@@ -64,13 +64,16 @@ const Modale: React.FC<ModaleProps> = ({
             borderColor: "var(--beige)",
             pb: 2,
             textAlign: "center",
-            color: isDarkMode ? "white" : "var(--pink-date)",
+            color: isDarkMode === true ? "white" : "var(--pink-date)",
           }}
         >
           {blog.title}
         </Typography>
         <Typography
-          sx={{ mt: 2, color: isDarkMode ? "white" : "var(--pink-date)" }}
+          sx={{
+            mt: 2,
+            color: isDarkMode === true ? "white" : "var(--pink-date)",
+          }}
         >
           Publié le {blog.date}
         </Typography>
@@ -79,7 +82,7 @@ const Modale: React.FC<ModaleProps> = ({
           image={blog.image}
           title={blog.title}
         />
-        {blog.website && (
+        {blog.website != null && (
           <Box sx={{ mt: 4 }}>
             {blog.website.title.map((title, index) => (
               <div key={index}>
@@ -91,9 +94,12 @@ const Modale: React.FC<ModaleProps> = ({
                       href={content}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={title}
                     >
                       <Typography
-                        sx={{ color: isDarkMode ? "var(--blue)" : "none" }}
+                        sx={{
+                          color: isDarkMode === true ? "var(--blue)" : "none",
+                        }}
                       >
                         {title}
                       </Typography>
@@ -111,7 +117,7 @@ const Modale: React.FC<ModaleProps> = ({
                 borderColor: "var(--beige)",
                 pb: 2,
                 mt: 4,
-                color: isDarkMode ? "white" : "var(--pink-date)",
+                color: isDarkMode === true ? "white" : "var(--pink-date)",
               }}
             >
               {index + 1}.&nbsp;{title}
@@ -122,7 +128,7 @@ const Modale: React.FC<ModaleProps> = ({
                 <Typography
                   key={lineIndex}
                   sx={{ py: 1 }}
-                  className={isDarkMode ? "text-white" : "inherit"}
+                  className={isDarkMode === true ? "text-white" : "inherit"}
                 >
                   {line}
                 </Typography>
@@ -133,7 +139,7 @@ const Modale: React.FC<ModaleProps> = ({
           container
           sx={{ borderTop: 2, borderColor: "var(--beige)", my: 4 }}
         >
-          {blog.files &&
+          {blog.files != null &&
             blog.files.length > 0 &&
             blog.files.map((file, index) => (
               <Grid
